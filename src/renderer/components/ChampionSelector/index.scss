@@ -1,0 +1,15 @@
+.champion-selector {
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	
+	& > ul {
+		width: 100%;
+		list-style: none;
+		display: flex;
+		flex: 1;
+		flex-flow: row wrap;
+		padding: 0;
+	}
+}

@@ -1,0 +1,14 @@
+{
+  "extends": "./node_modules/electron-webpack/tsconfig-base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "jsx": "react",
+    "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "@utils/*": ["src/common/utils/*"],
+      "@components/*": ["src/renderer/components/*"],
+      "@*": ["src/renderer/store/*"]
+    }
+  }
+}

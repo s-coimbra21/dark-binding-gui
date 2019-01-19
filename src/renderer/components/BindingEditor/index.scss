@@ -1,0 +1,25 @@
+@import '~react-hextech/lib/theme.scss';
+
+.editor {
+  height: 100%;
+  width: 100%;
+  padding-left: 15px;
+
+  .primaryBindings {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      .category {
+        .label {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}

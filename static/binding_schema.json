@@ -1,0 +1,511 @@
+{
+  "GameEvents": {
+    "evntPlayerPing": {
+      "default": "[Alt][Button 1]"
+    },
+    "evntPlayerPingCursor": {
+      "default": "[g]"
+    },
+    "evntPlayerPingCursorDanger": {
+      "default": "[v]"
+    },
+    "evntPlayerPingDanger": {
+      "default": "[Ctrl][Button 1]"
+    },
+    "evtCameraLockToggle": {
+      "default": "[y]"
+    },
+    "evtCameraSnap": {
+      "default": "[Space]"
+    },
+    "evtCastAvatarSpell1": {
+      "default": "[d]"
+    },
+    "evtCastAvatarSpell2": {
+      "default": "[f]"
+    },
+    "evtCastSpell1": {
+      "default": "[q]"
+    },
+    "evtCastSpell2": {
+      "default": "[w]"
+    },
+    "evtCastSpell3": {
+      "default": "[e]"
+    },
+    "evtCastSpell4": {
+      "default": "[r]"
+    },
+    "evtChampMasteryDisplay": {
+      "default": "[Ctrl][6]"
+    },
+    "evtChampionOnly": {
+      "default": "[`]"
+    },
+    "evtChatHistory": {
+      "default": "[z]"
+    },
+    "evtDragScrollLock": {
+      "default": ""
+    },
+    "evtDrawHud": {
+      "default": ""
+    },
+    "evtEmoteDance": {
+      "default": "[Ctrl][3]"
+    },
+    "evtEmoteJoke": {
+      "default": "[Ctrl][1]"
+    },
+    "evtEmoteLaugh": {
+      "default": "[Ctrl][4]"
+    },
+    "evtEmoteTaunt": {
+      "default": "[Ctrl][2]"
+    },
+    "evtEmoteToggle": {
+      "default": "[Ctrl][5]"
+    },
+    "evtLevelSpell1": {
+      "default": "[Ctrl][q]"
+    },
+    "evtLevelSpell2": {
+      "default": "[Ctrl][w]"
+    },
+    "evtLevelSpell3": {
+      "default": "[Ctrl][e]"
+    },
+    "evtLevelSpell4": {
+      "default": "[Ctrl][r]"
+    },
+    "evtNormalCastAvatarSpell1": {
+      "default": ""
+    },
+    "evtNormalCastAvatarSpell2": {
+      "default": ""
+    },
+    "evtNormalCastItem1": {
+      "default": ""
+    },
+    "evtNormalCastItem2": {
+      "default": ""
+    },
+    "evtNormalCastItem3": {
+      "default": ""
+    },
+    "evtNormalCastItem4": {
+      "default": ""
+    },
+    "evtNormalCastItem5": {
+      "default": ""
+    },
+    "evtNormalCastItem6": {
+      "default": ""
+    },
+    "evtNormalCastSpell1": {
+      "default": ""
+    },
+    "evtNormalCastSpell2": {
+      "default": ""
+    },
+    "evtNormalCastSpell3": {
+      "default": ""
+    },
+    "evtNormalCastSpell4": {
+      "default": ""
+    },
+    "evtNormalCastVisionItem": {
+      "default": ""
+    },
+    "evtOnUIMouse4Pan": {
+      "default": "[Button 3]"
+    },
+    "evtOpenShop": {
+      "default": "[p]"
+    },
+    "evtPetMoveClick": {
+      "default": "[Alt][Button 2],[Ctrl][Button 2]"
+    },
+    "evtPlayerAttackMove": {
+      "default": "[a],[x]"
+    },
+    "evtPlayerAttackMoveClick": {
+      "default": "[Shift][Button 2]"
+    },
+    "evtPlayerAttackOnlyClick": {
+      "default": ""
+    },
+    "evtPlayerHoldPosition": {
+      "default": "[h]"
+    },
+    "evtPlayerMoveClick": {
+      "default": "[Button 2]"
+    },
+    "evtPlayerPingAreaIsWarded": {
+      "default": ""
+    },
+    "evtPlayerPingComeHere": {
+      "default": ""
+    },
+    "evtPlayerPingMIA": {
+      "default": ""
+    },
+    "evtPlayerPingOMW": {
+      "default": ""
+    },
+    "evtPlayerPingRadialDanger": {
+      "default": ""
+    },
+    "evtPlayerStopPosition": {
+      "default": "[s]"
+    },
+    "evtRadialEmoteInstantOpen": {
+      "default": "[t]"
+    },
+    "evtRadialEmoteOpen": {
+      "default": ""
+    },
+    "evtRadialEmotePlaySlot0": {
+      "default": ""
+    },
+    "evtRadialEmotePlaySlot1": {
+      "default": ""
+    },
+    "evtRadialEmotePlaySlot2": {
+      "default": ""
+    },
+    "evtRadialEmotePlaySlot3": {
+      "default": ""
+    },
+    "evtRadialEmotePlaySlot4": {
+      "default": ""
+    },
+    "evtScrollDown": {
+      "default": "[Down Arrow]"
+    },
+    "evtScrollLeft": {
+      "default": "[Left Arrow]"
+    },
+    "evtScrollRight": {
+      "default": "[Right Arrow]"
+    },
+    "evtScrollUp": {
+      "default": "[Up Arrow]"
+    },
+    "evtSelectAlly1": {
+      "default": "[F2]"
+    },
+    "evtSelectAlly2": {
+      "default": "[F3]"
+    },
+    "evtSelectAlly3": {
+      "default": "[F4]"
+    },
+    "evtSelectAlly4": {
+      "default": "[F5]"
+    },
+    "evtSelectSelf": {
+      "default": "[F1]"
+    },
+    "evtSelfCastAvatarSpell1": {
+      "default": "[Alt][d],"
+    },
+    "evtSelfCastAvatarSpell2": {
+      "default": "[Alt][f],"
+    },
+    "evtSelfCastItem1": {
+      "default": "[Alt][1]"
+    },
+    "evtSelfCastItem2": {
+      "default": "[Alt][2]"
+    },
+    "evtSelfCastItem3": {
+      "default": "[Alt][3]"
+    },
+    "evtSelfCastItem4": {
+      "default": "[Alt][5]"
+    },
+    "evtSelfCastItem5": {
+      "default": "[Alt][6]"
+    },
+    "evtSelfCastItem6": {
+      "default": "[Alt][7]"
+    },
+    "evtSelfCastSpell1": {
+      "default": "[Alt][q],"
+    },
+    "evtSelfCastSpell2": {
+      "default": "[Alt][w],"
+    },
+    "evtSelfCastSpell3": {
+      "default": "[Alt][e],"
+    },
+    "evtSelfCastSpell4": {
+      "default": "[Alt][r],"
+    },
+    "evtSelfCastVisionItem": {
+      "default": "[Alt][4]"
+    },
+    "evtShowCharacterMenu": {
+      "default": "[c]"
+    },
+    "evtShowHealthBars": {
+      "default": ""
+    },
+    "evtShowScoreBoard": {
+      "default": "[o]"
+    },
+    "evtShowSummonerNames": {
+      "default": ""
+    },
+    "evtSmartCastAvatarSpell1": {
+      "default": "[Shift][d]"
+    },
+    "evtSmartCastAvatarSpell2": {
+      "default": "[Shift][f]"
+    },
+    "evtSmartCastItem1": {
+      "default": "[Shift][1]"
+    },
+    "evtSmartCastItem2": {
+      "default": "[Shift][2]"
+    },
+    "evtSmartCastItem3": {
+      "default": "[Shift][3]"
+    },
+    "evtSmartCastItem4": {
+      "default": "[Shift][5]"
+    },
+    "evtSmartCastItem5": {
+      "default": "[Shift][6]"
+    },
+    "evtSmartCastItem6": {
+      "default": "[Shift][7]"
+    },
+    "evtSmartCastSpell1": {
+      "default": "[Shift][q]"
+    },
+    "evtSmartCastSpell2": {
+      "default": "[Shift][w]"
+    },
+    "evtSmartCastSpell3": {
+      "default": "[Shift][e]"
+    },
+    "evtSmartCastSpell4": {
+      "default": "[Shift][r]"
+    },
+    "evtSmartCastVisionItem": {
+      "default": "[Shift][4]"
+    },
+    "evtSmartCastWithIndicatorAvatarSpell1": {
+      "default": ""
+    },
+    "evtSmartCastWithIndicatorAvatarSpell2": {
+      "default": ""
+    },
+    "evtSmartCastWithIndicatorItem1": {
+      "default": ""
+    },
+    "evtSmartCastWithIndicatorItem2": {
+      "default": ""
+    },
+    "evtSmartCastWithIndicatorItem3": {
+      "default": ""
+    },
+    "evtSmartCastWithIndicatorItem4": {
+      "default": ""
+    },
+    "evtSmartCastWithIndicatorItem5": {
+      "default": ""
+    },
+    "evtSmartCastWithIndicatorItem6": {
+      "default": ""
+    },
+    "evtSmartCastWithIndicatorSpell1": {
+      "default": ""
+    },
+    "evtSmartCastWithIndicatorSpell2": {
+      "default": ""
+    },
+    "evtSmartCastWithIndicatorSpell3": {
+      "default": ""
+    },
+    "evtSmartCastWithIndicatorSpell4": {
+      "default": ""
+    },
+    "evtSmartCastWithIndicatorVisionItem": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastAvatarSpell1": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastAvatarSpell2": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastItem1": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastItem2": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastItem3": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastItem4": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastItem5": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastItem6": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastSpell1": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastSpell2": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastSpell3": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastSpell4": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastVisionItem": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastWithIndicatorAvatarSpell1": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastWithIndicatorAvatarSpell2": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastWithIndicatorItem1": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastWithIndicatorItem2": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastWithIndicatorItem3": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastWithIndicatorItem4": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastWithIndicatorItem5": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastWithIndicatorItem6": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastWithIndicatorSpell1": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastWithIndicatorSpell2": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastWithIndicatorSpell3": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastWithIndicatorSpell4": {
+      "default": ""
+    },
+    "evtSmartPlusSelfCastWithIndicatorVisionItem": {
+      "default": ""
+    },
+    "evtSysMenu": {
+      "default": "[Esc]"
+    },
+    "evtToggleMinionHealthBars": {
+      "default": ""
+    },
+    "evtUseItem1": {
+      "default": "[1]"
+    },
+    "evtUseItem2": {
+      "default": "[2]"
+    },
+    "evtUseItem3": {
+      "default": "[3]"
+    },
+    "evtUseItem4": {
+      "default": "[5]"
+    },
+    "evtUseItem5": {
+      "default": "[6]"
+    },
+    "evtUseItem6": {
+      "default": "[7]"
+    },
+    "evtUseItem7": {
+      "default": "[b]"
+    },
+    "evtUseVisionItem": {
+      "default": "[4]"
+    }
+  },
+  "HUDEvents": {
+    "evtHoldShowScoreBoard": {
+      "default": "[Tab]"
+    },
+    "evtToggleFPSAndLatency": {
+      "default": "[Ctrl][f]"
+    },
+    "evtToggleMouseClip": {
+      "default": "[F9]"
+    },
+    "evtTogglePlayerStats": {
+      "default": "[Ctrl][c]"
+    }
+  },
+  "Quickbinds": {
+    "evtCastAvatarSpell1smart": {
+      "default": true
+    },
+    "evtCastAvatarSpell2smart": {
+      "default": true
+    },
+    "evtCastSpell1smart": {
+      "default": true
+    },
+    "evtCastSpell2smart": {
+      "default": true
+    },
+    "evtCastSpell3smart": {
+      "default": true
+    },
+    "evtCastSpell4smart": {
+      "default": true
+    },
+    "evtUseItem1smart": {
+      "default": false
+    },
+    "evtUseItem2smart": {
+      "default": false
+    },
+    "evtUseItem3smart": {
+      "default": false
+    },
+    "evtUseItem4smart": {
+      "default": false
+    },
+    "evtUseItem5smart": {
+      "default": false
+    },
+    "evtUseItem6smart": {
+      "default": false
+    },
+    "evtUseVisionItemsmart": {
+      "default": false
+    }
+  },
+  "ShopEvents": {
+    "evtShopFocusSearch": {
+      "default": "[Ctrl][l],[Ctrl][Return]"
+    },
+    "evtShopSwitchTabs": {
+      "default": "[Ctrl][Tab]"
+    }
+  }
+}

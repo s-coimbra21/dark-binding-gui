@@ -1,0 +1,151 @@
+@import '~react-hextech/lib/theme.scss';
+
+$active-color: rgb(70, 55, 20);
+
+.primaryHotkey {
+  position: relative;
+  height: 100px;
+  width: 60px;
+  margin-right: 5px;
+  padding: 1px;
+  float: left;
+  cursor: pointer;
+  background: linear-gradient(
+    to bottom,
+    rgb(129, 112, 76) 0%,
+    rgb(71, 57, 33) 100%
+  );
+
+  .background {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    left: 1px;
+    right: 1px;
+    background: #1e2328;
+  }
+
+  .button {
+    border: 1px solid rgba(1, 10, 19, 0.5);
+    height: 75%;
+    color: $text-dark;
+    text-align: center;
+    padding-top: 68%;
+    font-size: 35px;
+    font-family: 'LoL Display';
+    font-weight: bold;
+
+    &:hover {
+      color: $gold;
+    }
+  }
+
+  .spacer {
+    height: 1px;
+    background: rgb(89, 71, 40);
+  }
+
+  .quickcastButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    border: 1px solid rgba(1, 10, 19, 0.5);
+
+    .spark {
+      height: 16px;
+      fill: $text-dark;
+    }
+
+    &:hover .spark {
+      fill: $gold;
+    }
+  }
+
+  &:hover {
+    background: linear-gradient(
+      to bottom,
+      lighten(rgb(129, 112, 76), 35%) 0%,
+      lighten(rgb(71, 57, 33), 35%) 100%
+    );
+
+    .background {
+      background-image: linear-gradient(
+        to bottom,
+        #1e232a 0%,
+        #1e232a 40%,
+        rgba(118, 97, 51, 0.8) 140%
+      );
+    }
+
+    .spacer {
+      background: lighten(rgb(89, 71, 40), 35%);
+    }
+  }
+
+  &:active {
+    background: linear-gradient(to bottom, rgb(38, 34, 20), rgb(61, 50, 29));
+
+    .spacer {
+      background: rgb(38, 34, 20);
+    }
+  }
+
+  &.quickcast {
+    padding: 2px;
+    background: linear-gradient(
+      to bottom,
+      #785b28 0%,
+      #c89c3c 55%,
+      #c8a355 71%,
+      #c8aa6e 100%
+    );
+    border-image-slice: 1;
+
+    .button {
+      color: $gold;
+    }
+
+    .background {
+      top: 2px;
+      bottom: 2px;
+      left: 2px;
+      right: 2px;
+    }
+
+    .spacer {
+      height: 2px;
+      background: rgb(200, 164, 88);
+    }
+
+    .quickcastButton {
+      .spark {
+        fill: $gold;
+      }
+    }
+
+    &:hover {
+      background: linear-gradient(
+        to bottom,
+        #c89c3c 0%,
+        #dcc188 50%,
+        #e1c998 71%,
+        #f0e6d8 100%
+      );
+
+      .spacer {
+        background: rgb(227, 205, 161);
+      }
+    }
+
+    &:active {
+      background: linear-gradient(to bottom, rgb(38, 34, 20), rgb(61, 50, 29));
+
+      .spacer {
+        background: rgb(38, 34, 20);
+      }
+    }
+  }
+}

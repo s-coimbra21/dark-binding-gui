@@ -1,0 +1,38 @@
+@import '~react-hextech/lib/theme';
+
+.groupListItem {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  padding: 5px;
+
+  form {
+    width: 30%;
+
+    input {
+      cursor: pointer;
+      color: $text-dark;
+      width: 100%;
+      padding: 0;
+      margin-right: 5px;
+      user-select: none;
+      appearance: none;
+      background: none;
+      outline: none;
+      border: none;
+
+      font-family: 'Beaufort';
+      font-size: 18px;
+    }
+  }
+
+  &:hover {
+    background-color: transparentize($color: $gunmetal, $amount: 0.5);
+  }
+
+  &.editing {
+    input {
+      cursor: text;
+    }
+  }
+}

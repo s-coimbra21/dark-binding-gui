@@ -1,0 +1,255 @@
+/* LCU Emulation
+   ========================================================================== */
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  color: rgb(62.7%, 60.8%, 54.9%);
+  line-height: 16px;
+  letter-spacing: 0.025em;
+  font-family: 'Spiegel';
+  font-size: 12px;
+
+  ::-webkit-scrollbar {
+    width: 11px;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border: 3px solid transparent;
+    border-radius: 6px;
+    background-clip: padding-box;
+    min-height: 32px;
+    background-color: #785a28;
+  }
+}
+
+html {
+  margin: 1px;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-image: url('../../static/background.png');
+  background-size: 101% 101%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+img,
+iframe {
+  -webkit-user-select: none;
+  //	-webkit-font-smoothing: antialiased;
+}
+
+body,
+img,
+iframe,
+a {
+  -webkit-user-drag: none;
+}
+
+@font-face {
+  font-family: 'Spiegel';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../../static/spiegel/Spiegel-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Spiegel';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../../static/spiegel/Spiegel-SemiBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Spiegel';
+  font-weight: 900;
+  font-style: normal;
+  src: url('../../static/spiegel/Spiegel-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Spiegel';
+  font-weight: normal;
+  font-style: italic;
+  src: url('../../static/spiegel/Spiegel-RegularItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Spiegel';
+  font-weight: 700;
+  font-style: italic;
+  src: url('../../static/spiegel/Spiegel-SemiBoldItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Spiegel';
+  font-weight: 900;
+  font-style: italic;
+  src: url('../../static/spiegel/Spiegel-BoldItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Beaufort';
+  font-weight: 300;
+  font-style: normal;
+  src: url('../../static/beaufort/BeaufortForLoL-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Beaufort';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../../static/beaufort/BeaufortForLoL-Regular.otf')
+    format('opentype');
+}
+
+@font-face {
+  font-family: 'Beaufort';
+  font-weight: 500;
+  font-style: normal;
+  src: url('../../static/beaufort/BeaufortForLoL-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Beaufort';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../../static/beaufort/BeaufortForLoL-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Beaufort';
+  font-weight: 900;
+  font-style: normal;
+  src: url('../../static/beaufort/BeaufortForLoL-Heavy.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Beaufort';
+  font-weight: 300;
+  font-style: italic;
+  src: url('../../static/beaufort/BeaufortForLoL-LightItalic.otf')
+    format('opentype');
+}
+
+@font-face {
+  font-family: 'Beaufort';
+  font-weight: normal;
+  font-style: italic;
+  src: url('../../static/beaufort/BeaufortForLoL-Italic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Beaufort';
+  font-weight: 500;
+  font-style: italic;
+  src: url('../../static/beaufort/BeaufortForLoL-MediumItalic.otf')
+    format('opentype');
+}
+
+@font-face {
+  font-family: 'Beaufort';
+  font-weight: 700;
+  font-style: italic;
+  src: url('../../static/beaufort/BeaufortForLoL-BoldItalic.otf')
+    format('opentype');
+}
+
+@font-face {
+  font-family: 'Beaufort';
+  font-weight: 900;
+  font-style: italic;
+  src: url('../../static/beaufort/BeaufortForLoL-HeavyItalic.otf')
+    format('opentype');
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+acronym,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark {
+  cursor: default;
+}

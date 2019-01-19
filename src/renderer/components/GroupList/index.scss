@@ -1,0 +1,24 @@
+@import '~react-hextech/lib/theme';
+
+.groupList {
+  display: flex;
+  margin: 20px;
+  flex-direction: column;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    background: $gunmetal;
+    padding: 5px;
+
+    h3 {
+      text-transform: uppercase;
+      color: $text-light;
+      margin: 0;
+    }
+
+    h3:first-child {
+      width: 30%;
+    }
+  }
+}
