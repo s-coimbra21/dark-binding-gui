@@ -14,3 +14,10 @@ export const inputSettingsSchema = {
 export const chat = {
   me: get<{ id: string }>('/lol-chat/v1/me'),
 };
+
+export const champions = {
+  get: (summonerId: number) =>
+    get<Champions>(
+      `/lol-champions/v1/inventories/${summonerId}/champions-minimal`
+    )(),
+};

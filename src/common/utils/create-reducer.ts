@@ -4,7 +4,7 @@ import { ActionCreator, StringOrSymbol } from 'typesafe-actions/dist/types';
 
 type ActionMap = { [key: string]: ActionType<any> };
 type Handlers<S, T extends ActionMap> = {
-  [K in keyof T]: T[K] extends ActionCreator<StringOrSymbol>
+  [K in keyof T]?: T[K] extends ActionCreator<StringOrSymbol>
     ? (
         prevState: S,
         payload: ReturnType<T[K]>['payload'],
@@ -27,6 +27,8 @@ export function createReducer<S, T extends ActionMap>(
         if (typeof handlerGroup[key] === 'object') {
           return Object.assign(actionTypes, processHandlers(handlerGroup[key]));
         }
+
+        if (!handlerGroup[key]) return;
 
         actionTypes[getType(actions[key])] = handlerGroup[key];
       });

@@ -1,13 +1,15 @@
-import Store from 'electron-store';
+import { get, set } from 'lodash';
+
 import { createReducer } from '@utils/create-reducer';
+import { updateInputSettings } from '@utils/parse-binding';
+import store from '@utils/store';
 
 import * as actions from './actions';
 
-const store = new Store();
-
 const initialState: GroupsState = {
   hasChanges: false,
-  groups: [],
+  championGroups: store.get('champions', {}),
+  groups: store.get('groups', {}),
 };
 
 export default createReducer(initialState, actions)({
@@ -21,19 +23,48 @@ export default createReducer(initialState, actions)({
 
     return { ...state, hasChanges: false };
   },
-  addGroup: (state, payload) => {
-    let name = payload;
-    let suffix = 0;
+  addGroup: (state, { name, group }) => ({
+    ...state,
+    hasChanges: true,
+    groups: { ...state.groups, [name]: group },
+  }),
+  updateDefaultGroup: (state, defaultGroup) => ({
+    ...state,
+    groups: {
+      ...state.groups,
+      default: defaultGroup,
+    },
+  }),
+  changeBinding: (state, { groupName, path, value }) => {
+    const groups = state.groups;
+    const group = groups[groupName];
 
-    while (state.groups.findIndex(g => g.name === name) !== -1) {
-      suffix++;
-      name = payload + ` (${suffix})`;
-    }
+    updateInputSettings(group, path, value);
+
+    groups[groupName] = { ...group };
 
     return {
       ...state,
       hasChanges: true,
-      groups: state.groups.concat([{ name, champions: [] }]),
+      groups,
+    };
+  },
+  changeQuickcast: (state, { groupName, dataKey }) => {
+    const groups = state.groups;
+    const group = groups[groupName];
+
+    set(
+      group,
+      ['Quickbinds', dataKey + 'smart'],
+      !get(group, ['Quickbinds', dataKey + 'smart'])
+    );
+
+    groups[groupName] = { ...group };
+
+    return {
+      ...state,
+      hasChanges: true,
+      groups,
     };
   },
 });

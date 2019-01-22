@@ -17,12 +17,11 @@ declare interface Credentials {
   password: string;
 }
 
-declare interface LockfileData extends Credentials {
-  summoner?: string;
-}
-
 declare namespace NodeJS {
   interface Global {
-    credentials?: LockfileData;
+    credentials?: Credentials;
+    defaultSettings?: InputSettings;
   }
 }
+
+declare var __static: string;

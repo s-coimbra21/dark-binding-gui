@@ -1,21 +1,8 @@
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 
-import { PrimaryHotkey } from '../PrimaryHotkey';
+import PrimaryHotkey from '../../containers/PrimaryHotkey';
 
 const style = require('./index.scss');
-
-interface Binding {
-  label: string;
-  section: string;
-  dataKey: string;
-  smartCastDataKey?: string;
-}
-
-interface Section {
-  label: string;
-  twoSets?: boolean;
-  controls: Binding[];
-}
 
 const sections: Section[] = [
   {
@@ -23,34 +10,49 @@ const sections: Section[] = [
     controls: [1, 2, 3, 4].map(i => ({
       label: `Cast Ability ${i}`,
       section: 'GameEvents',
-      dataKey: `evtNormalCastSpell${i}`,
-      smartCastDataKey: `evtSmartCastSpell${i}`,
+      dataKey: `evtCastSpell${i}`,
     })),
   },
   {
     label: 'Summoner Spells',
     controls: [1, 2].map(i => ({
-      label: `Cast Summoner Spell ${1}`,
+      label: `Cast Summoner Spell ${i}`,
       section: 'GameEvents',
       dataKey: `evtCastAvatarSpell${i}`,
     })),
   },
-  { label: 'Items', keybinds: [1, 2, 3, 4, 5, 6].map(n => `evtUseItem${n}`) },
-  { label: 'Trinket', keybinds: ['evtUseVisionItem'] },
+  {
+    label: 'Items',
+    controls: [1, 2, 3, 4, 5, 6].map(i => ({
+      label: `Use Item ${i}`,
+      section: 'GameEvents',
+      dataKey: `evtUseItem${i}`,
+    })),
+  },
+  {
+    label: 'Trinket',
+    controls: [
+      {
+        label: 'Use Trinket',
+        section: 'GameEvents',
+        dataKey: 'evtUseVisionItem',
+      },
+    ],
+  },
 ];
 
-const PrimaryBindingRow: FC<Section> = ({ label, controls }) => (
+const PrimaryBindingRow: FC<Section> = memo(({ label, controls }) => (
   <div className={style.category}>
     <div className={style.label}>{label}</div>
     <div>
-      {keybinds.map(k => {
-        return <PrimaryHotkey key={k} />;
+      {controls.map(c => {
+        return <PrimaryHotkey key={c.label} {...c} />;
       })}
     </div>
   </div>
-);
+));
 
-export const PrimaryBindings: FC = ({ name }) => (
+export const PrimaryBindings: FC = memo(() => (
   <section className={style.primaryBindingsWrapper}>
     <h3>Primary Bindings</h3>
     <div className={style.primaryBindings}>
@@ -64,4 +66,4 @@ export const PrimaryBindings: FC = ({ name }) => (
       </div>
     </div>
   </section>
-);
+));

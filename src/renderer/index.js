@@ -5,20 +5,14 @@ import { ConnectedRouter } from 'connected-react-router';
 
 import { TitleBar } from '@components/TitleBar';
 
-import 'normalize.css/normalize.css';
 import './hextech.css';
 
 import store, { history } from './store';
-import Routes from './routes';
+import routes from './routes';
 
 render(
   <Provider store={store}>
-    <ConnectedRouter history={history}>
-      <Fragment>
-        <TitleBar />
-        <Routes />
-      </Fragment>
-    </ConnectedRouter>
+    <ConnectedRouter history={history}>{routes()}</ConnectedRouter>
   </Provider>,
   document.getElementById('app')
 );

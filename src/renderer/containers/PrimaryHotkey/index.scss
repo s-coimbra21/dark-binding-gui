@@ -27,15 +27,31 @@ $active-color: rgb(70, 55, 20);
     background: #1e2328;
   }
 
+  .modifier {
+    position: absolute;
+    right: 0;
+    left: 0;
+
+    height: 18px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-top: 6px;
+    font-size: 13px;
+  }
+
   .button {
     border: 1px solid rgba(1, 10, 19, 0.5);
     height: 75%;
     color: $text-dark;
     text-align: center;
     padding-top: 68%;
-    font-size: 35px;
-    font-family: 'LoL Display';
+    font-size: 36px;
+    font-family: 'Beaufort';
     font-weight: bold;
+    text-transform: uppercase;
+    line-height: 0.5;
 
     &:hover {
       color: $gold;
@@ -64,7 +80,7 @@ $active-color: rgb(70, 55, 20);
     }
   }
 
-  &:hover {
+  &:hover:not(:active) {
     background: linear-gradient(
       to bottom,
       lighten(rgb(129, 112, 76), 35%) 0%,

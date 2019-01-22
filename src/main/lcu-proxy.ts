@@ -1,58 +1,87 @@
-import { ipcMain, WebContents } from 'electron';
+import { app, ipcMain, webContents, WebContents } from 'electron';
+import http from 'http';
+import connect from 'connect';
+import url from 'url';
 import logger from 'electron-log';
 
 import { Connector } from '@utils/lcu-connector';
+import { baseRequest } from '@utils/lcu-request';
+import store from '@utils/store';
+
+import { start } from './binding-manager';
 
 logger.debug('starting LCU Connector');
 
-const connector = new Connector();
+export const connector = new Connector();
 
-connector.on('connect', (settings: LockfileData) => {
+const connectApp = connect();
+let server = http.createServer(connectApp);
+
+connectApp.use((req: http.IncomingMessage, res: http.ServerResponse) => {
+  if (!req.url) return res.writeHead(400);
+
+  const path = url.parse(req.url).pathname;
+
+  if (!path || !path.includes('/lol-game-data/assets'))
+    return res.writeHead(500);
+
+  baseRequest({ uri: path!, encoding: null }).pipe(res);
+});
+
+server.listen();
+
+const broadcast = (event: string, data?: any) => {
+  webContents.getAllWebContents().forEach(win => win.send(event, data));
+};
+
+const firstTimeSetup = (settings: InputSettings) => {
+  const setupFinished = store.get('_setupFinished', false);
+  if (setupFinished) return;
+
+  try {
+    store.set('groups.default', settings);
+    broadcast('lcu-game-settings', settings);
+    store.set('_setupFinished', true);
+  } catch (e) {
+    return app.exit(1);
+  }
+};
+
+const state: LCUState = {
+  champions: [],
+};
+
+connector.on('connect', (credentials: Credentials) => {
   logger.debug('LCU connected, updating main process cache');
 
-  global.credentials = settings;
+  global.credentials = credentials;
+  state.credentials = credentials;
 
-  connector.on('login', (summoner: string) => {
-    if (!global.credentials) return;
+  broadcast('lcu-connect', credentials);
+});
 
-    global.credentials.summoner = summoner;
-  });
+connector.on('login', ({ summoner, settings, champions }) => {
+  firstTimeSetup(settings);
+  start(summoner, settings);
 
-  connector.on('disconnect', () => {
-    logger.debug('LCU disconnected, updating main process cache');
+  state.summoner = summoner;
+  state.champions = champions;
 
-    global.credentials = undefined;
-  });
+  broadcast('lcu-login', { summoner, settings, champions });
+});
+
+connector.on('disconnect', () => {
+  logger.debug('LCU disconnected, updating main process cache');
+
+  global.credentials = undefined;
+
+  broadcast('lcu-disconnect');
 });
 
 ipcMain.on('lcu-subscribe', (event: { sender: WebContents }) => {
   const webContents = event.sender;
 
-  if (global.credentials) webContents.send('lcu-connect', global.credentials);
-
-  const handleConnect = (settings: LockfileData) => {
-    logger.debug('LCU connected, notifying renderer');
-
-    webContents.send('lcu-connect', settings);
-  };
-
-  const handleDisconnect = () => {
-    webContents.send('lcu-disconnect');
-  };
-
-  const handleLogin = (summoner: string) => {
-    webContents.send('lcu-login', summoner);
-  };
-
-  connector.on('connect', handleConnect);
-  connector.on('login', handleLogin);
-  connector.on('disconnect', handleDisconnect);
-
-  webContents.once('destroyed', () => {
-    connector.off('connect', handleConnect);
-    connector.off('login', handleLogin);
-    connector.off('disconnect', handleDisconnect);
-  });
+  if (global.credentials) webContents.send('lcu-connect', state);
 });
 
 connector.start();

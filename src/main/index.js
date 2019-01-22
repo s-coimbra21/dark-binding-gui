@@ -9,9 +9,11 @@ import installExtension, {
 import { getInitialWindowDimensions } from './window-scale';
 import { createMainWindow } from './main-window';
 
-import './lcu-proxy';
-
 const isDevelopment = process.env.NODE_ENV !== 'production';
+
+if (!app.requestSingleInstanceLock()) {
+  app.quit();
+}
 
 // global reference to mainWindow (necessary to prevent window from being garbage collected)
 let mainWindow;
@@ -23,5 +25,7 @@ app.on('window-all-closed', () => {
 
 // create main BrowserWindow when electron is ready
 app.on('ready', () => {
+  require('./lcu-proxy');
+
   mainWindow = createMainWindow();
 });

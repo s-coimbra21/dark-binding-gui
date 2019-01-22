@@ -1,13 +1,20 @@
 import { createSelector } from 'reselect';
 import { RootState } from '@types';
 
+import { defaultGroup } from '@groups/selectors';
+
 const lcu = (state: RootState) => state.lcu;
 
 export const lcuStatus = createSelector(
   lcu,
-  ({ port, password, summoner }) => {
+  defaultGroup,
+  ({ credentials, summoner }, defaultGroup) => {
+    if (!credentials) return 'closed';
+
+    const { port, password } = credentials;
+
     if (!port || !password) return 'closed';
-    if (!summoner) return 'loggedOut';
+    if (!summoner || !defaultGroup) return 'loggedOut';
 
     return 'loggedIn';
   }

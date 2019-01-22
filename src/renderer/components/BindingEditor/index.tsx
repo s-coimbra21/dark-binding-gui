@@ -1,16 +1,13 @@
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 
 import { PrimaryBindings } from './PrimaryBindings';
 
 const style = require('./index.scss');
 
-interface BindingEditorProps extends BindingGroup {
-  settings: InputSettings;
-}
+interface BindingEditorProps {}
 
-export const BindingEditor: FC<BindingEditorProps> = ({ name }) => (
+export const BindingEditor: FC<BindingEditorProps> = memo(() => (
   <section className={style.editor}>
-    <h1>Editing {name}</h1>
     <PrimaryBindings />
   </section>
-);
+));

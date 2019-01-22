@@ -8,5 +8,6 @@ export const down = createAction('@@lcu/down');
 
 export const login = createAction(
   '@@lcu/login',
-  resolve => (username: string) => resolve(username)
+  resolve => (summonerId: number, champions: Champions) =>
+    resolve({ summonerId, champions })
 );

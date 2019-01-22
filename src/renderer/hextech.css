@@ -1,39 +1,40 @@
 /* LCU Emulation
    ========================================================================== */
 
+html {
+  color: rgb(62.7%, 60.8%, 54.9%);
+  line-height: 16px;
+  letter-spacing: 0.025em;
+  font-family: 'Spiegel' !important;
+  font-size: 12px !important;
+}
+
 html,
 body {
   height: 100%;
   overflow: hidden;
-  color: rgb(62.7%, 60.8%, 54.9%);
-  line-height: 16px;
-  letter-spacing: 0.025em;
-  font-family: 'Spiegel';
-  font-size: 12px;
-
-  ::-webkit-scrollbar {
-    width: 11px;
-    background-color: transparent;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    border: 3px solid transparent;
-    border-radius: 6px;
-    background-clip: padding-box;
-    min-height: 32px;
-    background-color: #785a28;
-  }
 }
 
-html {
-  margin: 1px;
+*::-webkit-scrollbar {
+  width: 11px;
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: 6px;
+  background-clip: padding-box;
+  min-height: 32px;
+  background-color: #785a28;
 }
 
 #app {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background-image: url('../../static/background.png');
+  background-image: url('~static/background.png');
   background-size: 101% 101%;
   background-position: center;
   background-repeat: no-repeat;
@@ -48,7 +49,7 @@ body,
 img,
 iframe {
   -webkit-user-select: none;
-  //	-webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 body,

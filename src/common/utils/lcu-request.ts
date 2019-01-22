@@ -3,34 +3,37 @@ import req, { Options } from 'request-promise';
 
 export { Options };
 
+export const baseRequest = (options: Options, callback?: RequestCallback) => {
+  const { port, password } = global.credentials!;
+  const authorization = new Buffer(`riot:${password}`).toString('base64');
+
+  return req(
+    {
+      baseUrl: `https://127.0.0.1:${port}`,
+      headers: {
+        Authorization: `Basic ${authorization}`,
+        Referer: `https://127.0.0.1:${port}/index.html`,
+      },
+      rejectUnauthorized: false,
+      ...options,
+    },
+    callback
+  );
+};
+
 export function request<T = any>(
   uri: string,
   options?: Partial<Options>,
   forceCredentials?: Credentials,
   callback?: RequestCallback
 ) {
-  const credentials = global.credentials || forceCredentials;
-
-  if (!credentials) return Promise.reject(new Error('LCU not ready'));
-
-  const { port, password } = credentials;
-
-  const authorization = new Buffer(`riot:${password}`).toString('base64');
-
-  return (req(
-    Object.assign(
-      {
-        uri,
-        baseUrl: `https://127.0.0.1:${port}`,
-        headers: {
-          authorization: `Basic ${authorization}`,
-          Referer: `https://127.0.0.1:${port}/index.html`,
-        },
-        rejectUnauthorized: false,
-        json: true,
-      },
-      options
-    )
+  return (baseRequest(
+    {
+      ...options,
+      uri,
+      json: true,
+    },
+    callback
   ) as unknown) as Promise<T>;
 }
 

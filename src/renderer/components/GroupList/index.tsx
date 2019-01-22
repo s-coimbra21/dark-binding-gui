@@ -6,21 +6,21 @@ import { Link } from 'react-router-dom';
 const styles = require('./index.scss');
 
 interface GroupListProps {
-  groups: BindingGroup[];
-  addGroup: (name: string) => void;
+  groups: [string, BindingGroup][];
+  createGroup: (name: string) => void;
 }
 
-export const GroupList: FC<GroupListProps> = ({ groups = [], addGroup }) => (
+export const GroupList: FC<GroupListProps> = ({ groups = [], createGroup }) => (
   <div className={styles.groupList}>
     <div className={styles.header}>
       <h3>Name</h3>
       <h3>Champions</h3>
     </div>
-    {groups.map(group => (
-      <Link to={`/editor/${group.name}`}>
-        <GroupListItem key={group.name} group={group} onChange={console.log} />
+    {groups.map(([name, group]) => (
+      <Link key={name} to={`/editor/${name}`}>
+        <GroupListItem name={name} onChange={console.log} />
       </Link>
     ))}
-    <GroupListItem onChange={addGroup} />
+    <GroupListItem onChange={createGroup} />
   </div>
 );

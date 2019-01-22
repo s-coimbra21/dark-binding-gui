@@ -1,0 +1,31 @@
+@import '~react-hextech/lib/theme.scss';
+
+.modal {
+  & > * {
+    margin-bottom: 10px;
+  }
+}
+
+.title {
+  color: $gold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.binding {
+  color: $gold-medium;
+}
+
+.unbind {
+  appearance: none;
+  background: none;
+  outline: none;
+  text-decoration: underline;
+  border: none;
+  color: $gold-medium;
+
+  &:disabled {
+    color: inherit;
+    opacity: 0.5;
+  }
+}

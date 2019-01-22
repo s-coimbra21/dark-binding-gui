@@ -1,14 +1,9 @@
-@import '~react-hextech/lib/theme.scss';
-
 .editor {
-  height: 100%;
-  width: 100%;
-  padding-left: 15px;
+  width: 40%;
 
   .primaryBindings {
     display: flex;
     flex-direction: column;
-    width: 40%;
 
     .row {
       display: flex;

@@ -10,7 +10,7 @@ const styles = require('./index.scss');
 
 interface GroupItemProps {
   className?: string;
-  group?: BindingGroup;
+  name?: string;
   inputProps?: HTMLAttributes<HTMLInputElement>;
   onChange: (name: string) => void;
 }
@@ -26,7 +26,7 @@ export class GroupListItem extends PureComponent<
 > {
   state: GroupItemState = {
     editing: false,
-    name: this.props.group ? this.props.group.name : '+ New Group',
+    name: this.props.name || '+ New Group',
   };
 
   inputRef = React.createRef<HTMLInputElement>();
@@ -34,9 +34,9 @@ export class GroupListItem extends PureComponent<
   input = {
     onClick: () => {
       const { editing } = this.state;
-      const { group } = this.props;
+      const { name } = this.props;
 
-      if (group || editing) return;
+      if (name || editing) return;
 
       this.setState(
         {
@@ -49,12 +49,14 @@ export class GroupListItem extends PureComponent<
       );
     },
     onChange: (evt: ChangeEvent<HTMLInputElement>) => {
-      this.setState({ name: evt.target.value });
+      this.setState({
+        name: evt.target.value.replace('.', '').substring(0, 12),
+      });
     },
     onBlur: () => {
       this.setState({
         editing: false,
-        name: this.props.group ? this.props.group.name : '+ New Group',
+        name: this.props.name || '+ New Group',
       });
     },
   };

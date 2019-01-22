@@ -15,31 +15,39 @@ export class Image extends PureComponent<ImageProps, ImageState> {
     image: '',
   };
 
-  getImage = () => {
-    request(
-      this.props.src,
-      { json: false, encoding: 'binary' },
-      undefined,
-      (err, req, body) => {
-        if (err) return; // do some shit to retry
+  // getImage = () => {
+  //   request(
+  //     this.props.src,
+  //     { json: false, encoding: 'binary' },
+  //     undefined,
+  //     (err, req, body) => {
+  //       if (err) return; // do some shit to retry
 
-        const mime = req.headers['content-type']!;
-        const base64 = new Buffer(body, 'binary').toString('base64');
-        const dataURI = 'data:' + mime + ';base64,' + base64;
+  //       const mime = req.headers['content-type']!;
+  //       const base64 = new Buffer(body, 'binary').toString('base64');
+  //       const dataURI = 'data:' + mime + ';base64,' + base64;
 
-        this.setState({ image: dataURI });
-      }
-    );
-  };
+  //       this.setState({ image: dataURI });
+  //     }
+  //   );
+  // };
+
+  // componentDidMount() {
+  //   this.getImage();
+  // }
+
+  // componentDidUpdate(prevProps: ImageProps) {
+  //   if (this.props.src !== prevProps.src) this.getImage();
+  // }
 
   render() {
-    const { style, children, ...rest } = this.props;
-    const { image } = this.state;
+    const { src, style, children, ...rest } = this.props;
 
     return (
-      <div style={Object.assign({ backgroundImage: image }, style)} {...rest}>
-        {children}
-      </div>
+      <img
+        {...rest}
+        src={`https://127.0.0.1:${global.credentials!.port}${src}`}
+      />
     );
   }
 }

@@ -17,7 +17,7 @@ export const history = createHashHistory();
 const routerMiddleware = createRouterMiddleware(history);
 
 const enhancer = compose(
-  applyMiddleware(thunkMiddleware, routerMiddleware, loggerMiddleware)
+  applyMiddleware(routerMiddleware, thunkMiddleware, loggerMiddleware)
 );
 
 export default function configureStore(initialState: Partial<RootState>) {

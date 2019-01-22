@@ -1,0 +1,22 @@
+@import '~react-hextech/lib/theme.scss';
+
+.actions {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 15px;
+  border-top: 2px solid $border;
+
+  .buttons {
+    display: flex;
+
+    > *:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

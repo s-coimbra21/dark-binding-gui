@@ -1,12 +1,10 @@
 type ChampionId = string;
 
-declare interface BindingGroup {
-  name: string;
-  champions: ChampionId[];
-  settings?: InputSettings;
-}
+declare type BindingGroup = InputSettings;
 
 declare interface GroupsState {
   hasChanges: boolean;
-  groups: BindingGroup[];
+  // championId -> groupName
+  championGroups: Record<ChampionId, string>;
+  groups: Record<string, BindingGroup>;
 }
