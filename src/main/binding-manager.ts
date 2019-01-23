@@ -2,6 +2,7 @@ import { app, dialog, Tray } from 'electron';
 import logger from 'electron-log';
 import * as fs from 'fs-extra';
 import { join } from 'path';
+import { platform } from 'os';
 
 import { LeagueMonitor } from '@utils/lcu-ws';
 import { inputSettings } from '@utils/lcu-api';
@@ -9,7 +10,12 @@ import store from '@utils/store';
 
 import { connector } from './lcu-proxy';
 
-const tray = new Tray(join(__static, 'dark-binding.ico'));
+const tray = new Tray(
+  join(
+    __static,
+    platform() === 'win32' ? 'dark-biding.ico' : 'dark-binding.png'
+  )
+);
 
 const replaceConfig = async (group: string) => {
   const settings = store.get(`groups.${group}`);
@@ -94,7 +100,7 @@ export const start = (summonerId: number, settings: InputSettings) => {
 
     if (!self || !self.championId) return;
 
-    const groupName = store.get('champions')[self.championId] || 'default';
+    const groupName = store.get('championGroups')[self.championId] || 'default';
 
     logger.debug(`applying config: ${groupName}`);
 

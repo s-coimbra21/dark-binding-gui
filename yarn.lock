@@ -6205,9 +6205,10 @@ react-dom@^16.7.0:
     prop-types "^15.6.2"
     scheduler "^0.12.0"
 
-react-hextech@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/react-hextech/-/react-hextech-1.2.0.tgz#13ef846c4ffe2779bb860a5f891efc3e1ff595fa"
+react-hextech@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-hextech/-/react-hextech-1.2.1.tgz#72d687f3583b7f4c86426880a007df102e9d7fcd"
+  integrity sha512-Cl0RLLbUMA+AjXC0Zj2Y9YEIZ9rnqNPK/LiG5N+0gxgj1Y71cwibWKFhlGyDtKXrovIhi0inrrG3xpnbwQvHpQ==
   dependencies:
     classnames "^2.2.5"
     element-resize-detector "^1.1.11"

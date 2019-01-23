@@ -1,26 +1,40 @@
-import React, { FC } from 'react';
+import React, { FC, Fragment } from 'react';
 import { connect, ResolveThunks } from 'react-redux';
-import { get } from 'lodash/fp';
 
 import { RootState } from '@types';
 import { GroupList } from '@components/GroupList';
 import { Actions } from '@components/Actions';
 import * as groupsActions from '@groups/actions';
+import * as groupsSelectors from '@groups/selectors';
 
-type StateProps = GroupsState;
+interface StateProps {
+  championGroups: GroupByChampion;
+  userGroups: ReturnType<typeof groupsSelectors.userGroups>;
+  hasChanges: boolean;
+}
+
 type DispatchProps = ResolveThunks<typeof groupsActions>;
 
 type GroupManagerProps = StateProps & DispatchProps;
 
 const GroupManager: FC<GroupManagerProps> = ({
-  groups,
+  championGroups,
+  userGroups,
   hasChanges: hasChanged,
   createGroup,
   loadGroups,
   saveGroups,
+  changeName,
+  removeGroup,
 }) => (
-  <div>
-    <GroupList groups={Object.entries(groups)} createGroup={createGroup} />
+  <Fragment>
+    <GroupList
+      championGroups={championGroups}
+      userGroups={userGroups}
+      createGroup={createGroup}
+      renameGroup={changeName}
+      removeGroup={removeGroup}
+    />
     <Actions
       actions={[
         {
@@ -35,10 +49,14 @@ const GroupManager: FC<GroupManagerProps> = ({
         },
       ]}
     />
-  </div>
+  </Fragment>
 );
 
 export default connect(
-  get<RootState, 'groups'>('groups'),
+  (state: RootState) => ({
+    championGroups: state.groups.championGroups,
+    userGroups: groupsSelectors.userGroups(state),
+    hasChanges: state.groups.hasChanges,
+  }),
   groupsActions
 )(GroupManager);

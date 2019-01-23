@@ -1,13 +1,17 @@
 import Store from 'electron-store';
 
 interface StoreShape {
-  champions: Record<string | number, string>;
+  championGroups: Record<string | number, string>;
   groups: Record<string, BindingGroup>;
 }
 
-export default new Store<StoreShape>({
+const store = new Store<StoreShape>({
   defaults: {
-    champions: {},
-    groups: {},
+    championGroups: {},
+    groups: {
+      default: {} as BindingGroup,
+    },
   },
 });
+
+export default store;

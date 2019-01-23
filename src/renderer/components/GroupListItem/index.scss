@@ -2,16 +2,18 @@
 
 .groupListItem {
   display: flex;
-  align-items: center;
-  height: 36px;
+  align-items: flex-start;
   padding: 5px;
+  cursor: pointer;
+
+  * {
+    cursor: pointer;
+  }
 
   form {
     width: 30%;
 
     input {
-      cursor: pointer;
-      color: $text-dark;
       width: 100%;
       padding: 0;
       margin-right: 5px;
@@ -21,9 +23,28 @@
       outline: none;
       border: none;
 
+      color: $text-dark;
       font-family: 'Beaufort';
       font-size: 18px;
     }
+  }
+
+  .champions {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1;
+    margin-bottom: -5px;
+    line-height: normal;
+    color: $text-dark;
+    font-family: 'Beaufort';
+    font-size: 18px;
+  }
+
+  .actions {
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &:hover {

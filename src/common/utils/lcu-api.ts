@@ -19,5 +19,5 @@ export const champions = {
   get: (summonerId: number) =>
     get<Champions>(
       `/lol-champions/v1/inventories/${summonerId}/champions-minimal`
-    )(),
+    )().then(champions => champions.filter(c => c.id >= 0)),
 };

@@ -6,13 +6,18 @@ import React, {
 } from 'react';
 import cx from 'classnames';
 
+import { ChampionCircle } from '@components/ChampionCircle';
+import { ContextMenuConsumer } from '../../containers/ContextMenu';
+
 const styles = require('./index.scss');
 
 interface GroupItemProps {
   className?: string;
   name?: string;
   inputProps?: HTMLAttributes<HTMLInputElement>;
-  onChange: (name: string) => void;
+  champions?: Champion[];
+  onChange: (name: string, oldName?: string) => any;
+  onRemove: (name: string) => any;
 }
 
 interface GroupItemState {
@@ -38,15 +43,7 @@ export class GroupListItem extends PureComponent<
 
       if (name || editing) return;
 
-      this.setState(
-        {
-          name: '',
-          editing: true,
-        },
-        () => {
-          this.inputRef.current!.focus();
-        }
-      );
+      this.editName();
     },
     onChange: (evt: ChangeEvent<HTMLInputElement>) => {
       this.setState({
@@ -61,36 +58,77 @@ export class GroupListItem extends PureComponent<
     },
   };
 
+  editName = () => {
+    this.setState(
+      {
+        name: '',
+        editing: true,
+      },
+      () => {
+        this.inputRef.current!.focus();
+      }
+    );
+  };
+
+  handleRemove = () => {
+    this.props.onRemove(this.props.name!);
+  };
+
   handleSubmit = (evt: FormEvent<HTMLFormElement>) => {
+    if (!this.props.onChange) return;
+
     evt.preventDefault();
 
     if (!this.state.editing) return;
 
-    this.props.onChange(this.state.name);
+    this.props.onChange(this.state.name, this.props.name);
     this.inputRef.current!.blur();
   };
 
   render() {
-    const { className, inputProps } = this.props;
+    const { className, inputProps, champions = [] } = this.props;
     const { name, editing } = this.state;
 
+    const isDefault = this.props.name === 'Default';
+    const hasContextMenu = !isDefault && this.props.name;
+
     return (
-      <div
-        className={cx(styles.groupListItem, className, {
-          [`${styles.editing}`]: editing,
-        })}
-      >
-        <form onSubmit={this.handleSubmit} onClick={this.input.onClick}>
-          <input
-            disabled={!editing}
-            ref={this.inputRef}
-            type="text"
-            value={name}
-            {...this.input}
-            {...inputProps}
-          />
-        </form>
-      </div>
+      <ContextMenuConsumer>
+        {({ openContextMenu }) => (
+          <div
+            onContextMenu={
+              hasContextMenu
+                ? openContextMenu([
+                    { label: 'Rename', onClick: this.editName },
+                    { label: `Delete`, onClick: this.handleRemove },
+                  ])
+                : undefined
+            }
+            onClick={this.input.onClick}
+            className={cx(styles.groupListItem, className, {
+              [`${styles.editing}`]: editing,
+            })}
+          >
+            <form onSubmit={this.handleSubmit}>
+              <input
+                disabled={!editing}
+                ref={this.inputRef}
+                type="text"
+                value={name}
+                {...this.input}
+                {...inputProps}
+              />
+            </form>
+            <div className={styles.champions}>
+              {champions.map(champion => (
+                <ChampionCircle key={champion.id} {...champion} />
+              ))}
+              {isDefault &&
+                'The default group contains every unassigned champion.'}
+            </div>
+          </div>
+        )}
+      </ContextMenuConsumer>
     );
   }
 }

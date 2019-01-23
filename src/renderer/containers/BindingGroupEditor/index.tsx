@@ -21,6 +21,7 @@ interface StateProps {
   hasChanges: boolean;
   group: BindingGroup;
   champions: Champions;
+  championGroups: GroupByChampion;
 }
 
 type DispatchProps = ResolveThunks<typeof groupsActions>;
@@ -29,6 +30,9 @@ type BindingEditorProps = StateProps & DispatchProps;
 
 class BindingGroupEditor extends PureComponent<BindingEditorProps> {
   goBack = () => this.props.discardChanges('/');
+
+  assignChampion = (championId: number) =>
+    this.props.assignChampion({ group: this.props.name, championId });
 
   render() {
     const {
@@ -39,6 +43,7 @@ class BindingGroupEditor extends PureComponent<BindingEditorProps> {
       changeQuickcast,
       saveGroups,
       champions,
+      championGroups,
     } = this.props;
 
     if (!group) return <Redirect to="/" />;
@@ -55,8 +60,10 @@ class BindingGroupEditor extends PureComponent<BindingEditorProps> {
         >
           <BindingEditor />
           <ChampionSelector
+            groupName={name}
+            championGroups={championGroups}
             champions={champions}
-            onClickChampion={console.log}
+            onClickChampion={this.assignChampion}
           />
           <Actions
             actions={[
@@ -83,6 +90,7 @@ export default connect(
   (state: RootState, { groupName }: OuterProps) => ({
     name: groupName,
     hasChanges: state.groups.hasChanges,
+    championGroups: state.groups.championGroups,
     group: state.groups.groups[groupName],
     champions: state.lcu.champions,
   }),

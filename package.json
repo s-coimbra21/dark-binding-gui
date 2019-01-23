@@ -33,7 +33,7 @@
     "normalize.css": "^8.0.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-hextech": "^1.2.0",
+    "react-hextech": "^1.2.1",
     "react-modal": "^3.8.1",
     "react-redux": "^6.0.0",
     "react-router": "^4.3.1",

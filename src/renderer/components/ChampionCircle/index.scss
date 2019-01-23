@@ -1,0 +1,19 @@
+@import '~react-hextech/lib/theme.scss';
+
+$lcu-gold-border-gradient: linear-gradient(to bottom, #f0e6d2, #c99c3d);
+
+.frame {
+  min-width: 24px;
+  border-radius: 50%;
+  border: 2px solid $border-dark;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  overflow: hidden;
+
+  .portrait {
+    height: 20px;
+    width: 20px;
+    background-size: 115%;
+    background-position: center;
+  }
+}

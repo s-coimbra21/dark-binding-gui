@@ -3,17 +3,16 @@
 $lcu-gold-border-gradient: linear-gradient(to bottom, #f0e6d2, #c99c3d);
 $lcu-gold-border-gradient-active: linear-gradient(to top, #f0e6d2, #c99c3d);
 
-.champion-tile {
+.championTile {
   display: block;
-  width: 10.9%;
-  margin: 0 0 35px 0;
-  outline: 0;
+  height: 104px;
+  margin-bottom: 4px;
   will-change: transform;
 
   .frame {
     position: relative;
-    width: 70px;
-    margin: 0 auto 0.5em;
+    width: 66px;
+    margin: auto;
     padding: 2px;
     box-shadow: 0 0 0 1px #010913;
     cursor: pointer;
@@ -58,26 +57,17 @@ $lcu-gold-border-gradient-active: linear-gradient(to top, #f0e6d2, #c99c3d);
     }
   }
 
-  .background,
-  .placeholder {
-    background-size: 77px;
+  .portrait {
+    height: 62px;
+    background-size: 115%;
     background-position: center;
-    background-repeat: no-repeat;
-
-    img {
-      display: block;
-    }
   }
 
   .text {
+    margin-top: 4px;
     font-family: 'Spiegel';
-    line-height: 18px;
     letter-spacing: 0.075em;
     text-align: center;
-    position: absolute;
-    bottom: -18px;
-    left: 0;
-    right: 0;
     z-index: 10;
     pointer-events: none;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,

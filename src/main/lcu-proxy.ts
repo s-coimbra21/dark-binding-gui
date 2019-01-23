@@ -15,20 +15,26 @@ logger.debug('starting LCU Connector');
 export const connector = new Connector();
 
 const connectApp = connect();
-let server = http.createServer(connectApp);
+export const server = http.createServer(connectApp).listen();
+
+// @ts-ignore
+global.proxyPort = server.address().port;
+ipcMain.on('proxy-port', (event: any) => {
+  // @ts-ignore
+  event.returnValue = server.address().port;
+});
 
 connectApp.use((req: http.IncomingMessage, res: http.ServerResponse) => {
   if (!req.url) return res.writeHead(400);
 
   const path = url.parse(req.url).pathname;
 
-  if (!path || !path.includes('/lol-game-data/assets'))
+  if (!path || !path.startsWith('/lol-game-data/assets')) {
     return res.writeHead(500);
+  }
 
   baseRequest({ uri: path!, encoding: null }).pipe(res);
 });
-
-server.listen();
 
 const broadcast = (event: string, data?: any) => {
   webContents.getAllWebContents().forEach(win => win.send(event, data));
@@ -36,7 +42,9 @@ const broadcast = (event: string, data?: any) => {
 
 const firstTimeSetup = (settings: InputSettings) => {
   const setupFinished = store.get('_setupFinished', false);
-  if (setupFinished) return;
+  if (setupFinished) {
+    if (!store.get('groups.default')) store.set('groups.default', settings);
+  }
 
   try {
     store.set('groups.default', settings);
@@ -57,7 +65,7 @@ connector.on('connect', (credentials: Credentials) => {
   global.credentials = credentials;
   state.credentials = credentials;
 
-  broadcast('lcu-connect', credentials);
+  broadcast('lcu-connect', { credentials });
 });
 
 connector.on('login', ({ summoner, settings, champions }) => {

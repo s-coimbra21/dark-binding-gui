@@ -15,6 +15,7 @@ declare interface ChampSelectPacket {
 }
 
 declare interface Champion {
+  id: number;
   name: string;
   squarePortraitPath: string;
   onwership: {

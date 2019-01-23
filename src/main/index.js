@@ -7,7 +7,6 @@ import installExtension, {
 } from 'electron-devtools-installer';
 
 import { getInitialWindowDimensions } from './window-scale';
-import { createMainWindow } from './main-window';
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
@@ -26,6 +25,7 @@ app.on('window-all-closed', () => {
 // create main BrowserWindow when electron is ready
 app.on('ready', () => {
   require('./lcu-proxy');
+  const { createMainWindow } = require('./main-window');
 
   mainWindow = createMainWindow();
 });

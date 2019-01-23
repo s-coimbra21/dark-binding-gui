@@ -1,15 +1,41 @@
+@import '~react-hextech/lib/theme.scss';
+
 .championSelector {
+  display: flex;
+  flex-flow: column;
   flex: 1;
-  overflow-y: scroll;
-  overflow-x: hidden;
   margin-left: 10px;
 
-  & > ul {
-    width: 100%;
-    list-style: none;
-    display: flex;
-    flex: 1;
-    flex-flow: row wrap;
-    padding: 0;
+  .separator,
+  .options {
+    margin: 0 8px;
+    padding: 8px 0;
+  }
+
+  .separator {
+    border-bottom: 2px solid rgba(155, 125, 35, 0.5);
+    margin-bottom: 12px;
+  }
+
+  .options {
+    .checkbox {
+      float: right;
+    }
+  }
+
+  .scroller {
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      list-style: none;
+      flex: 1;
+
+      &.dimmed {
+        opacity: 0.5;
+      }
+    }
   }
 }
