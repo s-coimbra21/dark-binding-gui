@@ -22,7 +22,7 @@ const replaceConfig = async (group: string) => {
   const lockPath = join(app.getPath('userData'), 'lock');
 
   try {
-    const lock = await fs.readFile(lockPath, 'utf8');
+    const lock = await fs.readFile(lockPath, 'utf8').catch(() => false);
 
     if (!lock) {
       await fs.writeFile(lockPath, group, 'utf8');
