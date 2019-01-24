@@ -1,46 +1,22 @@
-# electron-webpack-quick-start
-> A bare minimum project structure to get started developing with [`electron-webpack`](https://github.com/electron-userland/electron-webpack).
+# Dark Binding
 
-Thanks to the power of `electron-webpack` this template comes packed with...
+This application was built for [Riot Games' 2018 API Challenge](https://www.riotgames.com/en/DevRel/the-riot-games-api-challenge-2018).
 
-* Use of [`webpack-dev-server`](https://github.com/webpack/webpack-dev-server) for development
-* HMR for both `renderer` and `main` processes
-* Use of [`babel-preset-env`](https://github.com/babel/babel-preset-env) that is automatically configured based on your `electron` version
-* Use of [`electron-builder`](https://github.com/electron-userland/electron-builder) to package and build a distributable electron application
+Dark Binding allows you to define groups of keybindings to which you can assign individual champions. When you go into a game, Dark Binding will detect your champion and automatically switch to the keybinding page you defined, if any.
 
-Make sure to check out [`electron-webpack`'s documentation](https://webpack.electron.build/) for more details.
+## Development
 
-## Getting Started
-Simply clone down this reposity, install dependencies, and get started on your application.
+### Requirements
 
-The use of the [yarn](https://yarnpkg.com/) package manager is **strongly** recommended, as opposed to using `npm`.
+- Windows or Mac OSX
+- NodeJS
+- Yarn
 
-```bash
-# create a directory of your choice, and copy template using curl
-mkdir new-electron-webpack-project && cd new-electron-webpack-project
-curl -fsSL https://github.com/electron-userland/electron-webpack-quick-start/archive/master.tar.gz | tar -xz --strip-components 1
+### Launching the app
 
-# or copy template using git clone
-git clone https://github.com/electron-userland/electron-webpack-quick-start.git
-cd electron-webpack-quick-start
-rm -rf .git
-
-# install dependencies
-yarn
 ```
-
-### Development Scripts
-
-```bash
-# run application in development mode
+git clone git@github.com:s-coimbra21/dark-binding-gui.git
+cd dark-binding-gui
+yarn install
 yarn dev
-
-# compile source code and create webpack output
-yarn compile
-
-# `yarn compile` & create build with electron-builder
-yarn dist
-
-# `yarn compile` & create unpacked build with electron-builder
-yarn dist:dir
 ```

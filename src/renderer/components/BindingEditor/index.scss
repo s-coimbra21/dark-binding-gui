@@ -1,5 +1,8 @@
+@import '~react-hextech/lib/theme.scss';
+
 .editor {
   width: 40%;
+  overflow-y: scroll;
 
   .primaryBindings {
     display: flex;
@@ -13,6 +16,56 @@
       .category {
         .label {
           margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  .secondaryBindingsWrapper {
+    .secondaryBindings {
+      .category,
+      .subCategory {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .binding {
+        border-bottom: 2px solid transparentize($color: $gunmetal, $amount: 0.5);
+      }
+
+      .binding {
+        display: flex;
+        flex-direction: row;
+
+        & > * {
+          flex: 1;
+        }
+
+        span,
+        .bindingButton {
+          padding: 4px 8px;
+          text-align: center;
+
+          &:not(:last-child) {
+            border-right: 2px solid
+              transparentize($color: $gunmetal, $amount: 0.5);
+          }
+        }
+
+        .label {
+          text-align: left;
+        }
+
+        &:hover {
+          .label {
+            color: $text-light;
+          }
+        }
+
+        &:first-child {
+          span {
+            border-right: none;
+          }
         }
       }
     }

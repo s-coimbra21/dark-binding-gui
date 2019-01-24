@@ -9,6 +9,11 @@
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
   },
   "build": {
+    "appId": "com.jinx.binding",
+    "productName": "Dark Binding",
+    "win": {
+      "icon": "./static/dark-binding.ico"
+    },
     "mac": {
       "darkModeSupport": true,
       "extendInfo": {

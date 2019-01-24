@@ -1,21 +1,14 @@
-import { app, dialog, Tray } from 'electron';
+import { app, dialog } from 'electron';
 import logger from 'electron-log';
 import * as fs from 'fs-extra';
 import { join } from 'path';
-import { platform } from 'os';
 
 import { LeagueMonitor } from '@utils/lcu-ws';
 import { inputSettings } from '@utils/lcu-api';
 import store from '@utils/store';
 
 import { connector } from './lcu-proxy';
-
-const tray = new Tray(
-  join(
-    __static,
-    platform() === 'win32' ? 'dark-biding.ico' : 'dark-binding.png'
-  )
-);
+import { showNotification } from './notifications';
 
 const replaceConfig = async (group: string) => {
   const settings = store.get(`groups.${group}`);
@@ -37,9 +30,9 @@ const replaceConfig = async (group: string) => {
 
     await inputSettings.patch(settings);
 
-    tray.displayBalloon({
-      title: 'Settings Applied',
-      content: `Switched bindings to ${group}`,
+    showNotification({
+      title: 'Bindings Applied',
+      body: `Switched bindings to ${group}`,
     });
   } catch (e) {
     dialog.showErrorBox('Dark Binding', `Could not apply group ${group}`);
@@ -58,9 +51,9 @@ const restoreConfig = async (config = store.get('groups.default')) => {
       store.set(`store.${group}`, await inputSettings.get());
     }
   } catch (e) {
-    tray.displayBalloon({
+    showNotification({
       title: 'Error',
-      content: 'Could not synchronize settings changed during the game',
+      body: 'Could not synchronize settings changed during the game',
     });
   } finally {
     fs.unlink(lockPath);
@@ -69,9 +62,10 @@ const restoreConfig = async (config = store.get('groups.default')) => {
   try {
     await inputSettings.patch(config);
 
-    tray.displayBalloon({
-      title: 'Settings Restored',
-      content: 'Your bindings have been restored',
+    showNotification({
+      title: 'Bindings Restored',
+      body:
+        'Your bindings have been restored. Changes made during the game have been applied',
     });
   } catch (e) {
     dialog.showErrorBox('Dark Binding', 'Error restoring settings to default');
@@ -83,9 +77,9 @@ export const start = (summonerId: number, settings: InputSettings) => {
   const monitor = new LeagueMonitor();
 
   monitor.on('connect', () =>
-    tray.displayBalloon({
+    showNotification({
       title: 'Ready',
-      content: 'You can now go into champion select!',
+      body: 'You can now go into champion select!',
     })
   );
 
@@ -109,7 +103,7 @@ export const start = (summonerId: number, settings: InputSettings) => {
 
   monitor.on('gameFlow', status => {
     console.log(status);
-    if (status === 'EndOfGame') {
+    if (status === 'WaitingForStats') {
       restoreConfig();
 
       return;

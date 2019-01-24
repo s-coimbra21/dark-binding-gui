@@ -10,7 +10,12 @@ import { getInitialWindowDimensions } from './window-scale';
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
-export function createMainWindow() {
+// global reference to mainWindow (necessary to prevent window from being garbage collected)
+let mainWindow: BrowserWindow | void;
+
+export function getMainWindow() {
+  if (mainWindow) return mainWindow;
+
   const { dimensions, scale } = getInitialWindowDimensions();
 
   const window = new BrowserWindow({
@@ -57,8 +62,21 @@ export function createMainWindow() {
 
   window.webContents.on('did-finish-load', () => {
     window.show();
-    window.focus();
   });
+
+  window.on('closed', () => {
+    mainWindow = undefined;
+  });
+
+  mainWindow = window;
 
   return window;
 }
+
+export const showMainWindow = () => {
+  if (mainWindow) {
+    mainWindow.show();
+  }
+
+  getMainWindow();
+};

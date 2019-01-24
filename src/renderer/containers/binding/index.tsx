@@ -7,6 +7,7 @@ import { BindingChangeModal } from '@components/BindingChangeModal';
 import { changeBinding, changeQuickcast } from '@groups/actions';
 
 interface BindingProps {
+  label: string;
   section: string;
   dataKey: string;
   secondary?: boolean;
@@ -75,7 +76,7 @@ export default function binding(Comp: ComponentType<BindingInnerProps>) {
 
     render() {
       const { group } = this.context as BindingContextProps;
-      const { section, dataKey, secondary } = this.props;
+      const { section, dataKey, label, secondary } = this.props;
 
       const saved = parseBinding(get(group, [section, dataKey]));
       const quickCast = get(group, ['Quickbinds', dataKey + 'smart']);
@@ -84,7 +85,9 @@ export default function binding(Comp: ComponentType<BindingInnerProps>) {
         <Fragment>
           {this.state.editing && (
             <BindingChangeModal
+              label={label}
               value={!secondary ? saved[0] : saved[1]}
+              secondary={!!secondary}
               onCancel={this.closeModal}
               onChange={this.handleChangeBinding}
             />

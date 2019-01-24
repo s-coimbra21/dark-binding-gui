@@ -11,7 +11,7 @@ declare interface PrimaryBinding extends Control {
 }
 
 declare interface Section {
-  label: string;
+  label?: string;
   twoSets?: boolean;
   controls: (Control | PrimaryBinding)[];
 }

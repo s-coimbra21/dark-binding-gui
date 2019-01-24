@@ -7,6 +7,7 @@ import {
   getPrimaryMainKeyDisplay,
   getPrimaryModifierDisplay,
   normalizeKeybindingString,
+  getModifiers,
 } from './binding-utils';
 
 export const parseBinding = (str: string = ''): Binding[] => {
@@ -19,7 +20,11 @@ export const parseBinding = (str: string = ''): Binding[] => {
   }
 };
 
-export const keyboardEventToSaved = (event: KeyboardEvent) => {
+export const eventToSaved = (event: React.KeyboardEvent & React.MouseEvent) => {
+  if (event.button) {
+    return getModifiers(event) + `[Button ${event.button}]`;
+  }
+
   return fromKeyToSaved(event);
 };
 

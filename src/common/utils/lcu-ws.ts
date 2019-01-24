@@ -1,4 +1,5 @@
 import WebSocket from 'ws';
+import logger from 'electron-log';
 import { EventEmitter } from 'events';
 
 type EventType = 'Create' | 'Update' | 'Delete';
@@ -92,7 +93,7 @@ export class LeagueMonitor extends EventEmitter {
     try {
       message = JSON.parse(<string> ev.data);
     } catch (e) {
-      console.log('[-] League socket sent invalid JSON?');
+      logger.log('[-] League socket sent invalid JSON?');
       return;
     }
 
@@ -112,7 +113,7 @@ export class LeagueMonitor extends EventEmitter {
    * @returns {Promise<void>}
    */
   private onSocketConnect = async () => {
-    console.log('[+] Connected to League client.');
+    logger.log('[+] Connected to League client.');
 
     if (!this.socket) return;
 
@@ -126,7 +127,7 @@ export class LeagueMonitor extends EventEmitter {
    * @returns {Promise<void>}
    */
   private onSocketDisconnect = async () => {
-    console.log('[-] Disconnected from League client.');
+    logger.log('[-] Disconnected from League client.');
 
     this.connected = false;
     this.emit('disconnect');

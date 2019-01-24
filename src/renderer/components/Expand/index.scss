@@ -1,0 +1,32 @@
+@import '~react-hextech/lib/theme.scss';
+
+.expand {
+  margin: 4px 0;
+
+  .title {
+    padding: 0 8px;
+    cursor: pointer;
+    height: 24px;
+    line-height: 24px;
+    color: $text-dark;
+    background: transparentize($color: $gunmetal, $amount: 0.5);
+    position: relative;
+
+    &:hover {
+      color: $text-light;
+    }
+
+    h4 {
+      text-transform: uppercase;
+    }
+  }
+
+  .content {
+    display: none;
+    margin-top: 4px;
+
+    &.open {
+      display: block;
+    }
+  }
+}

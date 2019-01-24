@@ -27,7 +27,7 @@ export function fromSavedToArray(e) {
   return e.indexOf('[,]') === -1 ? t : _splitSaved(e);
 }
 
-function _getModifiers(e) {
+export function getModifiers(e) {
   return (
     _resolveMetaKey(e) +
     (e.shiftKey ? '[Shift]' : '') +
