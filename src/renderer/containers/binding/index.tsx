@@ -63,6 +63,8 @@ export default function binding(Comp: ComponentType<BindingInnerProps>) {
 
       !secondary ? (nextValue[0] = value) : (nextValue[1] = value);
 
+      if (nextValue[1] === '[<Unbound>]') nextValue.pop();
+
       changeBinding(name, [section, dataKey].join('.'), nextValue);
 
       this.closeModal();
