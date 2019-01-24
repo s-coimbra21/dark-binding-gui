@@ -11,6 +11,7 @@ import AutoLauncher from 'auto-launch';
 import { platform } from 'os';
 import { join } from 'path';
 import { showMainWindow } from './main-window';
+import logger from 'electron-log';
 
 const isWin = platform() === 'win32';
 
@@ -31,17 +32,18 @@ const contextMenu = Menu.buildFromTemplate([
   {
     label: 'Run on start',
     type: 'checkbox',
-    checked: false,
+    checked: true,
     click: handleRunOnStartClick,
   },
   { label: 'Exit', type: 'normal', click: () => app.quit() },
 ]);
 
 tray.setToolTip('Manage your League of Legends keybindings');
-tray.setContextMenu(contextMenu);
 tray.setHighlightMode('always');
 
 launcher.isEnabled().then(isEnabled => {
+  logger.debug(`current run on startup status: ${isEnabled}`);
+
   contextMenu.items[1].checked = isEnabled;
 
   tray.setContextMenu(contextMenu);
@@ -62,12 +64,13 @@ export function showNotification(options: NotificationConstructorOptions) {
   }).show();
 }
 
-async function handleRunOnStartClick(item: MenuItem) {
-  if (item.checked) launcher.disable();
-  if (!item.checked) launcher.enable();
+async function handleRunOnStartClick() {
+  const status = contextMenu.items[1].checked;
 
-  contextMenu.items[1].checked = !item.checked;
-  tray.setContextMenu(contextMenu);
+  logger.debug(`Changing run on startup starting to ${status}`);
+
+  if (!status) await launcher.disable();
+  if (status) await launcher.enable();
 }
 
 setInterval(() => {
