@@ -31,7 +31,7 @@ export class ChampionSelector extends PureComponent<
   State
 > {
   state = {
-    showUnowned: false,
+    showUnowned: true,
   };
 
   filters = {
