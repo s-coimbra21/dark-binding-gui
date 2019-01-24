@@ -22,18 +22,20 @@ const replaceConfig = async (group: string) => {
   const lockPath = join(app.getPath('userData'), 'lock');
 
   try {
-    const isLocked = await fs.pathExists(lockPath);
+    const lock = await fs.readFile(lockPath, 'utf8');
 
-    if (!isLocked) {
+    if (!lock) {
       await fs.writeFile(lockPath, group, 'utf8');
     }
 
-    await inputSettings.patch(settings);
+    if (lock !== group) {
+      await inputSettings.patch(settings);
 
-    showNotification({
-      title: 'Bindings Applied',
-      body: `Switched bindings to ${group}`,
-    });
+      showNotification({
+        title: 'Bindings Applied',
+        body: `Switched bindings to ${group}`,
+      });
+    }
   } catch (e) {
     dialog.showErrorBox('Dark Binding', `Could not apply group ${group}`);
   }
@@ -102,7 +104,6 @@ export const start = (summonerId: number, settings: InputSettings) => {
   });
 
   monitor.on('gameFlow', status => {
-    console.log(status);
     if (status === 'WaitingForStats') {
       restoreConfig();
 
@@ -111,6 +112,8 @@ export const start = (summonerId: number, settings: InputSettings) => {
 
     if (status === 'TerminatedInError') {
       // think about this case
+      restoreConfig();
+
       return;
     }
   });
