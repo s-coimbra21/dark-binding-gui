@@ -2,7 +2,6 @@ import {
   app,
   Tray,
   Menu,
-  MenuItem,
   Notification,
   nativeImage,
   NotificationConstructorOptions,
