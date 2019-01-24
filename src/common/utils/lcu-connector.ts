@@ -39,10 +39,10 @@ export class Connector extends LCUConnector {
     logger.debug('Polling LCU summoner name');
 
     try {
-      const summoner = await api.chat.me();
+      const summoner = await api.summoner.currentSummoner();
       logger.debug('Found LCU summoner name', summoner);
 
-      this.pollSettings(+summoner.id);
+      this.pollSettings(+summoner.summonerId);
     } catch (e) {
       await sleep(5000);
       this.pollLogin();
@@ -56,7 +56,7 @@ export class Connector extends LCUConnector {
     try {
       const settings = await api.inputSettings.get();
       logger.debug('Found LCU input settings', settings);
-      const champions = await api.champions.get(summonerId);
+      const champions = await api.champions.get(/* summonerId */);
       logger.debug('Found LCU champions list', champions);
 
       this.emit('login', { summoner: summonerId, settings, champions });

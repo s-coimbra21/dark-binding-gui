@@ -13,9 +13,11 @@ export const inputSettingsSchema = {
   get: get<InputSettings>('/lol-game-settings/v1/input-settings-schema'),
 };
 
-export const chat = {
+export const summoner = {
   // Just getting summonerId
-  me: get<{ id: string }>('/lol-chat/v1/me'),
+  currentSummoner: get<{ summonerId: number }>(
+    '/lol-summoner/v1/current-summoner'
+  ),
 };
 
 // export const champions = {
