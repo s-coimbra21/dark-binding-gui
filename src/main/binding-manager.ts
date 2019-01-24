@@ -24,10 +24,6 @@ const replaceConfig = async (group: string) => {
   try {
     const lock = await fs.readFile(lockPath, 'utf8').catch(() => false);
 
-    if (!lock) {
-      await fs.writeFile(lockPath, group, 'utf8');
-    }
-
     if (lock !== group) {
       await inputSettings.patch(settings);
 
@@ -35,6 +31,8 @@ const replaceConfig = async (group: string) => {
         title: 'Bindings Applied',
         body: `Switched bindings to ${group}`,
       });
+
+      await fs.writeFile(lockPath, group, 'utf8');
     }
   } catch (e) {
     dialog.showErrorBox('Dark Binding', `Could not apply group ${group}`);
