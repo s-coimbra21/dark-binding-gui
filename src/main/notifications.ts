@@ -2,10 +2,12 @@ import {
   app,
   Tray,
   Menu,
+  MenuItem,
   Notification,
   nativeImage,
   NotificationConstructorOptions,
 } from 'electron';
+import AutoLauncher from 'auto-launch';
 import { platform } from 'os';
 import { join } from 'path';
 import { showMainWindow } from './main-window';
@@ -16,7 +18,9 @@ const icon = nativeImage.createFromPath(
   join(__static, isWin ? 'icons/dark-binding.png' : 'icons/16.png')
 );
 
-export const tray = new Tray(icon);
+export let tray = new Tray(icon);
+
+const launcher = new AutoLauncher({ name: 'Dark Binding' });
 
 const contextMenu = Menu.buildFromTemplate([
   {
@@ -24,21 +28,45 @@ const contextMenu = Menu.buildFromTemplate([
     type: 'normal',
     click: () => showMainWindow(),
   },
+  {
+    label: 'Run on start',
+    type: 'checkbox',
+    checked: false,
+    click: handleRunOnStartClick,
+  },
   { label: 'Exit', type: 'normal', click: () => app.quit() },
 ]);
 
 tray.setToolTip('Manage your League of Legends keybindings');
 tray.setContextMenu(contextMenu);
+tray.setHighlightMode('always');
+
+launcher.isEnabled().then(isEnabled => {
+  contextMenu.items[1].checked = isEnabled;
+});
 
 app.on('window-all-closed', () => {
-  tray.displayBalloon({
+  showNotification({
     title: 'Window closed',
-    content: 'Dark Binding is still running in the background',
+    body: 'Dark Binding is still running in the background',
   });
 });
 
-export const showNotification = (options: NotificationConstructorOptions) =>
+export function showNotification(options: NotificationConstructorOptions) {
   new Notification({
     silent: true,
+    icon: isWin ? icon : undefined,
     ...options,
   }).show();
+}
+
+async function handleRunOnStartClick(item: MenuItem) {
+  if (item.checked) launcher.disable();
+  if (!item.checked) launcher.enable();
+
+  contextMenu.items[1].checked = !item.checked;
+}
+
+setInterval(() => {
+  if (tray.isDestroyed()) tray = new Tray(icon);
+}, 30000);

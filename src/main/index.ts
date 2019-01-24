@@ -1,5 +1,7 @@
 import { app } from 'electron';
 
+app.setAppUserModelId('com.jinx.binding');
+
 if (!app.requestSingleInstanceLock()) {
   app.quit();
 }

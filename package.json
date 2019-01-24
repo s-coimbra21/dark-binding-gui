@@ -1,32 +1,46 @@
 {
-  "name": "electron-webpack-quick-start",
+  "name": "dark-binding",
+  "description": "Manage your League of Legends keybindings",
   "version": "0.0.0",
+  "author": {
+    "name": "S. Coimbra",
+    "email": "me@jinx.pro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:s-coimbra21/dark-binding-gui.git"
+  },
   "license": "MIT",
   "scripts": {
     "dev": "electron-webpack dev",
     "compile": "electron-webpack",
+    "build": "yarn dist",
     "dist": "yarn compile && electron-builder",
-    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null",
+    "release": "yarn compile && electron-builder -p always"
   },
   "build": {
     "appId": "com.jinx.binding",
     "productName": "Dark Binding",
-    "win": {
-      "icon": "./static/dark-binding.ico"
+    "icon": "./static/icons/dark-binding.png",
+    "nsis": {
+      "installerIcon": "./static/icons/dark-binding.ico"
     },
     "mac": {
-      "darkModeSupport": true,
       "extendInfo": {
         "NSRequiresAquaSystemAppearance": false
       }
-    }
+    },
+    "publish": "github"
   },
   "dependencies": {
     "@iarna/toml": "^2.2.1",
     "@types/lodash": "^4.14.120",
+    "auto-launch": "^5.0.5",
     "classnames": "^2.2.6",
     "connect": "^3.6.6",
     "connected-react-router": "^6.2.1",
+    "electron-devtools-installer": "^2.2.4",
     "electron-log": "^2.2.17",
     "electron-store": "^2.0.0",
     "electron-updater": "^4.0.6",
@@ -34,7 +48,6 @@
     "history": "^4.7.2",
     "lcu-connector": "^1.0.2",
     "lodash": "^4.17.11",
-    "moo": "^0.5.0",
     "normalize.css": "^8.0.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
@@ -59,6 +72,7 @@
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
+    "@types/auto-launch": "^5.0.0",
     "@types/classnames": "^2.2.7",
     "@types/connect": "^3.4.32",
     "@types/electron-devtools-installer": "^2.2.0",
@@ -81,7 +95,6 @@
     "css-loader": "^2.1.0",
     "electron": "3.0.10",
     "electron-builder": "^20.36.2",
-    "electron-devtools-installer": "^2.2.4",
     "electron-webpack": "^2.6.1",
     "electron-webpack-ts": "^3.1.0",
     "identity-loader": "^1.0.1",
