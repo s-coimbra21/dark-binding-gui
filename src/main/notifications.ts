@@ -13,7 +13,7 @@ import { showMainWindow } from './main-window';
 const isWin = platform() === 'win32';
 
 const icon = nativeImage.createFromPath(
-  join(__static, isWin ? 'dark-biding.ico' : 'icons/16.png')
+  join(__static, isWin ? 'icons/dark-binding.png' : 'icons/16.png')
 );
 
 export const tray = new Tray(icon);
