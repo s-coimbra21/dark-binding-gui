@@ -43,6 +43,8 @@ tray.setHighlightMode('always');
 
 launcher.isEnabled().then(isEnabled => {
   contextMenu.items[1].checked = isEnabled;
+
+  tray.setContextMenu(contextMenu);
 });
 
 app.on('window-all-closed', () => {
@@ -65,6 +67,7 @@ async function handleRunOnStartClick(item: MenuItem) {
   if (!item.checked) launcher.enable();
 
   contextMenu.items[1].checked = !item.checked;
+  tray.setContextMenu(contextMenu);
 }
 
 setInterval(() => {
