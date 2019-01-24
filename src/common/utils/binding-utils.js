@@ -42,7 +42,7 @@ function _resolveMetaKey(e) {
 
 export function fromKeyToSaved(e) {
   var t;
-  return (t = codes[e.code]), void 0 !== t ? _getModifiers(e) + t : void 0;
+  return (t = codes[e.code]), void 0 !== t ? getModifiers(e) + t : void 0;
 }
 
 export function getPrimaryModifierDisplay(e) {

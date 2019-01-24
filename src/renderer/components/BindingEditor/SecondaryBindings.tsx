@@ -38,7 +38,7 @@ export const SecondaryBindings: FC = memo(() => (
       {bindings.map(({ label, subgroups }) => (
         <Expand key={label} title={label}>
           {subgroups.map(subgroup => (
-            <BindingRow key={subgroup.label} {...subgroup} />
+            <BindingRow key={`${label}_${subgroup.label}`} {...subgroup} />
           ))}
         </Expand>
       ))}
