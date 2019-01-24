@@ -82,7 +82,7 @@ function p(e) {
     : formatBinding(void 0 === e[1] ? e[0] : fromSavedToArray(e[0])[e[1] - 1]);
 }
 
-export function normalizeKeybindingString(e) {
+export function normalizeKeybindingString(e = '') {
   var t = e;
   t = t.toLowerCase();
   var n = g(t);

@@ -50,7 +50,8 @@ export default function binding(Comp: ComponentType<BindingInnerProps>) {
     closeModal = () => this.setState({ editing: false });
 
     handleChangeBinding = (value: string) => {
-      const { group, changeBinding } = this.context as BindingContextProps;
+      const { group, name, changeBinding } = this
+        .context as BindingContextProps;
       const { secondary, section, dataKey } = this.props;
 
       const [
