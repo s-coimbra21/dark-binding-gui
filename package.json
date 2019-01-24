@@ -1,5 +1,6 @@
 {
   "name": "dark-binding",
+  "productName": "Dark Binding",
   "description": "Manage your League of Legends keybindings",
   "version": "0.0.2",
   "author": {
