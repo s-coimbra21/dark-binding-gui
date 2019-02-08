@@ -9,6 +9,7 @@ import * as api from '@utils/lcu/api';
 import { monitor } from './lcu-toolkit';
 import { showNotification } from './notifications';
 import { firstTimeSetup } from './first-time-setup';
+import { broadcast } from './utils';
 
 const replaceConfig = async (group: string) => {
   const settings = store.get(`groups.${group}`);
@@ -53,6 +54,7 @@ const restoreConfig = async (config = store.get('groups.default')) => {
     if (isLocked) {
       const group = await fs.readFile(lockPath, 'utf8');
       store.set(`store.${group}`, await api.inputSettings.get());
+      broadcast('lcu-input-settings');
     }
   } catch (e) {
     showNotification({
