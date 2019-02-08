@@ -53,8 +53,27 @@ const restoreConfig = async (config = store.get('groups.default')) => {
     const isLocked = await fs.pathExists(lockPath);
     if (isLocked) {
       const group = await fs.readFile(lockPath, 'utf8');
-      store.set(`groups.${group}`, await api.inputSettings.get());
+      const nextSettings = await api.inputSettings.get();
+
+      logger.debug(`syncing settings for group ${group}`, nextSettings);
+
+      store.set(`groups.${group}`, nextSettings);
       broadcast('lcu-input-settings');
+
+      try {
+        await api.inputSettings.patch(config);
+
+        showNotification({
+          title: 'Bindings Restored',
+          body:
+            'Your bindings have been restored. Changes made during the game have been applied',
+        });
+      } catch (e) {
+        dialog.showErrorBox(
+          'Dark Binding',
+          'Error restoring settings to default'
+        );
+      }
     }
   } catch (e) {
     showNotification({
@@ -63,17 +82,6 @@ const restoreConfig = async (config = store.get('groups.default')) => {
     });
   } finally {
     fs.unlink(lockPath);
-  }
-  try {
-    await api.inputSettings.patch(config);
-
-    showNotification({
-      title: 'Bindings Restored',
-      body:
-        'Your bindings have been restored. Changes made during the game have been applied',
-    });
-  } catch (e) {
-    dialog.showErrorBox('Dark Binding', 'Error restoring settings to default');
   }
 };
 
@@ -107,10 +115,7 @@ monitor.on('champSelect', async data => {
 });
 
 monitor.on('gameFlow', status => {
-  logger.debug('gameFlow', status);
   if (status === 'WaitingForStats' || status === 'TerminatedInError') {
-    restoreConfig();
-
-    return;
+    setTimeout(() => restoreConfig(), 5000);
   }
 });

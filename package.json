@@ -2,7 +2,7 @@
   "name": "dark-binding",
   "productName": "Dark Binding",
   "description": "Manage your League of Legends keybindings",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": {
     "name": "S. Coimbra",
     "email": "me@jinx.pro"
@@ -27,6 +27,7 @@
       "installerIcon": "./static/icons/dark-binding.ico"
     },
     "mac": {
+      "target": "dmg",
       "extendInfo": {
         "NSRequiresAquaSystemAppearance": false
       }
