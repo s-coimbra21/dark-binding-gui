@@ -12,6 +12,8 @@ export const firstTimeSetup = (settings: InputSettings, force?: boolean) => {
 
   if (setupFinished) {
     if (!store.get('groups.default')) store.set('groups.default', settings);
+
+    return;
   }
 
   try {
