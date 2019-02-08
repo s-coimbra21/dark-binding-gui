@@ -16,9 +16,7 @@ export const ChampionCircle: FC<ChampionCircleProps> = ({
     <div
       className={styles.portrait}
       style={{
-        backgroundImage: `url(http://127.0.0.1:${
-          global.proxyPort
-        }${squarePortraitPath})`,
+        backgroundImage: `url(lcu://${squarePortraitPath})`,
       }}
     />
   </div>

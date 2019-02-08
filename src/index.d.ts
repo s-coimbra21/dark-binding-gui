@@ -1,4 +1,8 @@
-declare type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
+type Diff<
+  T extends string | number | symbol,
+  U extends string | number | symbol
+> = ({ [P in T]: P } & { [P in U]: never } & { [x: string]: never })[T];
+type Omit<T, K extends string | number | symbol> = Pick<T, Diff<keyof T, K>>;
 
 declare module '*.scss' {
   const classNames: { [name: string]: string };
@@ -8,6 +12,12 @@ declare module '*.scss' {
 
 declare module 'semver' {
   export type SemVer = any;
+}
+
+declare module 'fuzzysearch' {
+  const fuzzysearch: (needle: string, haystack: string) => boolean;
+
+  export default fuzzysearch;
 }
 
 declare module 'react-hextech' {
@@ -55,6 +65,8 @@ declare module 'react-hextech' {
   }
 
   export const Dropdown: React.ComponentType<DropdownProps>;
+
+  export const TextInput: React.ComponentType<any>;
 }
 
 declare interface Credentials {

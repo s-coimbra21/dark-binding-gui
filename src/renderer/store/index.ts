@@ -18,7 +18,7 @@ ipcRenderer.on('lcu-connect', (evt: any, state: LCUState) => {
 ipcRenderer.on(
   'lcu-login',
   (evt: any, data: { summoner: number; champions: Champions }) => {
-    logger.debug('LCU Login detetcted');
+    logger.debug('LCU Login detected');
 
     store.dispatch(lcu.login(data.summoner, data.champions));
   }
@@ -36,7 +36,7 @@ ipcRenderer.on('lcu-game-settings', (evt: any, settings: InputSettings) => {
   store.dispatch(groups.updateDefaultGroup(settings));
 });
 
-ipcRenderer.send('lcu-subscribe');
+ipcRenderer.send('lcu-hydrate');
 
 export { history };
 

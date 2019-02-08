@@ -3,12 +3,12 @@ import logger from 'electron-log';
 import * as fs from 'fs-extra';
 import { join } from 'path';
 
-import { LeagueMonitor } from '@utils/lcu-ws';
-import { inputSettings } from '@utils/lcu-api';
 import store from '@utils/store';
+import * as api from '@utils/lcu/api';
 
-import { connector } from './lcu-proxy';
+import { LeagueMonitor, connector } from './lcu-toolkit';
 import { showNotification } from './notifications';
+import { firstTimeSetup } from './first-time-setup';
 
 const replaceConfig = async (group: string) => {
   const settings = store.get(`groups.${group}`);
@@ -25,7 +25,7 @@ const replaceConfig = async (group: string) => {
     const lock = await fs.readFile(lockPath, 'utf8').catch(() => false);
 
     if (lock !== group) {
-      await inputSettings.patch(settings);
+      await api.inputSettings.patch(settings);
 
       showNotification({
         title: 'Bindings Applied',
@@ -48,7 +48,7 @@ const restoreConfig = async (config = store.get('groups.default')) => {
     if (isLocked) {
       const group = await fs.readFile(lockPath, 'utf8');
 
-      store.set(`store.${group}`, await inputSettings.get());
+      store.set(`store.${group}`, await api.inputSettings.get());
     }
   } catch (e) {
     showNotification({
@@ -60,7 +60,7 @@ const restoreConfig = async (config = store.get('groups.default')) => {
   }
 
   try {
-    await inputSettings.patch(config);
+    await api.inputSettings.patch(config);
 
     showNotification({
       title: 'Bindings Restored',
@@ -72,7 +72,9 @@ const restoreConfig = async (config = store.get('groups.default')) => {
   }
 };
 
-export const start = (summonerId: number, settings: InputSettings) => {
+connector.on('login', ({ summoner, settings }) => {
+  firstTimeSetup(settings);
+
   logger.debug('starting binding manager');
   const monitor = new LeagueMonitor();
 
@@ -88,9 +90,7 @@ export const start = (summonerId: number, settings: InputSettings) => {
 
     logger.debug('received champion select packet');
 
-    const self = data.myTeam.find(
-      player => +player.summonerId === +summonerId
-    )!;
+    const self = data.myTeam.find(player => +player.summonerId === +summoner)!;
 
     if (!self || !self.championId) return;
 
@@ -109,7 +109,8 @@ export const start = (summonerId: number, settings: InputSettings) => {
     }
 
     if (status === 'TerminatedInError') {
-      // think about this case
+      // think about this case, player might want to keep settings
+      // as they are so that they can keep them if they reconnect
       restoreConfig();
 
       return;
@@ -120,4 +121,4 @@ export const start = (summonerId: number, settings: InputSettings) => {
     monitor.removeAllListeners();
     monitor.disconnect();
   });
-};
+});

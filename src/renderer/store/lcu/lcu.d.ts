@@ -18,7 +18,7 @@ declare interface Champion {
   id: number;
   name: string;
   squarePortraitPath: string;
-  onwership: {
+  ownership: {
     owned: boolean;
   };
 }

@@ -1,8 +1,10 @@
 import React, { PureComponent } from 'react';
-import { equals, filter, get, flow, sortBy } from 'lodash/fp';
+import { Checkbox, TextInput } from 'react-hextech';
+import { equals, get, flow } from 'lodash/fp';
 import cx from 'classnames';
 
 import { ChampionTile } from '@components/ChampionTile';
+import withChampionSearch from '../../containers/withChampionSearch';
 
 const styles = require('./index.scss');
 
@@ -11,27 +13,23 @@ interface ChampionSelectorProps {
   groupName: string;
   championGroups: GroupByChampion;
   onClickChampion: (championId: number) => any;
+
+  search: string;
+  updateSearch: (nextSearch: string) => any;
 }
 
 interface State {
   showUnowned: boolean;
 }
 
-const onlyOwned = filter(
-  flow(
-    get('ownership.owned'),
-    equals(true)
-  )
+const isOwned = flow(
+  get('ownership.owned'),
+  equals(true)
 );
 
-const sortChampions = sortBy<Champion>(['name']);
-
-export class ChampionSelector extends PureComponent<
-  ChampionSelectorProps,
-  State
-> {
+class ChampionSelector extends PureComponent<ChampionSelectorProps, State> {
   state = {
-    showUnowned: true,
+    showUnowned: false,
   };
 
   filters = {
@@ -45,6 +43,31 @@ export class ChampionSelector extends PureComponent<
       this.props.championGroups[champion.id] !== 'default' &&
       this.props.championGroups[champion.id] !== this.props.groupName,
   };
+
+  groupChampions = (champions: Champions) =>
+    champions.reduce(
+      (acc, champion) => {
+        if (!this.state.showUnowned && !isOwned(champion)) return acc;
+
+        if (this.filters.members(champion)) {
+          acc.members.push(champion);
+        }
+
+        if (this.filters.unassigned(champion)) {
+          acc.unassigned.push(champion);
+        }
+
+        if (this.filters.otherGroups(champion)) {
+          acc.otherGroups.push(champion);
+        }
+
+        return acc;
+      },
+      { members: [], unassigned: [], otherGroups: [] } as Record<
+        string,
+        Champions
+      >
+    );
 
   handleShowUnownedChange = () => {
     this.setState({
@@ -61,23 +84,13 @@ export class ChampionSelector extends PureComponent<
   );
 
   render() {
-    const { groupName } = this.props;
-    const champions = sortChampions(
-      this.state.showUnowned
-        ? this.props.champions
-        : onlyOwned(this.props.champions)
-    );
+    const { groupName, champions, search, updateSearch } = this.props;
 
-    const unassigned = champions.filter(this.filters.unassigned);
-    const members =
-      groupName === 'default'
-        ? unassigned
-        : champions.filter(this.filters.members);
-    const otherGroups = champions.filter(this.filters.otherGroups);
+    const { members, unassigned, otherGroups } = this.groupChampions(champions);
 
     return (
       <section className={styles.championSelector}>
-        {/* <div className={styles.options}>
+        <div className={styles.options}>
           <Checkbox
             className={styles.checkbox}
             value={this.state.showUnowned}
@@ -85,7 +98,13 @@ export class ChampionSelector extends PureComponent<
           >
             Show Unowned
           </Checkbox>
-        </div> */}
+          <TextInput
+            type="search"
+            placeholder="Search..."
+            value={search}
+            onChange={updateSearch}
+          />
+        </div>
         <div className={styles.scroller}>
           {!!members.length && (
             <div className={styles.separator}>
@@ -114,3 +133,7 @@ export class ChampionSelector extends PureComponent<
     );
   }
 }
+
+const enhanced = withChampionSearch(ChampionSelector);
+
+export { enhanced as ChampionSelector };

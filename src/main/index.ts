@@ -1,5 +1,8 @@
 import { app } from 'electron';
 
+import './lcu-toolkit';
+import { checkForUpdates } from './auto-update';
+
 app.setAppUserModelId('com.jinx.binding');
 
 if (!app.requestSingleInstanceLock()) {
@@ -8,8 +11,8 @@ if (!app.requestSingleInstanceLock()) {
 
 // create main BrowserWindow when electron is ready
 app.on('ready', () => {
-  require('./lcu-proxy');
+  require('./binding-manager');
   const { getMainWindow } = require('./main-window');
 
-  getMainWindow();
+  checkForUpdates(getMainWindow());
 });

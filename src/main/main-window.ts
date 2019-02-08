@@ -32,6 +32,11 @@ export function getMainWindow() {
     hasShadow: false,
     webPreferences: {
       zoomFactor: scale,
+      nodeIntegration: true,
+      webSecurity: false,
+      allowRunningInsecureContent: true,
+      webaudio: false,
+      webgl: false,
     },
   });
 

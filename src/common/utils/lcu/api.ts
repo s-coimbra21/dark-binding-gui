@@ -1,6 +1,8 @@
-import { get, patch } from '@utils/lcu-request';
+import { sortBy } from 'lodash/fp';
 
-import championsJson from '../../../static/champions.json';
+import { get, patch } from './fetch';
+
+import championsJson from '../../../../static/champions.json';
 
 export const inputSettings = {
   get: get<InputSettings>('/lol-game-settings/v1/input-settings'),
@@ -20,13 +22,12 @@ export const summoner = {
   ),
 };
 
-// export const champions = {
-//   get: (summonerId: number) =>
-//     get<Champions>(
-//       `/lol-champions/v1/inventories/${summonerId}/champions-minimal`
-//     )().then(champions => champions.filter(c => c.id >= 0)),
-// };
-
 export const champions = {
-  get: () => Promise.resolve(championsJson),
+  get: (summonerId: number) =>
+    get<Champions>(
+      `/lol-champions/v1/inventories/${summonerId}/champions-minimal`
+    )()
+      .then(champions => champions.filter(c => c.id >= 0))
+      .catch(() => championsJson)
+      .then(sortBy(['name'])),
 };

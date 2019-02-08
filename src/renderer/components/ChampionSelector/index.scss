@@ -8,7 +8,6 @@
 
   .separator,
   .options {
-    margin: 0 8px;
     padding: 8px 0;
   }
 
@@ -18,12 +17,14 @@
   }
 
   .options {
-    .checkbox {
-      float: right;
-    }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .scroller {
+    flex: 1;
     overflow-y: scroll;
     overflow-x: hidden;
 

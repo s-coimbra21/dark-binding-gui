@@ -29,7 +29,7 @@ const contextMenu = Menu.buildFromTemplate([
     click: () => showMainWindow(),
   },
   {
-    label: 'Run on start',
+    label: 'Run on system startup',
     type: 'checkbox',
     checked: true,
     click: handleRunOnStartClick,
@@ -38,7 +38,6 @@ const contextMenu = Menu.buildFromTemplate([
 ]);
 
 tray.setToolTip('Manage your League of Legends keybindings');
-tray.setHighlightMode('always');
 
 launcher.isEnabled().then(isEnabled => {
   logger.debug(`current run on startup status: ${isEnabled}`);

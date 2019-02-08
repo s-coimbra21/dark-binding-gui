@@ -30,8 +30,7 @@ export class LeagueMonitor extends EventEmitter {
 
     // Check if league is running every 5s.
     this.watchTimer = setInterval(() => {
-      if (this.connected) return;
-      this.connect();
+      if (!this.connected) this.connect();
     }, 5000);
 
     // Check immediately without waiting 5s.
@@ -70,7 +69,9 @@ export class LeagueMonitor extends EventEmitter {
   public async connect() {
     if (!global.credentials || this.connected) return;
 
-    process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+    if (typeof process !== 'undefined') {
+      process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+    }
 
     this.socket = new WebSocket(
       `wss://riot:${global.credentials.password}@127.0.0.1:${
@@ -91,9 +92,9 @@ export class LeagueMonitor extends EventEmitter {
   private onSocketMessage = async (ev: { data: WebSocket.Data }) => {
     let message: WAMPMessage;
     try {
-      message = JSON.parse(<string> ev.data);
+      message = JSON.parse(ev.data as string);
     } catch (e) {
-      logger.log('[-] League socket sent invalid JSON?');
+      logger.debug('[-] League socket sent invalid JSON?');
       return;
     }
 
@@ -113,7 +114,7 @@ export class LeagueMonitor extends EventEmitter {
    * @returns {Promise<void>}
    */
   private onSocketConnect = async () => {
-    logger.log('[+] Connected to League client.');
+    logger.debug('[+] Connected to League client.');
 
     if (!this.socket) return;
 
@@ -127,7 +128,7 @@ export class LeagueMonitor extends EventEmitter {
    * @returns {Promise<void>}
    */
   private onSocketDisconnect = async () => {
-    logger.log('[-] Disconnected from League client.');
+    logger.debug('[-] Disconnected from League client.');
 
     this.connected = false;
     this.emit('disconnect');

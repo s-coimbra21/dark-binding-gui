@@ -1,20 +1,23 @@
 import logger from 'electron-log';
 
-import * as api from './lcu-api';
-import { sleep } from './sleep';
+import { sleep } from '@utils/sleep';
+
+import * as api from '@utils/lcu/api';
 
 const LCUConnector = require('lcu-connector');
 
-export class Connector extends LCUConnector {
+class Connector extends LCUConnector {
   public lockfile?: Credentials;
 
   public on(event: 'connect', handler: (lockfile: Credentials) => any): this;
   public on(event: 'disconnect', handler: () => any): this;
   public on(
     event: 'login',
-    handler: (
-      data: { summoner: number; settings: InputSettings; champions: Champions }
-    ) => any
+    handler: (data: {
+      summoner: number;
+      settings: InputSettings;
+      champions: Champions;
+    }) => any
   ): this;
   public on(event: string, handler: (...args: any[]) => void): this {
     return super.on(event, handler);
@@ -26,7 +29,7 @@ export class Connector extends LCUConnector {
     this.on('connect', (settings: Credentials) => {
       this.lockfile = settings;
 
-      this.pollLogin();
+      setImmediate(() => this.pollLogin());
     });
 
     this.on('disconnect', () => {
@@ -44,6 +47,7 @@ export class Connector extends LCUConnector {
 
       this.pollSettings(+summoner.summonerId);
     } catch (e) {
+      logger.error(e);
       await sleep(5000);
       this.pollLogin();
     }
@@ -55,14 +59,17 @@ export class Connector extends LCUConnector {
 
     try {
       const settings = await api.inputSettings.get();
-      logger.debug('Found LCU input settings', settings);
-      const champions = await api.champions.get(/* summonerId */);
-      logger.debug('Found LCU champions list', champions);
+      logger.debug('Found LCU input settings');
+      const champions = await api.champions.get(summonerId);
+      logger.debug('Found LCU champions list');
 
       this.emit('login', { summoner: summonerId, settings, champions });
     } catch (e) {
+      logger.error(e);
       await sleep(5000);
       this.pollLogin();
     }
   }
 }
+
+export const connector = new Connector();
