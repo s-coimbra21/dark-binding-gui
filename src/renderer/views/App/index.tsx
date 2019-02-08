@@ -15,7 +15,7 @@ const App: FC<AppProps> = ({ lcuStatus, updateProgress, children }) => {
   if (updateProgress) {
     return (
       <div className={styles.app}>
-        <h1>Updating {updateProgress}%</h1>
+        <h1>Updating {+updateProgress.toFixed(0)}%</h1>
       </div>
     );
   }

@@ -1,4 +1,4 @@
-import { dialog, BrowserWindow } from 'electron';
+import { dialog, BrowserWindow, shell } from 'electron';
 import os from 'os';
 import logger from 'electron-log';
 import { autoUpdater } from 'electron-updater';
@@ -7,6 +7,7 @@ import { isDev } from '@utils/env';
 import { broadcast } from './utils';
 
 autoUpdater.autoDownload = false;
+autoUpdater.logger = logger;
 
 const promptUpdate = (wnd: BrowserWindow) =>
   !dialog.showMessageBox(wnd, {
@@ -32,6 +33,14 @@ export function checkForUpdates(mainWindow: BrowserWindow) {
     logger.debug('New update available');
 
     if (promptUpdate(mainWindow)) {
+      if (platform === 'darwin') {
+        shell.openExternal(
+          'https://github.com/s-coimbra21/dark-binding-gui/releases'
+        );
+
+        return;
+      }
+
       autoUpdater.downloadUpdate();
     }
   });

@@ -1,7 +1,15 @@
 import { app } from 'electron';
+import log from 'electron-log';
+import minimist from 'minimist';
+import { isDev } from '@utils/env';
 
 import './lcu-toolkit';
 import { checkForUpdates } from './auto-update';
+
+log.transports.file.level = false;
+log.transports.console.level = isDev
+  ? 'silly'
+  : minimist(process.argv.slice(2)).loglevel || false;
 
 app.setAppUserModelId('com.jinx.binding');
 
