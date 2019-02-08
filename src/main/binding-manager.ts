@@ -53,7 +53,7 @@ const restoreConfig = async (config = store.get('groups.default')) => {
     const isLocked = await fs.pathExists(lockPath);
     if (isLocked) {
       const group = await fs.readFile(lockPath, 'utf8');
-      store.set(`store.${group}`, await api.inputSettings.get());
+      store.set(`groups.${group}`, await api.inputSettings.get());
       broadcast('lcu-input-settings');
     }
   } catch (e) {

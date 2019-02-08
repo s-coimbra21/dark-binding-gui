@@ -7,10 +7,19 @@ import { lcuStatus } from '@lcu/selectors';
 const styles = require('./index.scss');
 
 interface AppProps {
+  updateProgress?: number;
   lcuStatus: ReturnType<typeof lcuStatus>;
 }
 
-const App: FC<AppProps> = ({ lcuStatus, children }) => {
+const App: FC<AppProps> = ({ lcuStatus, updateProgress, children }) => {
+  if (updateProgress) {
+    return (
+      <div className={styles.app}>
+        <h1>Updating {updateProgress}%</h1>
+      </div>
+    );
+  }
+
   if (lcuStatus === 'loggedIn') return <Fragment>{children}</Fragment>;
 
   return (
@@ -26,4 +35,5 @@ const App: FC<AppProps> = ({ lcuStatus, children }) => {
 
 export default connect<AppProps, {}, {}, RootState>(state => ({
   lcuStatus: lcuStatus(state),
+  updateProgress: state.lcu.updateProgress,
 }))(App);

@@ -4,6 +4,7 @@ import logger from 'electron-log';
 import { autoUpdater } from 'electron-updater';
 
 import { isDev } from '@utils/env';
+import { broadcast } from './utils';
 
 autoUpdater.autoDownload = false;
 
@@ -47,6 +48,8 @@ export function checkForUpdates(mainWindow: BrowserWindow) {
 
   autoUpdater.addListener('download-progress', progress => {
     logger.debug('Update Progress', progress);
+
+    broadcast('lcu-sync', { updateProgress: progress.percent });
   });
 
   autoUpdater.addListener('error', error => {
