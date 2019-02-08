@@ -31,3 +31,7 @@ export const champions = {
       .catch(() => championsJson)
       .then(sortBy(['name'])),
 };
+
+export const gameFlow = {
+  phase: () => get<string>('/lol-gameflow/v1/gameflow-phase'),
+};

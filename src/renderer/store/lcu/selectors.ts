@@ -17,13 +17,14 @@ export const championsById = createSelector(
 
 export const lcuStatus = createSelector(
   lcu,
-  ({ credentials, summoner }) => {
+  ({ credentials, summoner, gameFlow }) => {
     if (!credentials) return 'closed';
 
     const { port, password } = credentials;
 
     if (!port || !password) return 'closed';
     if (!summoner) return 'loggedOut';
+    if (gameFlow !== 'None' && gameFlow !== 'Lobby') return 'inGame';
 
     return 'loggedIn';
   }

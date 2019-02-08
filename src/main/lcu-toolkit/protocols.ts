@@ -1,6 +1,8 @@
 import got from 'got';
 import { protocol, app } from 'electron';
 import { resolve } from 'url';
+import { monitor } from './ws';
+import { error } from 'electron-log';
 
 app.on('ready', () => {
   protocol.registerStreamProtocol('lcu', (req, callback: any) => {
@@ -14,14 +16,14 @@ app.on('ready', () => {
     //   return callback(resolve(app.getPath('userData'), path));
     // }
 
-    const { port, password } = global.credentials!;
+    const { port, password } = monitor.lockfile!;
 
     const url = resolve(
       `https://riot:${password}@127.0.0.1:${port}`,
       req.url.slice(6)
     );
 
-    callback(got.stream(url));
+    callback(got.stream(url, { rejectUnauthorized: false }).on('error', error));
   });
 });
 

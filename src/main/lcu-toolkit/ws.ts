@@ -1,10 +1,10 @@
 import WebSocket from 'ws';
 import logger from 'electron-log';
-import { EventEmitter } from 'events';
+import { Connector } from './connector';
 
-type EventType = 'Create' | 'Update' | 'Delete';
+export type EventType = 'Create' | 'Update' | 'Delete';
 
-type WAMPMessage = [
+export type WAMPMessage = [
   number,
   string,
   {
@@ -15,70 +15,68 @@ type WAMPMessage = [
 ];
 
 // The list of events we dispatch, in the format of [uri, eventType, eventName].
-const EVENTS: [string, EventType, string][] = [
+export const EVENTS: [string, EventType, string][] = [
   ['/lol-champ-select/v1/session', 'Update', 'champSelect'],
   ['/lol-gameflow/v1/gameflow-phase', 'Update', 'gameFlow'],
 ];
 
-export class LeagueMonitor extends EventEmitter {
+export class LeagueMonitor extends Connector {
+  public state: LCUState = {
+    champions: [],
+    gameFlow: 'None',
+  };
   private socket?: WebSocket;
   private connected = false;
-  private watchTimer: NodeJS.Timer;
+  private watchTimer?: NodeJS.Timer;
 
   constructor() {
     super();
 
-    // Check if league is running every 5s.
-    this.watchTimer = setInterval(() => {
-      if (!this.connected) this.connect();
-    }, 5000);
+    this.on('connect', (settings: Credentials) => {
+      this.lockfile = settings;
+      this.state.credentials = settings;
 
-    // Check immediately without waiting 5s.
-    this.connect();
+      // Check if league is running every 5s.
+      this.watchTimer = setInterval(() => {
+        if (!this.connected) this.monitor_connect();
+      }, 5000);
+
+      this.monitor_connect();
+
+      setImmediate(() => this.pollLogin());
+    });
+
+    this.on('login', data => {
+      this.state = { ...this.state, ...data };
+    });
+
+    this.on('disconnect', () => {
+      this.lockfile = undefined;
+      delete this.state.credentials;
+      this.monitor_disconnect();
+    });
   }
 
-  public on(event: 'connect', handler: () => any): this;
-  public on(event: 'disconnect', handler: () => any): this;
-
-  public on(
-    event: 'champSelect',
-    handler: (data: ChampSelectPacket) => any
-  ): this;
-
-  public on(event: 'gameFlow', handler: (data: string) => any): this;
-
-  public on(event: string, handler: (...args: any[]) => void): this {
-    return super.on(event, handler);
-  }
-
-  public emit(event: string, ...args: any[]) {
-    return super.emit(event, ...args);
-  }
-
-  public async disconnect() {
+  protected async monitor_disconnect() {
     if (this.connected) {
       this.socket!.close();
     }
-    clearInterval(this.watchTimer);
+    clearInterval(this.watchTimer!);
   }
 
   /**
    * Checks if league is running, and connects to the websocket if it is.
    * @returns {Promise<void>}
    */
-  public async connect() {
-    if (!global.credentials || this.connected) return;
-
-    if (typeof process !== 'undefined') {
-      process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
-    }
+  protected async monitor_connect() {
+    if (!this.lockfile || this.connected) return;
 
     this.socket = new WebSocket(
-      `wss://riot:${global.credentials.password}@127.0.0.1:${
-        global.credentials.port
-      }`,
-      'wamp'
+      `wss://riot:${this.lockfile!.password}@127.0.0.1:${this.lockfile!.port}`,
+      'wamp',
+      { rejectUnauthorized: false }
     );
+
     this.socket.onopen = this.onSocketConnect;
     this.socket.onclose = this.onSocketDisconnect;
     this.socket.onmessage = this.onSocketMessage;
@@ -89,7 +87,7 @@ export class LeagueMonitor extends EventEmitter {
    * Called when we receive a websocket message.
    * @returns {Promise<void>}
    */
-  private onSocketMessage = async (ev: { data: WebSocket.Data }) => {
+  private onSocketMessage = async (ev: { data: any }) => {
     let message: WAMPMessage;
     try {
       message = JSON.parse(ev.data as string);
@@ -120,7 +118,7 @@ export class LeagueMonitor extends EventEmitter {
 
     this.connected = true;
     this.socket.send(`[5,"OnJsonApiEvent"]`);
-    this.emit('connect');
+    this.emit('monitor-connect');
   };
 
   /**
@@ -131,10 +129,12 @@ export class LeagueMonitor extends EventEmitter {
     logger.debug('[-] Disconnected from League client.');
 
     this.connected = false;
-    this.emit('disconnect');
+    this.emit('monitor-disconnect');
   };
 
   private onSocketError = async () => {
     this.socket!.terminate();
   };
 }
+
+export const monitor = new LeagueMonitor();

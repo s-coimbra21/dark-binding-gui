@@ -6,12 +6,13 @@ import { join } from 'path';
 import store from '@utils/store';
 import * as api from '@utils/lcu/api';
 
-import { LeagueMonitor, connector } from './lcu-toolkit';
+import { monitor } from './lcu-toolkit';
 import { showNotification } from './notifications';
 import { firstTimeSetup } from './first-time-setup';
 
 const replaceConfig = async (group: string) => {
   const settings = store.get(`groups.${group}`);
+  logger.debug(`patching settings to group ${group}`, settings);
 
   if (!settings)
     return dialog.showErrorBox(
@@ -22,10 +23,13 @@ const replaceConfig = async (group: string) => {
   const lockPath = join(app.getPath('userData'), 'lock');
 
   try {
-    const lock = await fs.readFile(lockPath, 'utf8').catch(() => false);
+    const lock = await fs.readFile(lockPath, 'utf8').catch(() => null);
 
     if (lock !== group) {
-      await api.inputSettings.patch(settings);
+      logger.debug(
+        'input settings patched',
+        await api.inputSettings.patch(settings)
+      );
 
       showNotification({
         title: 'Bindings Applied',
@@ -35,19 +39,19 @@ const replaceConfig = async (group: string) => {
       await fs.writeFile(lockPath, group, 'utf8');
     }
   } catch (e) {
+    logger.error(e);
     dialog.showErrorBox('Dark Binding', `Could not apply group ${group}`);
   }
 };
 
 const restoreConfig = async (config = store.get('groups.default')) => {
+  logger.debug('restoring settings');
   const lockPath = join(app.getPath('userData'), 'lock');
 
   try {
     const isLocked = await fs.pathExists(lockPath);
-
     if (isLocked) {
       const group = await fs.readFile(lockPath, 'utf8');
-
       store.set(`store.${group}`, await api.inputSettings.get());
     }
   } catch (e) {
@@ -58,7 +62,6 @@ const restoreConfig = async (config = store.get('groups.default')) => {
   } finally {
     fs.unlink(lockPath);
   }
-
   try {
     await api.inputSettings.patch(config);
 
@@ -72,53 +75,40 @@ const restoreConfig = async (config = store.get('groups.default')) => {
   }
 };
 
-connector.on('login', ({ summoner, settings }) => {
+monitor.on('login', ({ settings }) => {
   firstTimeSetup(settings);
 
-  logger.debug('starting binding manager');
-  const monitor = new LeagueMonitor();
+  logger.debug('Binding Manager started');
 
-  monitor.on('connect', () =>
-    showNotification({
-      title: 'Ready',
-      body: 'You can now go into champion select!',
-    })
-  );
-
-  monitor.on('champSelect', async data => {
-    if (data.timer.phase !== 'FINALIZATION') return;
-
-    logger.debug('received champion select packet');
-
-    const self = data.myTeam.find(player => +player.summonerId === +summoner)!;
-
-    if (!self || !self.championId) return;
-
-    const groupName = store.get('championGroups')[self.championId] || 'default';
-
-    logger.debug(`applying config: ${groupName}`);
-
-    await replaceConfig(groupName);
+  showNotification({
+    title: 'Ready',
+    body: 'You can now go into champion select!',
   });
+});
 
-  monitor.on('gameFlow', status => {
-    if (status === 'WaitingForStats') {
-      restoreConfig();
+monitor.on('champSelect', async data => {
+  if (data.timer.phase !== 'FINALIZATION') return;
 
-      return;
-    }
+  logger.debug('received champion select packet');
 
-    if (status === 'TerminatedInError') {
-      // think about this case, player might want to keep settings
-      // as they are so that they can keep them if they reconnect
-      restoreConfig();
+  const self = data.myTeam.find(
+    player => +player.summonerId === +monitor.state.summoner!
+  )!;
 
-      return;
-    }
-  });
+  if (!self || !self.championId) return;
 
-  connector.on('disconnect', () => {
-    monitor.removeAllListeners();
-    monitor.disconnect();
-  });
+  const groupName = store.get('championGroups')[self.championId] || 'default';
+
+  logger.debug(`applying config: ${groupName}`);
+
+  await replaceConfig(groupName);
+});
+
+monitor.on('gameFlow', status => {
+  logger.debug('gameFlow', status);
+  if (status === 'WaitingForStats' || status === 'TerminatedInError') {
+    restoreConfig();
+
+    return;
+  }
 });

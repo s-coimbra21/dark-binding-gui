@@ -16,7 +16,7 @@ export const firstTimeSetup = (settings: InputSettings, force?: boolean) => {
 
   try {
     store.set('groups.default', settings);
-    broadcast('lcu-game-settings', settings);
+    broadcast('lcu-default-input-settings', settings);
     store.set(SETUP_KEY, true);
   } catch (e) {
     dialog.showErrorBox(

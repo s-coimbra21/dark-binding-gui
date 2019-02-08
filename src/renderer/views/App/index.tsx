@@ -7,7 +7,7 @@ import { lcuStatus } from '@lcu/selectors';
 const styles = require('./index.scss');
 
 interface AppProps {
-  lcuStatus: 'closed' | 'loggedOut' | 'loggedIn';
+  lcuStatus: ReturnType<typeof lcuStatus>;
 }
 
 const App: FC<AppProps> = ({ lcuStatus, children }) => {
@@ -15,11 +15,11 @@ const App: FC<AppProps> = ({ lcuStatus, children }) => {
 
   return (
     <div className={styles.app}>
-      {lcuStatus === 'loggedOut' ? (
+      {lcuStatus === 'closed' && <h1>Waiting for the League Client...</h1>}
+      {lcuStatus === 'loggedOut' && (
         <h1>Login on the League Client to start managing your keybindings</h1>
-      ) : (
-        <h1>Waiting for the League Client...</h1>
       )}
+      {lcuStatus === 'inGame' && <h1>Waiting for your game to finish</h1>}
     </div>
   );
 };

@@ -2,6 +2,7 @@ declare interface LCUState {
   credentials?: Credentials;
   summoner?: number;
   champions: Champions;
+  gameFlow: string;
 }
 
 declare interface ChampSelectPacket {

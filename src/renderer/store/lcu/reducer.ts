@@ -2,7 +2,7 @@ import { createReducer } from '@utils/create-reducer';
 
 import * as actions from './actions';
 
-const initialState: LCUState = { champions: [] };
+const initialState: LCUState = { champions: [], gameFlow: 'None' };
 
 export default createReducer(initialState, actions)({
   up: (state, payload) => ({
@@ -10,9 +10,4 @@ export default createReducer(initialState, actions)({
     ...payload,
   }),
   down: () => initialState,
-  login: (state, { summonerId, champions }) => ({
-    ...state,
-    summoner: summonerId,
-    champions,
-  }),
 });

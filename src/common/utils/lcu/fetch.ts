@@ -1,37 +1,33 @@
-import fetchPonyfill from 'fetch-ponyfill';
+import axios, { AxiosRequestConfig } from 'axios';
 
-const { fetch } = fetchPonyfill();
-
-let agent: any;
+let httpsAgent: any;
 if (typeof window === 'undefined') {
-  agent = require('https').Agent({
+  httpsAgent = require('https').Agent({
     rejectUnauthorized: false,
     keepAlive: true,
     keepAliveMsecs: 60000,
   });
 }
 
-const getURL = (path: string) => {
+const getURL = () => {
   if (global.credentials) {
     const { password, port } = global.credentials;
 
-    return `https://riot:${password}@127.0.0.1:${port}${path}`;
+    return `https://riot:${password}@127.0.0.1:${port}`;
   }
 
-  return `lcu:/${path}`;
+  return `lcu://`;
 };
 
-async function request<T>(path: string, options?: RequestInit | undefined) {
-  const url = getURL(path);
-
-  const response = await fetch(url, {
-    keepalive: true,
+async function request<T>(path: string, options?: AxiosRequestConfig) {
+  const response = await axios(path, {
     // @ts-ignore
-    agent,
+    baseURL: getURL(),
+    httpsAgent,
     ...options,
   });
 
-  return response.json() as Promise<T>;
+  return response.data as Promise<T>;
 }
 
 export const get = <ResponseType>(path: string, options?: RequestInit) => () =>
@@ -40,19 +36,19 @@ export const get = <ResponseType>(path: string, options?: RequestInit) => () =>
 export const patch = <BodyType, ResponseType>(
   path: string,
   options?: Partial<RequestInit>
-) => (body: BodyType) =>
+) => (data: BodyType) =>
   request<ResponseType>(path, {
     ...options,
-    body: JSON.stringify(body),
+    data,
     method: 'PATCH',
   });
 
 export const post = <BodyType, ResponseType>(
   path: string,
   options?: Partial<RequestInit>
-) => (body: BodyType) =>
+) => (data: BodyType) =>
   request<ResponseType>(path, {
     ...options,
-    body: JSON.stringify(body),
+    data,
     method: 'POST',
   });

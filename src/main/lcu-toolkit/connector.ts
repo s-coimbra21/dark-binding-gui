@@ -1,14 +1,16 @@
 import logger from 'electron-log';
+import { EventEmitter } from 'events';
 
 import { sleep } from '@utils/sleep';
 
 import * as api from '@utils/lcu/api';
 
-const LCUConnector = require('lcu-connector');
+const LCUConnector: typeof EventEmitter = require('lcu-connector');
 
-class Connector extends LCUConnector {
+export class Connector extends LCUConnector {
   public lockfile?: Credentials;
 
+  /* Connector */
   public on(event: 'connect', handler: (lockfile: Credentials) => any): this;
   public on(event: 'disconnect', handler: () => any): this;
   public on(
@@ -17,27 +19,31 @@ class Connector extends LCUConnector {
       summoner: number;
       settings: InputSettings;
       champions: Champions;
+      gameFlow: string;
     }) => any
   ): this;
+
+  /* Monitor */
+  public on(event: 'monitor-connect', handler: () => any): this;
+  public on(event: 'monitor-disconnect', handler: () => any): this;
+
+  public on(
+    event: 'champSelect',
+    handler: (data: ChampSelectPacket) => any
+  ): this;
+
+  public on(event: 'gameFlow', handler: (data: string) => any): this;
+
   public on(event: string, handler: (...args: any[]) => void): this {
     return super.on(event, handler);
   }
 
   constructor(executablePath?: string) {
+    // @ts-ignore
     super(executablePath);
-
-    this.on('connect', (settings: Credentials) => {
-      this.lockfile = settings;
-
-      setImmediate(() => this.pollLogin());
-    });
-
-    this.on('disconnect', () => {
-      this.lockfile = undefined;
-    });
   }
 
-  private async pollLogin() {
+  protected async pollLogin() {
     if (!this.lockfile) return;
     logger.debug('Polling LCU summoner name');
 
@@ -53,7 +59,7 @@ class Connector extends LCUConnector {
     }
   }
 
-  private async pollSettings(summonerId: number) {
+  protected async pollSettings(summonerId: number) {
     if (!this.lockfile) return;
     logger.debug('Polling LCU input settings');
 
@@ -62,8 +68,14 @@ class Connector extends LCUConnector {
       logger.debug('Found LCU input settings');
       const champions = await api.champions.get(summonerId);
       logger.debug('Found LCU champions list');
+      const gameFlow = await api.gameFlow.phase();
 
-      this.emit('login', { summoner: summonerId, settings, champions });
+      this.emit('login', {
+        summoner: summonerId,
+        settings,
+        champions,
+        gameFlow,
+      });
     } catch (e) {
       logger.error(e);
       await sleep(5000);
@@ -71,5 +83,3 @@ class Connector extends LCUConnector {
     }
   }
 }
-
-export const connector = new Connector();

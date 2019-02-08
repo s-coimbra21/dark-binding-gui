@@ -2,7 +2,7 @@
   "name": "dark-binding",
   "productName": "Dark Binding",
   "description": "Manage your League of Legends keybindings",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "author": {
     "name": "S. Coimbra",
     "email": "me@jinx.pro"
@@ -15,8 +15,7 @@
   "scripts": {
     "dev": "electron-webpack dev",
     "compile": "electron-webpack",
-    "build": "yarn dist",
-    "dist": "yarn compile && electron-builder",
+    "build": "yarn compile && electron-builder",
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null",
     "release": "yarn compile && electron-builder -p always"
   },
@@ -36,6 +35,7 @@
   },
   "dependencies": {
     "auto-launch": "^5.0.5",
+    "axios": "^0.18.0",
     "classnames": "^2.2.6",
     "connected-react-router": "^6.2.1",
     "electron-devtools-installer": "^2.2.4",
@@ -64,7 +64,7 @@
     "reselect": "^4.0.0",
     "source-map-support": "^0.5.9",
     "typesafe-actions": "^3.0.0",
-    "ws": "^6.1.2"
+    "ws": "^6.1.3"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
