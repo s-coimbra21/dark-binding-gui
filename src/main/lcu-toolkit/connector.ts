@@ -1,5 +1,8 @@
+import { app, dialog } from 'electron';
 import logger from 'electron-log';
 import { EventEmitter } from 'events';
+import { join } from 'path';
+import { readFile } from 'fs-extra';
 
 import { sleep } from '@utils/sleep';
 
@@ -38,9 +41,30 @@ export class Connector extends LCUConnector {
     return super.on(event, handler);
   }
 
-  constructor(executablePath?: string) {
+  constructor() {
+    super();
+
     // @ts-ignore
-    super(executablePath);
+    this._onFileCreated = async (path: string) => {
+      const config = await readFile(
+        // @ts-ignore
+        join(this._dirPath, 'Config/LeagueClientSettings.yaml'),
+        'utf8'
+      );
+
+      if (config.match(/region:\W*"KR"/gi)) {
+        dialog.showMessageBox({
+          type: 'error',
+          message:
+            'Unfortunately, 3rd Party LCU applications are not available in your region, the app will now exit',
+          buttons: ['I understand'],
+        });
+        return app.exit(1);
+      }
+
+      // @ts-ignore
+      return super._onFileCreated(path);
+    };
   }
 
   protected async pollLogin() {
