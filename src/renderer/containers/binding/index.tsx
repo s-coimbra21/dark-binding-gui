@@ -49,7 +49,7 @@ export default function binding(Comp: ComponentType<BindingInnerProps>) {
     openModal = () => this.setState({ editing: true });
     closeModal = () => this.setState({ editing: false });
 
-    handleChangeBinding = (value: string) => {
+    handleChangeBinding = (value: string, allowDuplicates: boolean) => {
       const { group, name, changeBinding } = this
         .context as BindingContextProps;
       const { secondary, section, dataKey } = this.props;
@@ -65,7 +65,12 @@ export default function binding(Comp: ComponentType<BindingInnerProps>) {
 
       if (nextValue[1] === '[<Unbound>]') nextValue.pop();
 
-      changeBinding(name, [section, dataKey].join('.'), nextValue);
+      changeBinding(
+        name,
+        [section, dataKey].join('.'),
+        nextValue,
+        allowDuplicates
+      );
 
       this.closeModal();
     };

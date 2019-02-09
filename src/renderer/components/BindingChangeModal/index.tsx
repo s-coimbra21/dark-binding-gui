@@ -6,7 +6,7 @@ import React, {
 } from 'react';
 import { Modal } from '@components/Modal';
 import { eventToSaved, formatSaved } from '@utils/parse-binding';
-import { Button } from 'react-hextech';
+import { Button, Checkbox } from 'react-hextech';
 
 const styles = require('./index.scss');
 
@@ -14,11 +14,12 @@ interface Props {
   label: string;
   value: string;
   secondary: boolean;
-  onChange: (path: string) => void;
+  onChange: (path: string, allowDuplicates: boolean) => void;
   onCancel: () => void;
 }
 
 interface State {
+  allowDuplicates: boolean;
   value: string;
 }
 
@@ -28,6 +29,7 @@ export class BindingChangeModal extends PureComponent<Props, State> {
   };
 
   state = {
+    allowDuplicates: false,
     value: this.props.value,
   };
 
@@ -60,7 +62,13 @@ export class BindingChangeModal extends PureComponent<Props, State> {
   };
 
   handleSave = () => {
-    this.props.onChange(this.state.value);
+    this.props.onChange(this.state.value, this.state.allowDuplicates);
+  };
+
+  handleAllowDuplicatesToggle = () => {
+    this.setState({
+      allowDuplicates: !this.state.allowDuplicates,
+    });
   };
 
   handleCancel = () => {
@@ -69,6 +77,7 @@ export class BindingChangeModal extends PureComponent<Props, State> {
 
   render() {
     const { label, secondary } = this.props;
+    const { allowDuplicates } = this.state;
     const formatted = formatSaved(this.state.value);
 
     const buttons = (
@@ -94,6 +103,12 @@ export class BindingChangeModal extends PureComponent<Props, State> {
           >
             Unbind
           </button>
+          <Checkbox
+            onChange={this.handleAllowDuplicatesToggle}
+            value={allowDuplicates}
+          >
+            Allow Duplicate Binding
+          </Checkbox>
         </div>
       </Modal>
     );

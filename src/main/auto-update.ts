@@ -30,7 +30,7 @@ export function checkForUpdates(mainWindow: BrowserWindow) {
   }
 
   autoUpdater.addListener('update-available', () => {
-    logger.debug('New update available');
+    logger.silly('New update available');
 
     if (promptUpdate(mainWindow)) {
       if (platform === 'darwin') {
@@ -46,23 +46,23 @@ export function checkForUpdates(mainWindow: BrowserWindow) {
   });
 
   autoUpdater.addListener('update-not-available', () => {
-    logger.debug('No new updates');
+    logger.silly('No new updates');
   });
 
   autoUpdater.addListener('update-downloaded', () => {
-    logger.debug('Quitting to install new update');
+    logger.silly('Quitting to install new update');
 
     autoUpdater.quitAndInstall();
   });
 
   autoUpdater.addListener('download-progress', progress => {
-    logger.debug('Update Progress', progress);
+    logger.silly('Update Progress', progress);
 
     broadcast('lcu-sync', { updateProgress: progress.percent });
   });
 
   autoUpdater.addListener('error', error => {
-    logger.debug(error);
+    logger.error(error);
   });
 
   autoUpdater.checkForUpdates();

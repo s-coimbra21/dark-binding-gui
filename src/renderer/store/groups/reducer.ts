@@ -90,11 +90,11 @@ export default createReducer(initialState, actions)({
       default: defaultGroup,
     },
   }),
-  changeBinding: (state, { groupName, path, value }) => {
+  changeBinding: (state, { groupName, path, value, allowDuplicates }) => {
     const groups = state.groups;
     const group = groups[groupName];
 
-    updateInputSettings(group, path, value);
+    updateInputSettings(group, path, value, allowDuplicates);
 
     groups[groupName] = { ...group };
 

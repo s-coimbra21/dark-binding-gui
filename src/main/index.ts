@@ -6,7 +6,7 @@ import { isDev } from '@utils/env';
 import './lcu-toolkit';
 import { checkForUpdates } from './auto-update';
 
-log.transports.file.level = false;
+log.transports.file.level = 'debug';
 log.transports.console.level = isDev
   ? 'silly'
   : minimist(process.argv.slice(2)).loglevel || false;

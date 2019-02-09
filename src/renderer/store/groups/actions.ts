@@ -96,8 +96,12 @@ export const createGroup = (groupName: string) => (
 
 export const changeBinding = createAction(
   '@@groups/changeBinding',
-  resolve => (groupName: string, path: string, value: Binding[]) =>
-    resolve({ groupName, path, value })
+  resolve => (
+    groupName: string,
+    path: string,
+    value: Binding[],
+    allowDuplicates = false
+  ) => resolve({ groupName, path, value, allowDuplicates })
 );
 
 export const changeQuickcast = createAction(

@@ -13,7 +13,7 @@ import { broadcast } from './utils';
 
 const replaceConfig = async (group: string) => {
   const settings = store.get(`groups.${group}`);
-  logger.debug(`patching settings to group ${group}`, settings);
+  logger.debug(`patching settings from group ${group}`, settings);
 
   if (!settings)
     return dialog.showErrorBox(
@@ -27,7 +27,7 @@ const replaceConfig = async (group: string) => {
     const lock = await fs.readFile(lockPath, 'utf8').catch(() => null);
 
     if (lock !== group) {
-      logger.debug(
+      logger.silly(
         'input settings patched',
         await api.inputSettings.patch(settings)
       );
@@ -99,7 +99,7 @@ monitor.on('login', ({ settings }) => {
 monitor.on('champSelect', async data => {
   if (data.timer.phase !== 'FINALIZATION') return;
 
-  logger.debug('received champion select packet');
+  logger.silly('received champion select packet');
 
   const self = data.myTeam.find(
     player => +player.summonerId === +monitor.state.summoner!
@@ -108,8 +108,6 @@ monitor.on('champSelect', async data => {
   if (!self || !self.championId) return;
 
   const groupName = store.get('championGroups')[self.championId] || 'default';
-
-  logger.debug(`applying config: ${groupName}`);
 
   await replaceConfig(groupName);
 });
