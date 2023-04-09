@@ -28,7 +28,7 @@ export const champions = {
       `/lol-champions/v1/inventories/${summonerId}/champions-minimal`
     )()
       .then(champions => champions.filter(c => c.id >= 0))
-      .catch(() => championsJson)
+      .catch(() => championsJson.data)
       .then(sortBy(['name'])),
 };
 

@@ -11,7 +11,6 @@ interface ChampionTileProps extends Champion {
 export const ChampionTile: FC<ChampionTileProps> = ({
   className,
   id,
-  squarePortraitPath,
   name,
   onClick,
 }) => (
@@ -20,7 +19,7 @@ export const ChampionTile: FC<ChampionTileProps> = ({
       <div
         className={style.portrait}
         style={{
-          backgroundImage: `url(lcu://${squarePortraitPath})`,
+          backgroundImage: `url(lcu:///lol-game-data/assets/v1/champion-icons/${id}.png)`,
         }}
       />
     </div>

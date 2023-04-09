@@ -1,0 +1,35 @@
+name: Build/release
+
+on: push
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  release:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [windows-latest]
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 2.7
+
+      - name: Install Node.js, NPM and Yarn
+        uses: actions/setup-node@v1
+        with:
+          node-version: 11
+
+      - name: Build/release Electron app
+        uses: samuelmeuli/action-electron-builder@v1
+        if: ${{ startsWith(github.ref, 'refs/tags/v') }}
+        with:
+          github_token: ${{ secrets.github_token }}
+          release: ${{ startsWith(github.ref, 'refs/tags/v') }}
+          # build_script_name: release
