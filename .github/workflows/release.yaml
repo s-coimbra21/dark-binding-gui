@@ -1,9 +1,6 @@
 name: Build/release
 
 on: push
-permissions:
-  contents: write
-  pull-requests: read
 
 jobs:
   release:
@@ -30,6 +27,6 @@ jobs:
         uses: samuelmeuli/action-electron-builder@v1
         if: ${{ startsWith(github.ref, 'refs/tags/v') }}
         with:
-          github_token: ${{ secrets.github_token }}
+          github_token: ${{ secrets.MY_PAT }}
           release: ${{ startsWith(github.ref, 'refs/tags/v') }}
           # build_script_name: release
