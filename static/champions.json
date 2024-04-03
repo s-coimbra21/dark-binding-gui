@@ -1,10 +1,10 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "13.7.1",
+    "version": "14.7.1",
     "data": {
         "Aatrox": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Aatrox",
             "key": "266",
             "name": "Aatrox",
@@ -54,7 +54,7 @@
             }
         },
         "Ahri": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Ahri",
             "key": "103",
             "name": "Ahri",
@@ -82,7 +82,7 @@
             "partype": "Mana",
             "stats": {
                 "hp": 590,
-                "hpperlevel": 96,
+                "hpperlevel": 104,
                 "mp": 418,
                 "mpperlevel": 25,
                 "movespeed": 330,
@@ -99,12 +99,12 @@
                 "critperlevel": 0,
                 "attackdamage": 53,
                 "attackdamageperlevel": 3,
-                "attackspeedperlevel": 2,
+                "attackspeedperlevel": 2.2,
                 "attackspeed": 0.668
             }
         },
         "Akali": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Akali",
             "key": "84",
             "name": "Akali",
@@ -153,7 +153,7 @@
             }
         },
         "Akshan": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Akshan",
             "key": "166",
             "name": "Akshan",
@@ -181,12 +181,12 @@
             "partype": "Mana",
             "stats": {
                 "hp": 630,
-                "hpperlevel": 104,
+                "hpperlevel": 107,
                 "mp": 350,
                 "mpperlevel": 40,
                 "movespeed": 330,
                 "armor": 26,
-                "armorperlevel": 4.2,
+                "armorperlevel": 4.7,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
                 "attackrange": 500,
@@ -197,13 +197,13 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 52,
-                "attackdamageperlevel": 3.5,
+                "attackdamageperlevel": 3,
                 "attackspeedperlevel": 4,
                 "attackspeed": 0.638
             }
         },
         "Alistar": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Alistar",
             "key": "12",
             "name": "Alistar",
@@ -253,7 +253,7 @@
             }
         },
         "Amumu": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Amumu",
             "key": "32",
             "name": "Amumu",
@@ -303,7 +303,7 @@
             }
         },
         "Anivia": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Anivia",
             "key": "34",
             "name": "Anivia",
@@ -349,11 +349,11 @@
                 "attackdamage": 51,
                 "attackdamageperlevel": 3.2,
                 "attackspeedperlevel": 1.68,
-                "attackspeed": 0.625
+                "attackspeed": 0.658
             }
         },
         "Annie": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Annie",
             "key": "1",
             "name": "Annie",
@@ -398,11 +398,11 @@
                 "attackdamage": 50,
                 "attackdamageperlevel": 2.65,
                 "attackspeedperlevel": 1.36,
-                "attackspeed": 0.579
+                "attackspeed": 0.61
             }
         },
         "Aphelios": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Aphelios",
             "key": "523",
             "name": "Aphelios",
@@ -445,13 +445,13 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 55,
-                "attackdamageperlevel": 3,
+                "attackdamageperlevel": 2.3,
                 "attackspeedperlevel": 2.1,
                 "attackspeed": 0.64
             }
         },
         "Ashe": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Ashe",
             "key": "22",
             "name": "Ashe",
@@ -501,7 +501,7 @@
             }
         },
         "AurelionSol": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "AurelionSol",
             "key": "136",
             "name": "Aurelion Sol",
@@ -528,12 +528,12 @@
             "partype": "Mana",
             "stats": {
                 "hp": 620,
-                "hpperlevel": 95,
+                "hpperlevel": 90,
                 "mp": 530,
                 "mpperlevel": 40,
                 "movespeed": 335,
                 "armor": 22,
-                "armorperlevel": 4.3,
+                "armorperlevel": 4,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
                 "attackrange": 550,
@@ -550,7 +550,7 @@
             }
         },
         "Azir": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Azir",
             "key": "268",
             "name": "Azir",
@@ -587,7 +587,7 @@
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
                 "attackrange": 525,
-                "hpregen": 7,
+                "hpregen": 5,
                 "hpregenperlevel": 0.75,
                 "mpregen": 8,
                 "mpregenperlevel": 0.8,
@@ -600,7 +600,7 @@
             }
         },
         "Bard": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Bard",
             "key": "432",
             "name": "Bard",
@@ -633,7 +633,7 @@
                 "mpperlevel": 50,
                 "movespeed": 330,
                 "armor": 34,
-                "armorperlevel": 5.2,
+                "armorperlevel": 5,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
                 "attackrange": 500,
@@ -646,11 +646,11 @@
                 "attackdamage": 52,
                 "attackdamageperlevel": 3,
                 "attackspeedperlevel": 2,
-                "attackspeed": 0.625
+                "attackspeed": 0.658
             }
         },
         "Belveth": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Belveth",
             "key": "200",
             "name": "Bel'Veth",
@@ -693,13 +693,13 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 60,
-                "attackdamageperlevel": 1.7,
+                "attackdamageperlevel": 1.5,
                 "attackspeedperlevel": 0,
                 "attackspeed": 0.85
             }
         },
         "Blitzcrank": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Blitzcrank",
             "key": "53",
             "name": "Blitzcrank",
@@ -726,14 +726,14 @@
             ],
             "partype": "Mana",
             "stats": {
-                "hp": 633,
+                "hp": 650,
                 "hpperlevel": 109,
                 "mp": 267,
                 "mpperlevel": 40,
                 "movespeed": 325,
-                "armor": 40,
+                "armor": 37,
                 "armorperlevel": 4.7,
-                "spellblock": 28,
+                "spellblock": 32,
                 "spellblockperlevel": 2.05,
                 "attackrange": 125,
                 "hpregen": 7.5,
@@ -745,11 +745,11 @@
                 "attackdamage": 62,
                 "attackdamageperlevel": 3.5,
                 "attackspeedperlevel": 1.13,
-                "attackspeed": 0.65
+                "attackspeed": 0.625
             }
         },
         "Brand": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Brand",
             "key": "63",
             "name": "Brand",
@@ -775,13 +775,13 @@
             ],
             "partype": "Mana",
             "stats": {
-                "hp": 590,
-                "hpperlevel": 102,
+                "hp": 570,
+                "hpperlevel": 105,
                 "mp": 469,
                 "mpperlevel": 21,
                 "movespeed": 340,
-                "armor": 22,
-                "armorperlevel": 4.7,
+                "armor": 27,
+                "armorperlevel": 4.2,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
                 "attackrange": 550,
@@ -793,12 +793,12 @@
                 "critperlevel": 0,
                 "attackdamage": 57,
                 "attackdamageperlevel": 3,
-                "attackspeedperlevel": 1.36,
-                "attackspeed": 0.625
+                "attackspeedperlevel": 2,
+                "attackspeed": 0.681
             }
         },
         "Braum": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Braum",
             "key": "201",
             "name": "Braum",
@@ -837,7 +837,7 @@
                 "attackrange": 125,
                 "hpregen": 8.5,
                 "hpregenperlevel": 1,
-                "mpregen": 6,
+                "mpregen": 7,
                 "mpregenperlevel": 0.8,
                 "crit": 0,
                 "critperlevel": 0,
@@ -847,8 +847,58 @@
                 "attackspeed": 0.644
             }
         },
+        "Briar": {
+            "version": "14.7.1",
+            "id": "Briar",
+            "key": "233",
+            "name": "Briar",
+            "title": "the Restrained Hunger",
+            "blurb": "A failed experiment by the Black Rose, Briar's uncontrollable bloodlust required a special pillory to focus her frenzied mind. After years of confinement, this living weapon broke free from her restraints and unleashed herself into the world. Now she's...",
+            "info": {
+                "attack": 9,
+                "defense": 5,
+                "magic": 3,
+                "difficulty": 3
+            },
+            "image": {
+                "full": "Briar.png",
+                "sprite": "champion0.png",
+                "group": "champion",
+                "x": 336,
+                "y": 48,
+                "w": 48,
+                "h": 48
+            },
+            "tags": [
+                "Fighter",
+                "Assassin"
+            ],
+            "partype": "Fury",
+            "stats": {
+                "hp": 590,
+                "hpperlevel": 100,
+                "mp": 0,
+                "mpperlevel": 0,
+                "movespeed": 340,
+                "armor": 30,
+                "armorperlevel": 4.2,
+                "spellblock": 32,
+                "spellblockperlevel": 2.05,
+                "attackrange": 125,
+                "hpregen": 0,
+                "hpregenperlevel": 0,
+                "mpregen": 0,
+                "mpregenperlevel": 0,
+                "crit": 0,
+                "critperlevel": 0,
+                "attackdamage": 60,
+                "attackdamageperlevel": 3,
+                "attackspeedperlevel": 2,
+                "attackspeed": 0.644
+            }
+        },
         "Caitlyn": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Caitlyn",
             "key": "51",
             "name": "Caitlyn",
@@ -864,7 +914,7 @@
                 "full": "Caitlyn.png",
                 "sprite": "champion0.png",
                 "group": "champion",
-                "x": 336,
+                "x": 384,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -897,7 +947,7 @@
             }
         },
         "Camille": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Camille",
             "key": "164",
             "name": "Camille",
@@ -913,7 +963,7 @@
                 "full": "Camille.png",
                 "sprite": "champion0.png",
                 "group": "champion",
-                "x": 384,
+                "x": 432,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -924,7 +974,7 @@
             ],
             "partype": "Mana",
             "stats": {
-                "hp": 646,
+                "hp": 670,
                 "hpperlevel": 99,
                 "mp": 339,
                 "mpperlevel": 52,
@@ -941,13 +991,13 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 68,
-                "attackdamageperlevel": 3.5,
+                "attackdamageperlevel": 3.8,
                 "attackspeedperlevel": 2.5,
                 "attackspeed": 0.644
             }
         },
         "Cassiopeia": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Cassiopeia",
             "key": "69",
             "name": "Cassiopeia",
@@ -963,8 +1013,8 @@
                 "full": "Cassiopeia.png",
                 "sprite": "champion0.png",
                 "group": "champion",
-                "x": 432,
-                "y": 48,
+                "x": 0,
+                "y": 96,
                 "w": 48,
                 "h": 48
             },
@@ -996,7 +1046,7 @@
             }
         },
         "Chogath": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Chogath",
             "key": "31",
             "name": "Cho'Gath",
@@ -1012,7 +1062,7 @@
                 "full": "Chogath.png",
                 "sprite": "champion0.png",
                 "group": "champion",
-                "x": 0,
+                "x": 48,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -1046,7 +1096,7 @@
             }
         },
         "Corki": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Corki",
             "key": "42",
             "name": "Corki",
@@ -1062,7 +1112,7 @@
                 "full": "Corki.png",
                 "sprite": "champion0.png",
                 "group": "champion",
-                "x": 48,
+                "x": 96,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -1072,8 +1122,8 @@
             ],
             "partype": "Mana",
             "stats": {
-                "hp": 588,
-                "hpperlevel": 105,
+                "hp": 610,
+                "hpperlevel": 103,
                 "mp": 350,
                 "mpperlevel": 54,
                 "movespeed": 325,
@@ -1088,14 +1138,14 @@
                 "mpregenperlevel": 0.55,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 55,
-                "attackdamageperlevel": 2.8,
+                "attackdamage": 61,
+                "attackdamageperlevel": 2.5,
                 "attackspeedperlevel": 2.3,
                 "attackspeed": 0.638
             }
         },
         "Darius": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Darius",
             "key": "122",
             "name": "Darius",
@@ -1111,7 +1161,7 @@
                 "full": "Darius.png",
                 "sprite": "champion0.png",
                 "group": "champion",
-                "x": 96,
+                "x": 144,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -1145,7 +1195,7 @@
             }
         },
         "Diana": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Diana",
             "key": "131",
             "name": "Diana",
@@ -1161,7 +1211,7 @@
                 "full": "Diana.png",
                 "sprite": "champion0.png",
                 "group": "champion",
-                "x": 144,
+                "x": 192,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -1190,12 +1240,12 @@
                 "critperlevel": 0,
                 "attackdamage": 57,
                 "attackdamageperlevel": 3,
-                "attackspeedperlevel": 2.25,
+                "attackspeedperlevel": 2,
                 "attackspeed": 0.625
             }
         },
         "Draven": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Draven",
             "key": "119",
             "name": "Draven",
@@ -1211,7 +1261,7 @@
                 "full": "Draven.png",
                 "sprite": "champion0.png",
                 "group": "champion",
-                "x": 192,
+                "x": 240,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -1244,7 +1294,7 @@
             }
         },
         "DrMundo": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "DrMundo",
             "key": "36",
             "name": "Dr. Mundo",
@@ -1260,7 +1310,7 @@
                 "full": "DrMundo.png",
                 "sprite": "champion0.png",
                 "group": "champion",
-                "x": 240,
+                "x": 288,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -1294,7 +1344,7 @@
             }
         },
         "Ekko": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Ekko",
             "key": "245",
             "name": "Ekko",
@@ -1310,7 +1360,7 @@
                 "full": "Ekko.png",
                 "sprite": "champion0.png",
                 "group": "champion",
-                "x": 288,
+                "x": 336,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -1344,7 +1394,7 @@
             }
         },
         "Elise": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Elise",
             "key": "60",
             "name": "Elise",
@@ -1360,7 +1410,7 @@
                 "full": "Elise.png",
                 "sprite": "champion0.png",
                 "group": "champion",
-                "x": 336,
+                "x": 384,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -1394,7 +1444,7 @@
             }
         },
         "Evelynn": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Evelynn",
             "key": "28",
             "name": "Evelynn",
@@ -1410,7 +1460,7 @@
                 "full": "Evelynn.png",
                 "sprite": "champion0.png",
                 "group": "champion",
-                "x": 384,
+                "x": 432,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -1444,7 +1494,7 @@
             }
         },
         "Ezreal": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Ezreal",
             "key": "81",
             "name": "Ezreal",
@@ -1458,10 +1508,10 @@
             },
             "image": {
                 "full": "Ezreal.png",
-                "sprite": "champion0.png",
+                "sprite": "champion1.png",
                 "group": "champion",
-                "x": 432,
-                "y": 96,
+                "x": 0,
+                "y": 0,
                 "w": 48,
                 "h": 48
             },
@@ -1487,14 +1537,14 @@
                 "mpregenperlevel": 1,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 60,
+                "attackdamage": 62,
                 "attackdamageperlevel": 2.5,
                 "attackspeedperlevel": 2.5,
                 "attackspeed": 0.625
             }
         },
         "Fiddlesticks": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Fiddlesticks",
             "key": "9",
             "name": "Fiddlesticks",
@@ -1510,7 +1560,7 @@
                 "full": "Fiddlesticks.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 0,
+                "x": 48,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -1544,7 +1594,7 @@
             }
         },
         "Fiora": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Fiora",
             "key": "114",
             "name": "Fiora",
@@ -1560,7 +1610,7 @@
                 "full": "Fiora.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 48,
+                "x": 96,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -1587,14 +1637,14 @@
                 "mpregenperlevel": 0.7,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 68,
+                "attackdamage": 66,
                 "attackdamageperlevel": 3.3,
                 "attackspeedperlevel": 3.2,
                 "attackspeed": 0.69
             }
         },
         "Fizz": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Fizz",
             "key": "105",
             "name": "Fizz",
@@ -1610,7 +1660,7 @@
                 "full": "Fizz.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 96,
+                "x": 144,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -1644,7 +1694,7 @@
             }
         },
         "Galio": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Galio",
             "key": "3",
             "name": "Galio",
@@ -1660,7 +1710,7 @@
                 "full": "Galio.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 144,
+                "x": 192,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -1694,7 +1744,7 @@
             }
         },
         "Gangplank": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Gangplank",
             "key": "41",
             "name": "Gangplank",
@@ -1710,7 +1760,7 @@
                 "full": "Gangplank.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 192,
+                "x": 240,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -1743,7 +1793,7 @@
             }
         },
         "Garen": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Garen",
             "key": "86",
             "name": "Garen",
@@ -1759,7 +1809,7 @@
                 "full": "Garen.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 240,
+                "x": 288,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -1775,7 +1825,7 @@
                 "mp": 0,
                 "mpperlevel": 0,
                 "movespeed": 340,
-                "armor": 36,
+                "armor": 38,
                 "armorperlevel": 4.2,
                 "spellblock": 32,
                 "spellblockperlevel": 1.55,
@@ -1786,14 +1836,14 @@
                 "mpregenperlevel": 0,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 66,
+                "attackdamage": 69,
                 "attackdamageperlevel": 4.5,
                 "attackspeedperlevel": 3.65,
                 "attackspeed": 0.625
             }
         },
         "Gnar": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Gnar",
             "key": "150",
             "name": "Gnar",
@@ -1809,7 +1859,7 @@
                 "full": "Gnar.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 288,
+                "x": 336,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -1843,7 +1893,7 @@
             }
         },
         "Gragas": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Gragas",
             "key": "79",
             "name": "Gragas",
@@ -1859,7 +1909,7 @@
                 "full": "Gragas.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 336,
+                "x": 384,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -1870,13 +1920,13 @@
             ],
             "partype": "Mana",
             "stats": {
-                "hp": 670,
-                "hpperlevel": 109,
+                "hp": 640,
+                "hpperlevel": 115,
                 "mp": 400,
                 "mpperlevel": 47,
                 "movespeed": 330,
                 "armor": 38,
-                "armorperlevel": 4.8,
+                "armorperlevel": 5,
                 "spellblock": 32,
                 "spellblockperlevel": 2.05,
                 "attackrange": 125,
@@ -1893,7 +1943,7 @@
             }
         },
         "Graves": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Graves",
             "key": "104",
             "name": "Graves",
@@ -1909,7 +1959,7 @@
                 "full": "Graves.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 384,
+                "x": 432,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -1942,7 +1992,7 @@
             }
         },
         "Gwen": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Gwen",
             "key": "887",
             "name": "Gwen",
@@ -1958,8 +2008,8 @@
                 "full": "Gwen.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 432,
-                "y": 0,
+                "x": 0,
+                "y": 48,
                 "w": 48,
                 "h": 48
             },
@@ -1970,7 +2020,7 @@
             "partype": "Mana",
             "stats": {
                 "hp": 620,
-                "hpperlevel": 109,
+                "hpperlevel": 115,
                 "mp": 330,
                 "mpperlevel": 40,
                 "movespeed": 340,
@@ -1979,7 +2029,7 @@
                 "spellblock": 32,
                 "spellblockperlevel": 2.05,
                 "attackrange": 150,
-                "hpregen": 8.5,
+                "hpregen": 9,
                 "hpregenperlevel": 0.9,
                 "mpregen": 7.5,
                 "mpregenperlevel": 0.7,
@@ -1992,7 +2042,7 @@
             }
         },
         "Hecarim": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Hecarim",
             "key": "120",
             "name": "Hecarim",
@@ -2008,7 +2058,7 @@
                 "full": "Hecarim.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 0,
+                "x": 48,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -2021,8 +2071,8 @@
             "stats": {
                 "hp": 625,
                 "hpperlevel": 99,
-                "mp": 277,
-                "mpperlevel": 60,
+                "mp": 280,
+                "mpperlevel": 40,
                 "movespeed": 345,
                 "armor": 32,
                 "armorperlevel": 5.45,
@@ -2031,18 +2081,18 @@
                 "attackrange": 175,
                 "hpregen": 7,
                 "hpregenperlevel": 0.75,
-                "mpregen": 6.5,
-                "mpregenperlevel": 0.6,
+                "mpregen": 7,
+                "mpregenperlevel": 0.8,
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 66,
-                "attackdamageperlevel": 3.2,
+                "attackdamageperlevel": 3.7,
                 "attackspeedperlevel": 2.5,
                 "attackspeed": 0.67
             }
         },
         "Heimerdinger": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Heimerdinger",
             "key": "74",
             "name": "Heimerdinger",
@@ -2058,7 +2108,7 @@
                 "full": "Heimerdinger.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 48,
+                "x": 96,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -2088,11 +2138,60 @@
                 "attackdamage": 56,
                 "attackdamageperlevel": 2.7,
                 "attackspeedperlevel": 1.36,
-                "attackspeed": 0.625
+                "attackspeed": 0.658
+            }
+        },
+        "Hwei": {
+            "version": "14.7.1",
+            "id": "Hwei",
+            "key": "910",
+            "name": "Hwei",
+            "title": "the Visionary",
+            "blurb": "Hwei is a brooding painter who creates brilliant art in order to confront Ionia's criminals and comfort their victims. Beneath his melancholy roils a torn, emotional mind\u2014haunted by both the vibrant visions of his imagination and the gruesome memories...",
+            "info": {
+                "attack": 7,
+                "defense": 1,
+                "magic": 8,
+                "difficulty": 9
+            },
+            "image": {
+                "full": "Hwei.png",
+                "sprite": "champion1.png",
+                "group": "champion",
+                "x": 144,
+                "y": 48,
+                "w": 48,
+                "h": 48
+            },
+            "tags": [
+                "Mage"
+            ],
+            "partype": "Mana",
+            "stats": {
+                "hp": 580,
+                "hpperlevel": 109,
+                "mp": 480,
+                "mpperlevel": 30,
+                "movespeed": 330,
+                "armor": 21,
+                "armorperlevel": 4.7,
+                "spellblock": 30,
+                "spellblockperlevel": 1.3,
+                "attackrange": 550,
+                "hpregen": 5.5,
+                "hpregenperlevel": 0.55,
+                "mpregen": 7.5,
+                "mpregenperlevel": 0.75,
+                "crit": 0,
+                "critperlevel": 0,
+                "attackdamage": 54,
+                "attackdamageperlevel": 3.3,
+                "attackspeedperlevel": 2.5,
+                "attackspeed": 0.69
             }
         },
         "Illaoi": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Illaoi",
             "key": "420",
             "name": "Illaoi",
@@ -2108,7 +2207,7 @@
                 "full": "Illaoi.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 96,
+                "x": 192,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -2120,9 +2219,9 @@
             "partype": "Mana",
             "stats": {
                 "hp": 656,
-                "hpperlevel": 109,
-                "mp": 300,
-                "mpperlevel": 50,
+                "hpperlevel": 115,
+                "mp": 350,
+                "mpperlevel": 60,
                 "movespeed": 350,
                 "armor": 35,
                 "armorperlevel": 5,
@@ -2142,7 +2241,7 @@
             }
         },
         "Irelia": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Irelia",
             "key": "39",
             "name": "Irelia",
@@ -2158,7 +2257,7 @@
                 "full": "Irelia.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 144,
+                "x": 240,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -2192,7 +2291,7 @@
             }
         },
         "Ivern": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Ivern",
             "key": "427",
             "name": "Ivern",
@@ -2208,7 +2307,7 @@
                 "full": "Ivern.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 192,
+                "x": 288,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -2219,15 +2318,15 @@
             ],
             "partype": "Mana",
             "stats": {
-                "hp": 655,
+                "hp": 630,
                 "hpperlevel": 99,
                 "mp": 450,
                 "mpperlevel": 60,
                 "movespeed": 330,
                 "armor": 27,
                 "armorperlevel": 4.7,
-                "spellblock": 32,
-                "spellblockperlevel": 2.05,
+                "spellblock": 30,
+                "spellblockperlevel": 1.3,
                 "attackrange": 475,
                 "hpregen": 7,
                 "hpregenperlevel": 0.85,
@@ -2242,7 +2341,7 @@
             }
         },
         "Janna": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Janna",
             "key": "40",
             "name": "Janna",
@@ -2258,7 +2357,7 @@
                 "full": "Janna.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 240,
+                "x": 336,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -2270,29 +2369,29 @@
             "partype": "Mana",
             "stats": {
                 "hp": 570,
-                "hpperlevel": 84,
-                "mp": 350,
-                "mpperlevel": 64,
+                "hpperlevel": 90,
+                "mp": 360,
+                "mpperlevel": 50,
                 "movespeed": 325,
                 "armor": 28,
-                "armorperlevel": 5,
+                "armorperlevel": 4.5,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
-                "attackrange": 500,
+                "attackrange": 550,
                 "hpregen": 5.5,
                 "hpregenperlevel": 0.55,
                 "mpregen": 11.5,
                 "mpregenperlevel": 0.4,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 52,
-                "attackdamageperlevel": 3,
+                "attackdamage": 47,
+                "attackdamageperlevel": 2.5,
                 "attackspeedperlevel": 3,
                 "attackspeed": 0.625
             }
         },
         "JarvanIV": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "JarvanIV",
             "key": "59",
             "name": "Jarvan IV",
@@ -2308,7 +2407,7 @@
                 "full": "JarvanIV.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 288,
+                "x": 384,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -2325,7 +2424,7 @@
                 "mpperlevel": 55,
                 "movespeed": 340,
                 "armor": 36,
-                "armorperlevel": 4.8,
+                "armorperlevel": 5.2,
                 "spellblock": 32,
                 "spellblockperlevel": 2.05,
                 "attackrange": 175,
@@ -2336,13 +2435,13 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 64,
-                "attackdamageperlevel": 3.4,
+                "attackdamageperlevel": 3,
                 "attackspeedperlevel": 2.5,
                 "attackspeed": 0.658
             }
         },
         "Jax": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Jax",
             "key": "24",
             "name": "Jax",
@@ -2358,7 +2457,7 @@
                 "full": "Jax.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 336,
+                "x": 432,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -2392,7 +2491,7 @@
             }
         },
         "Jayce": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Jayce",
             "key": "126",
             "name": "Jayce",
@@ -2408,8 +2507,8 @@
                 "full": "Jayce.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 384,
-                "y": 48,
+                "x": 0,
+                "y": 96,
                 "w": 48,
                 "h": 48
             },
@@ -2435,14 +2534,14 @@
                 "mpregenperlevel": 0.8,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 57,
+                "attackdamage": 59,
                 "attackdamageperlevel": 4.25,
                 "attackspeedperlevel": 3,
                 "attackspeed": 0.658
             }
         },
         "Jhin": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Jhin",
             "key": "202",
             "name": "Jhin",
@@ -2458,8 +2557,8 @@
                 "full": "Jhin.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 432,
-                "y": 48,
+                "x": 48,
+                "y": 96,
                 "w": 48,
                 "h": 48
             },
@@ -2492,7 +2591,7 @@
             }
         },
         "Jinx": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Jinx",
             "key": "222",
             "name": "Jinx",
@@ -2508,7 +2607,7 @@
                 "full": "Jinx.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 0,
+                "x": 96,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -2519,7 +2618,7 @@
             "partype": "Mana",
             "stats": {
                 "hp": 630,
-                "hpperlevel": 100,
+                "hpperlevel": 105,
                 "mp": 260,
                 "mpperlevel": 50,
                 "movespeed": 325,
@@ -2535,13 +2634,13 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 59,
-                "attackdamageperlevel": 3.4,
-                "attackspeedperlevel": 1.36,
+                "attackdamageperlevel": 3.15,
+                "attackspeedperlevel": 1,
                 "attackspeed": 0.625
             }
         },
         "Kaisa": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Kaisa",
             "key": "145",
             "name": "Kai'Sa",
@@ -2557,7 +2656,7 @@
                 "full": "Kaisa.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 48,
+                "x": 144,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -2567,12 +2666,12 @@
             ],
             "partype": "Mana",
             "stats": {
-                "hp": 670,
+                "hp": 640,
                 "hpperlevel": 102,
                 "mp": 345,
                 "mpperlevel": 40,
                 "movespeed": 335,
-                "armor": 28,
+                "armor": 25,
                 "armorperlevel": 4.2,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
@@ -2584,13 +2683,13 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 59,
-                "attackdamageperlevel": 2,
+                "attackdamageperlevel": 2.6,
                 "attackspeedperlevel": 1.8,
                 "attackspeed": 0.644
             }
         },
         "Kalista": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Kalista",
             "key": "429",
             "name": "Kalista",
@@ -2606,7 +2705,7 @@
                 "full": "Kalista.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 96,
+                "x": 192,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -2616,7 +2715,7 @@
             ],
             "partype": "Mana",
             "stats": {
-                "hp": 574,
+                "hp": 600,
                 "hpperlevel": 114,
                 "mp": 300,
                 "mpperlevel": 45,
@@ -2626,20 +2725,20 @@
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
                 "attackrange": 525,
-                "hpregen": 3.75,
-                "hpregenperlevel": 0.55,
+                "hpregen": 4,
+                "hpregenperlevel": 0.75,
                 "mpregen": 6.3,
                 "mpregenperlevel": 0.4,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 66,
-                "attackdamageperlevel": 3.75,
+                "attackdamage": 61,
+                "attackdamageperlevel": 3.25,
                 "attackspeedperlevel": 4.5,
                 "attackspeed": 0.694
             }
         },
         "Karma": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Karma",
             "key": "43",
             "name": "Karma",
@@ -2655,7 +2754,7 @@
                 "full": "Karma.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 144,
+                "x": 240,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -2666,10 +2765,10 @@
             ],
             "partype": "Mana",
             "stats": {
-                "hp": 604,
+                "hp": 630,
                 "hpperlevel": 109,
                 "mp": 374,
-                "mpperlevel": 50,
+                "mpperlevel": 40,
                 "movespeed": 335,
                 "armor": 28,
                 "armorperlevel": 5,
@@ -2679,7 +2778,7 @@
                 "hpregen": 5.5,
                 "hpregenperlevel": 0.55,
                 "mpregen": 13,
-                "mpregenperlevel": 0.5,
+                "mpregenperlevel": 0.8,
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 51,
@@ -2689,7 +2788,7 @@
             }
         },
         "Karthus": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Karthus",
             "key": "30",
             "name": "Karthus",
@@ -2705,7 +2804,7 @@
                 "full": "Karthus.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 192,
+                "x": 288,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -2738,7 +2837,7 @@
             }
         },
         "Kassadin": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Kassadin",
             "key": "38",
             "name": "Kassadin",
@@ -2754,7 +2853,7 @@
                 "full": "Kassadin.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 240,
+                "x": 336,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -2788,7 +2887,7 @@
             }
         },
         "Katarina": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Katarina",
             "key": "55",
             "name": "Katarina",
@@ -2804,7 +2903,7 @@
                 "full": "Katarina.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 288,
+                "x": 384,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -2838,7 +2937,7 @@
             }
         },
         "Kayle": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Kayle",
             "key": "10",
             "name": "Kayle",
@@ -2854,7 +2953,7 @@
                 "full": "Kayle.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 336,
+                "x": 432,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -2888,7 +2987,7 @@
             }
         },
         "Kayn": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Kayn",
             "key": "141",
             "name": "Kayn",
@@ -2902,10 +3001,10 @@
             },
             "image": {
                 "full": "Kayn.png",
-                "sprite": "champion1.png",
+                "sprite": "champion2.png",
                 "group": "champion",
-                "x": 384,
-                "y": 96,
+                "x": 0,
+                "y": 0,
                 "w": 48,
                 "h": 48
             },
@@ -2938,7 +3037,7 @@
             }
         },
         "Kennen": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Kennen",
             "key": "85",
             "name": "Kennen",
@@ -2952,10 +3051,10 @@
             },
             "image": {
                 "full": "Kennen.png",
-                "sprite": "champion1.png",
+                "sprite": "champion2.png",
                 "group": "champion",
-                "x": 432,
-                "y": 96,
+                "x": 48,
+                "y": 0,
                 "w": 48,
                 "h": 48
             },
@@ -2988,7 +3087,7 @@
             }
         },
         "Khazix": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Khazix",
             "key": "121",
             "name": "Kha'Zix",
@@ -3004,7 +3103,7 @@
                 "full": "Khazix.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 0,
+                "x": 96,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -3030,14 +3129,14 @@
                 "mpregenperlevel": 0.5,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 63,
+                "attackdamage": 60,
                 "attackdamageperlevel": 3.1,
                 "attackspeedperlevel": 2.7,
                 "attackspeed": 0.668
             }
         },
         "Kindred": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Kindred",
             "key": "203",
             "name": "Kindred",
@@ -3053,7 +3152,7 @@
                 "full": "Kindred.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 48,
+                "x": 144,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -3064,7 +3163,7 @@
             "partype": "Mana",
             "stats": {
                 "hp": 610,
-                "hpperlevel": 99,
+                "hpperlevel": 104,
                 "mp": 300,
                 "mpperlevel": 35,
                 "movespeed": 325,
@@ -3080,13 +3179,13 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 65,
-                "attackdamageperlevel": 2.5,
+                "attackdamageperlevel": 3.25,
                 "attackspeedperlevel": 3.5,
                 "attackspeed": 0.625
             }
         },
         "Kled": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Kled",
             "key": "240",
             "name": "Kled",
@@ -3102,7 +3201,7 @@
                 "full": "Kled.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 96,
+                "x": 192,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -3136,7 +3235,7 @@
             }
         },
         "KogMaw": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "KogMaw",
             "key": "96",
             "name": "Kog'Maw",
@@ -3152,7 +3251,7 @@
                 "full": "KogMaw.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 144,
+                "x": 240,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -3186,7 +3285,7 @@
             }
         },
         "KSante": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "KSante",
             "key": "897",
             "name": "K'Sante",
@@ -3202,7 +3301,7 @@
                 "full": "KSante.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 192,
+                "x": 288,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -3213,13 +3312,13 @@
             ],
             "partype": "Mana",
             "stats": {
-                "hp": 610,
-                "hpperlevel": 108,
-                "mp": 290,
+                "hp": 625,
+                "hpperlevel": 115,
+                "mp": 320,
                 "mpperlevel": 60,
                 "movespeed": 330,
                 "armor": 33,
-                "armorperlevel": 4.7,
+                "armorperlevel": 5.2,
                 "spellblock": 30,
                 "spellblockperlevel": 2.1,
                 "attackrange": 175,
@@ -3236,7 +3335,7 @@
             }
         },
         "Leblanc": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Leblanc",
             "key": "7",
             "name": "LeBlanc",
@@ -3252,7 +3351,7 @@
                 "full": "Leblanc.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 240,
+                "x": 336,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -3266,7 +3365,7 @@
                 "hp": 598,
                 "hpperlevel": 111,
                 "mp": 400,
-                "mpperlevel": 55,
+                "mpperlevel": 25,
                 "movespeed": 340,
                 "armor": 22,
                 "armorperlevel": 4.7,
@@ -3276,17 +3375,17 @@
                 "hpregen": 7.5,
                 "hpregenperlevel": 0.55,
                 "mpregen": 8,
-                "mpregenperlevel": 1,
+                "mpregenperlevel": 0.8,
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 55,
-                "attackdamageperlevel": 3.5,
-                "attackspeedperlevel": 1.4,
-                "attackspeed": 0.625
+                "attackdamageperlevel": 2.2,
+                "attackspeedperlevel": 2.35,
+                "attackspeed": 0.658
             }
         },
         "LeeSin": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "LeeSin",
             "key": "64",
             "name": "Lee Sin",
@@ -3302,7 +3401,7 @@
                 "full": "LeeSin.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 288,
+                "x": 384,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -3318,7 +3417,7 @@
                 "mp": 200,
                 "mpperlevel": 0,
                 "movespeed": 345,
-                "armor": 34,
+                "armor": 36,
                 "armorperlevel": 4.9,
                 "spellblock": 32,
                 "spellblockperlevel": 2.05,
@@ -3336,7 +3435,7 @@
             }
         },
         "Leona": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Leona",
             "key": "89",
             "name": "Leona",
@@ -3352,7 +3451,7 @@
                 "full": "Leona.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 336,
+                "x": 432,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -3386,7 +3485,7 @@
             }
         },
         "Lillia": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Lillia",
             "key": "876",
             "name": "Lillia",
@@ -3402,8 +3501,8 @@
                 "full": "Lillia.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 384,
-                "y": 0,
+                "x": 0,
+                "y": 48,
                 "w": 48,
                 "h": 48
             },
@@ -3436,7 +3535,7 @@
             }
         },
         "Lissandra": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Lissandra",
             "key": "127",
             "name": "Lissandra",
@@ -3452,8 +3551,8 @@
                 "full": "Lissandra.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 432,
-                "y": 0,
+                "x": 48,
+                "y": 48,
                 "w": 48,
                 "h": 48
             },
@@ -3480,12 +3579,12 @@
                 "critperlevel": 0,
                 "attackdamage": 55,
                 "attackdamageperlevel": 2.7,
-                "attackspeedperlevel": 1.36,
+                "attackspeedperlevel": 1.5,
                 "attackspeed": 0.656
             }
         },
         "Lucian": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Lucian",
             "key": "236",
             "name": "Lucian",
@@ -3501,7 +3600,7 @@
                 "full": "Lucian.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 0,
+                "x": 96,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -3534,7 +3633,7 @@
             }
         },
         "Lulu": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Lulu",
             "key": "117",
             "name": "Lulu",
@@ -3550,7 +3649,7 @@
                 "full": "Lulu.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 48,
+                "x": 144,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -3562,11 +3661,11 @@
             "partype": "Mana",
             "stats": {
                 "hp": 595,
-                "hpperlevel": 88,
+                "hpperlevel": 92,
                 "mp": 350,
                 "mpperlevel": 55,
                 "movespeed": 330,
-                "armor": 29,
+                "armor": 26,
                 "armorperlevel": 4.9,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
@@ -3584,7 +3683,7 @@
             }
         },
         "Lux": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Lux",
             "key": "99",
             "name": "Lux",
@@ -3600,7 +3699,7 @@
                 "full": "Lux.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 96,
+                "x": 192,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -3611,30 +3710,30 @@
             ],
             "partype": "Mana",
             "stats": {
-                "hp": 560,
+                "hp": 580,
                 "hpperlevel": 99,
                 "mp": 480,
                 "mpperlevel": 23.5,
                 "movespeed": 330,
-                "armor": 19,
+                "armor": 21,
                 "armorperlevel": 5.2,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
                 "attackrange": 550,
                 "hpregen": 5.5,
                 "hpregenperlevel": 0.55,
-                "mpregen": 8,
+                "mpregen": 7,
                 "mpregenperlevel": 0.8,
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 54,
                 "attackdamageperlevel": 3.3,
-                "attackspeedperlevel": 2,
+                "attackspeedperlevel": 3,
                 "attackspeed": 0.669
             }
         },
         "Malphite": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Malphite",
             "key": "54",
             "name": "Malphite",
@@ -3650,7 +3749,7 @@
                 "full": "Malphite.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 144,
+                "x": 240,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -3684,7 +3783,7 @@
             }
         },
         "Malzahar": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Malzahar",
             "key": "90",
             "name": "Malzahar",
@@ -3700,7 +3799,7 @@
                 "full": "Malzahar.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 192,
+                "x": 288,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -3734,7 +3833,7 @@
             }
         },
         "Maokai": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Maokai",
             "key": "57",
             "name": "Maokai",
@@ -3750,7 +3849,7 @@
                 "full": "Maokai.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 240,
+                "x": 336,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -3765,15 +3864,15 @@
                 "hpperlevel": 109,
                 "mp": 375,
                 "mpperlevel": 43,
-                "movespeed": 335,
-                "armor": 39,
+                "movespeed": 330,
+                "armor": 35,
                 "armorperlevel": 5.2,
                 "spellblock": 32,
                 "spellblockperlevel": 2.05,
                 "attackrange": 125,
                 "hpregen": 5,
                 "hpregenperlevel": 0.75,
-                "mpregen": 7.2,
+                "mpregen": 6,
                 "mpregenperlevel": 0.6,
                 "crit": 0,
                 "critperlevel": 0,
@@ -3784,7 +3883,7 @@
             }
         },
         "MasterYi": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "MasterYi",
             "key": "11",
             "name": "Master Yi",
@@ -3800,7 +3899,7 @@
                 "full": "MasterYi.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 288,
+                "x": 384,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -3834,7 +3933,7 @@
             }
         },
         "Milio": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Milio",
             "key": "902",
             "name": "Milio",
@@ -3850,7 +3949,7 @@
                 "full": "Milio.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 336,
+                "x": 432,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -3865,8 +3964,8 @@
                 "mp": 365,
                 "mpperlevel": 43,
                 "movespeed": 330,
-                "armor": 28,
-                "armorperlevel": 4.9,
+                "armor": 26,
+                "armorperlevel": 4.6,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
                 "attackrange": 525,
@@ -3883,7 +3982,7 @@
             }
         },
         "MissFortune": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "MissFortune",
             "key": "21",
             "name": "Miss Fortune",
@@ -3899,8 +3998,8 @@
                 "full": "MissFortune.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 384,
-                "y": 48,
+                "x": 0,
+                "y": 96,
                 "w": 48,
                 "h": 48
             },
@@ -3932,7 +4031,7 @@
             }
         },
         "MonkeyKing": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "MonkeyKing",
             "key": "62",
             "name": "Wukong",
@@ -3948,8 +4047,8 @@
                 "full": "MonkeyKing.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 432,
-                "y": 48,
+                "x": 48,
+                "y": 96,
                 "w": 48,
                 "h": 48
             },
@@ -3972,7 +4071,7 @@
                 "hpregen": 3.5,
                 "hpregenperlevel": 0.65,
                 "mpregen": 8,
-                "mpregenperlevel": 0.65,
+                "mpregenperlevel": 0.8,
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 66,
@@ -3982,7 +4081,7 @@
             }
         },
         "Mordekaiser": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Mordekaiser",
             "key": "82",
             "name": "Mordekaiser",
@@ -3998,7 +4097,7 @@
                 "full": "Mordekaiser.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 0,
+                "x": 96,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -4031,7 +4130,7 @@
             }
         },
         "Morgana": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Morgana",
             "key": "25",
             "name": "Morgana",
@@ -4047,7 +4146,7 @@
                 "full": "Morgana.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 48,
+                "x": 144,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -4080,8 +4179,57 @@
                 "attackspeed": 0.625
             }
         },
+        "Naafiri": {
+            "version": "14.7.1",
+            "id": "Naafiri",
+            "key": "950",
+            "name": "Naafiri",
+            "title": "the Hound of a Hundred Bites",
+            "blurb": "Across the sands of Shurima, a chorus of howls rings out. It is the call of the dune hounds, voracious predators who form packs and compete for the right to hunt in these barren lands. Among them, one pack stands above all, for they are driven not only...",
+            "info": {
+                "attack": 9,
+                "defense": 5,
+                "magic": 0,
+                "difficulty": 2
+            },
+            "image": {
+                "full": "Naafiri.png",
+                "sprite": "champion2.png",
+                "group": "champion",
+                "x": 192,
+                "y": 96,
+                "w": 48,
+                "h": 48
+            },
+            "tags": [
+                "Assassin"
+            ],
+            "partype": "Mana",
+            "stats": {
+                "hp": 635,
+                "hpperlevel": 120,
+                "mp": 400,
+                "mpperlevel": 55,
+                "movespeed": 340,
+                "armor": 30,
+                "armorperlevel": 4.7,
+                "spellblock": 32,
+                "spellblockperlevel": 2.05,
+                "attackrange": 125,
+                "hpregen": 9,
+                "hpregenperlevel": 0.9,
+                "mpregen": 7.5,
+                "mpregenperlevel": 1,
+                "crit": 0,
+                "critperlevel": 0,
+                "attackdamage": 55,
+                "attackdamageperlevel": 2.1,
+                "attackspeedperlevel": 2.1,
+                "attackspeed": 0.663
+            }
+        },
         "Nami": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Nami",
             "key": "267",
             "name": "Nami",
@@ -4097,7 +4245,7 @@
                 "full": "Nami.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 96,
+                "x": 240,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -4131,7 +4279,7 @@
             }
         },
         "Nasus": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Nasus",
             "key": "75",
             "name": "Nasus",
@@ -4147,7 +4295,7 @@
                 "full": "Nasus.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 144,
+                "x": 288,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -4181,7 +4329,7 @@
             }
         },
         "Nautilus": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Nautilus",
             "key": "111",
             "name": "Nautilus",
@@ -4197,7 +4345,7 @@
                 "full": "Nautilus.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 192,
+                "x": 336,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -4231,7 +4379,7 @@
             }
         },
         "Neeko": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Neeko",
             "key": "518",
             "name": "Neeko",
@@ -4247,7 +4395,7 @@
                 "full": "Neeko.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 240,
+                "x": 384,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -4281,7 +4429,7 @@
             }
         },
         "Nidalee": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Nidalee",
             "key": "76",
             "name": "Nidalee",
@@ -4297,7 +4445,7 @@
                 "full": "Nidalee.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 288,
+                "x": 432,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -4313,10 +4461,10 @@
                 "mp": 295,
                 "mpperlevel": 45,
                 "movespeed": 335,
-                "armor": 28,
-                "armorperlevel": 4.7,
+                "armor": 32,
+                "armorperlevel": 5,
                 "spellblock": 30,
-                "spellblockperlevel": 1.3,
+                "spellblockperlevel": 1.45,
                 "attackrange": 525,
                 "hpregen": 6,
                 "hpregenperlevel": 0.6,
@@ -4331,7 +4479,7 @@
             }
         },
         "Nilah": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Nilah",
             "key": "895",
             "name": "Nilah",
@@ -4345,10 +4493,10 @@
             },
             "image": {
                 "full": "Nilah.png",
-                "sprite": "champion2.png",
+                "sprite": "champion3.png",
                 "group": "champion",
-                "x": 336,
-                "y": 96,
+                "x": 0,
+                "y": 0,
                 "w": 48,
                 "h": 48
             },
@@ -4381,7 +4529,7 @@
             }
         },
         "Nocturne": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Nocturne",
             "key": "56",
             "name": "Nocturne",
@@ -4395,10 +4543,10 @@
             },
             "image": {
                 "full": "Nocturne.png",
-                "sprite": "champion2.png",
+                "sprite": "champion3.png",
                 "group": "champion",
-                "x": 384,
-                "y": 96,
+                "x": 48,
+                "y": 0,
                 "w": 48,
                 "h": 48
             },
@@ -4431,7 +4579,7 @@
             }
         },
         "Nunu": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Nunu",
             "key": "20",
             "name": "Nunu & Willump",
@@ -4445,10 +4593,10 @@
             },
             "image": {
                 "full": "Nunu.png",
-                "sprite": "champion2.png",
+                "sprite": "champion3.png",
                 "group": "champion",
-                "x": 432,
-                "y": 96,
+                "x": 96,
+                "y": 0,
                 "w": 48,
                 "h": 48
             },
@@ -4481,7 +4629,7 @@
             }
         },
         "Olaf": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Olaf",
             "key": "2",
             "name": "Olaf",
@@ -4497,7 +4645,7 @@
                 "full": "Olaf.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 0,
+                "x": 144,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -4531,7 +4679,7 @@
             }
         },
         "Orianna": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Orianna",
             "key": "61",
             "name": "Orianna",
@@ -4547,7 +4695,7 @@
                 "full": "Orianna.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 48,
+                "x": 192,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -4558,8 +4706,8 @@
             ],
             "partype": "Mana",
             "stats": {
-                "hp": 600,
-                "hpperlevel": 105,
+                "hp": 585,
+                "hpperlevel": 110,
                 "mp": 418,
                 "mpperlevel": 25,
                 "movespeed": 325,
@@ -4581,7 +4729,7 @@
             }
         },
         "Ornn": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Ornn",
             "key": "516",
             "name": "Ornn",
@@ -4597,7 +4745,7 @@
                 "full": "Ornn.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 96,
+                "x": 240,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -4631,7 +4779,7 @@
             }
         },
         "Pantheon": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Pantheon",
             "key": "80",
             "name": "Pantheon",
@@ -4647,7 +4795,7 @@
                 "full": "Pantheon.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 144,
+                "x": 288,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -4681,7 +4829,7 @@
             }
         },
         "Poppy": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Poppy",
             "key": "78",
             "name": "Poppy",
@@ -4697,7 +4845,7 @@
                 "full": "Poppy.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 192,
+                "x": 336,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -4731,7 +4879,7 @@
             }
         },
         "Pyke": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Pyke",
             "key": "555",
             "name": "Pyke",
@@ -4747,7 +4895,7 @@
                 "full": "Pyke.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 240,
+                "x": 384,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -4759,11 +4907,11 @@
             "partype": "Mana",
             "stats": {
                 "hp": 670,
-                "hpperlevel": 104,
+                "hpperlevel": 110,
                 "mp": 415,
                 "mpperlevel": 50,
                 "movespeed": 330,
-                "armor": 45,
+                "armor": 47,
                 "armorperlevel": 4.7,
                 "spellblock": 32,
                 "spellblockperlevel": 2.05,
@@ -4781,7 +4929,7 @@
             }
         },
         "Qiyana": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Qiyana",
             "key": "246",
             "name": "Qiyana",
@@ -4797,7 +4945,7 @@
                 "full": "Qiyana.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 288,
+                "x": 432,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -4810,8 +4958,8 @@
             "stats": {
                 "hp": 590,
                 "hpperlevel": 124,
-                "mp": 320,
-                "mpperlevel": 50,
+                "mp": 375,
+                "mpperlevel": 60,
                 "movespeed": 335,
                 "armor": 28,
                 "armorperlevel": 4.7,
@@ -4831,7 +4979,7 @@
             }
         },
         "Quinn": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Quinn",
             "key": "133",
             "name": "Quinn",
@@ -4847,8 +4995,8 @@
                 "full": "Quinn.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 336,
-                "y": 0,
+                "x": 0,
+                "y": 48,
                 "w": 48,
                 "h": 48
             },
@@ -4858,11 +5006,11 @@
             ],
             "partype": "Mana",
             "stats": {
-                "hp": 603,
-                "hpperlevel": 99,
+                "hp": 565,
+                "hpperlevel": 107,
                 "mp": 269,
                 "mpperlevel": 35,
-                "movespeed": 335,
+                "movespeed": 330,
                 "armor": 28,
                 "armorperlevel": 4.7,
                 "spellblock": 30,
@@ -4875,13 +5023,13 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 59,
-                "attackdamageperlevel": 2.4,
+                "attackdamageperlevel": 2.7,
                 "attackspeedperlevel": 3.1,
                 "attackspeed": 0.668
             }
         },
         "Rakan": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Rakan",
             "key": "497",
             "name": "Rakan",
@@ -4897,8 +5045,8 @@
                 "full": "Rakan.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 384,
-                "y": 0,
+                "x": 48,
+                "y": 48,
                 "w": 48,
                 "h": 48
             },
@@ -4912,8 +5060,8 @@
                 "mp": 315,
                 "mpperlevel": 50,
                 "movespeed": 335,
-                "armor": 32,
-                "armorperlevel": 5.1,
+                "armor": 30,
+                "armorperlevel": 4.9,
                 "spellblock": 32,
                 "spellblockperlevel": 2.05,
                 "attackrange": 300,
@@ -4930,7 +5078,7 @@
             }
         },
         "Rammus": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Rammus",
             "key": "33",
             "name": "Rammus",
@@ -4946,8 +5094,8 @@
                 "full": "Rammus.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 432,
-                "y": 0,
+                "x": 96,
+                "y": 48,
                 "w": 48,
                 "h": 48
             },
@@ -4980,7 +5128,7 @@
             }
         },
         "RekSai": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "RekSai",
             "key": "421",
             "name": "Rek'Sai",
@@ -4996,7 +5144,7 @@
                 "full": "RekSai.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 0,
+                "x": 144,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -5006,30 +5154,30 @@
             ],
             "partype": "Rage",
             "stats": {
-                "hp": 640,
+                "hp": 600,
                 "hpperlevel": 99,
                 "mp": 100,
                 "mpperlevel": 0,
-                "movespeed": 335,
+                "movespeed": 340,
                 "armor": 36,
                 "armorperlevel": 4.95,
                 "spellblock": 32,
                 "spellblockperlevel": 2.05,
                 "attackrange": 175,
-                "hpregen": 7.5,
-                "hpregenperlevel": 0.65,
+                "hpregen": 2.5,
+                "hpregenperlevel": 0.5,
                 "mpregen": 0,
                 "mpregenperlevel": 0,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 61,
+                "attackdamage": 58,
                 "attackdamageperlevel": 3,
                 "attackspeedperlevel": 2,
                 "attackspeed": 0.667
             }
         },
         "Rell": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Rell",
             "key": "526",
             "name": "Rell",
@@ -5045,7 +5193,7 @@
                 "full": "Rell.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 48,
+                "x": 192,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -5060,26 +5208,26 @@
                 "hpperlevel": 104,
                 "mp": 350,
                 "mpperlevel": 45,
-                "movespeed": 335,
-                "armor": 32,
+                "movespeed": 330,
+                "armor": 36,
                 "armorperlevel": 4.2,
-                "spellblock": 32,
+                "spellblock": 30,
                 "spellblockperlevel": 2.05,
                 "attackrange": 175,
-                "hpregen": 7,
-                "hpregenperlevel": 0.55,
+                "hpregen": 7.5,
+                "hpregenperlevel": 0.85,
                 "mpregen": 6,
                 "mpregenperlevel": 0.35,
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 55,
                 "attackdamageperlevel": 3,
-                "attackspeedperlevel": 2,
-                "attackspeed": 0.55
+                "attackspeedperlevel": 1.5,
+                "attackspeed": 0.625
             }
         },
         "Renata": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Renata",
             "key": "888",
             "name": "Renata Glasc",
@@ -5095,7 +5243,7 @@
                 "full": "Renata.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 96,
+                "x": 240,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -5129,7 +5277,7 @@
             }
         },
         "Renekton": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Renekton",
             "key": "58",
             "name": "Renekton",
@@ -5145,7 +5293,7 @@
                 "full": "Renekton.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 144,
+                "x": 288,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -5163,7 +5311,7 @@
                 "movespeed": 345,
                 "armor": 35,
                 "armorperlevel": 5.2,
-                "spellblock": 32,
+                "spellblock": 28,
                 "spellblockperlevel": 2.05,
                 "attackrange": 125,
                 "hpregen": 8,
@@ -5179,7 +5327,7 @@
             }
         },
         "Rengar": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Rengar",
             "key": "107",
             "name": "Rengar",
@@ -5195,7 +5343,7 @@
                 "full": "Rengar.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 192,
+                "x": 336,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -5206,7 +5354,7 @@
             ],
             "partype": "Ferocity",
             "stats": {
-                "hp": 620,
+                "hp": 590,
                 "hpperlevel": 104,
                 "mp": 4,
                 "mpperlevel": 0,
@@ -5216,7 +5364,7 @@
                 "spellblock": 32,
                 "spellblockperlevel": 2.05,
                 "attackrange": 125,
-                "hpregen": 7,
+                "hpregen": 6,
                 "hpregenperlevel": 0.5,
                 "mpregen": 0,
                 "mpregenperlevel": 0,
@@ -5229,7 +5377,7 @@
             }
         },
         "Riven": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Riven",
             "key": "92",
             "name": "Riven",
@@ -5245,7 +5393,7 @@
                 "full": "Riven.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 240,
+                "x": 384,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -5279,7 +5427,7 @@
             }
         },
         "Rumble": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Rumble",
             "key": "68",
             "name": "Rumble",
@@ -5295,7 +5443,7 @@
                 "full": "Rumble.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 288,
+                "x": 432,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -5306,9 +5454,9 @@
             ],
             "partype": "Heat",
             "stats": {
-                "hp": 659,
-                "hpperlevel": 99,
-                "mp": 100,
+                "hp": 625,
+                "hpperlevel": 105,
+                "mp": 150,
                 "mpperlevel": 0,
                 "movespeed": 345,
                 "armor": 36,
@@ -5316,20 +5464,20 @@
                 "spellblock": 28,
                 "spellblockperlevel": 1.55,
                 "attackrange": 125,
-                "hpregen": 8,
+                "hpregen": 7,
                 "hpregenperlevel": 0.6,
                 "mpregen": 0,
                 "mpregenperlevel": 0,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 61,
+                "attackdamage": 64,
                 "attackdamageperlevel": 3.2,
                 "attackspeedperlevel": 1.85,
                 "attackspeed": 0.644
             }
         },
         "Ryze": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Ryze",
             "key": "13",
             "name": "Ryze",
@@ -5345,8 +5493,8 @@
                 "full": "Ryze.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 336,
-                "y": 48,
+                "x": 0,
+                "y": 96,
                 "w": 48,
                 "h": 48
             },
@@ -5375,11 +5523,11 @@
                 "attackdamage": 58,
                 "attackdamageperlevel": 3,
                 "attackspeedperlevel": 2.11,
-                "attackspeed": 0.625
+                "attackspeed": 0.658
             }
         },
         "Samira": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Samira",
             "key": "360",
             "name": "Samira",
@@ -5395,8 +5543,8 @@
                 "full": "Samira.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 384,
-                "y": 48,
+                "x": 48,
+                "y": 96,
                 "w": 48,
                 "h": 48
             },
@@ -5405,7 +5553,7 @@
             ],
             "partype": "Mana",
             "stats": {
-                "hp": 600,
+                "hp": 630,
                 "hpperlevel": 108,
                 "mp": 349,
                 "mpperlevel": 38,
@@ -5428,7 +5576,7 @@
             }
         },
         "Sejuani": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Sejuani",
             "key": "113",
             "name": "Sejuani",
@@ -5444,8 +5592,8 @@
                 "full": "Sejuani.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 432,
-                "y": 48,
+                "x": 96,
+                "y": 96,
                 "w": 48,
                 "h": 48
             },
@@ -5478,7 +5626,7 @@
             }
         },
         "Senna": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Senna",
             "key": "235",
             "name": "Senna",
@@ -5494,7 +5642,7 @@
                 "full": "Senna.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 0,
+                "x": 144,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -5528,7 +5676,7 @@
             }
         },
         "Seraphine": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Seraphine",
             "key": "147",
             "name": "Seraphine",
@@ -5544,7 +5692,7 @@
                 "full": "Seraphine.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 48,
+                "x": 192,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -5556,29 +5704,29 @@
             "partype": "Mana",
             "stats": {
                 "hp": 570,
-                "hpperlevel": 104,
-                "mp": 440,
-                "mpperlevel": 40,
-                "movespeed": 325,
-                "armor": 19,
+                "hpperlevel": 90,
+                "mp": 360,
+                "mpperlevel": 25,
+                "movespeed": 330,
+                "armor": 26,
                 "armorperlevel": 4.2,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
                 "attackrange": 525,
                 "hpregen": 6.5,
                 "hpregenperlevel": 0.6,
-                "mpregen": 8,
-                "mpregenperlevel": 1,
+                "mpregen": 11.5,
+                "mpregenperlevel": 0.95,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 55,
+                "attackdamage": 50,
                 "attackdamageperlevel": 3,
-                "attackspeedperlevel": 1,
+                "attackspeedperlevel": 2,
                 "attackspeed": 0.669
             }
         },
         "Sett": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Sett",
             "key": "875",
             "name": "Sett",
@@ -5594,7 +5742,7 @@
                 "full": "Sett.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 96,
+                "x": 240,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -5628,7 +5776,7 @@
             }
         },
         "Shaco": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Shaco",
             "key": "35",
             "name": "Shaco",
@@ -5644,7 +5792,7 @@
                 "full": "Shaco.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 144,
+                "x": 288,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -5666,8 +5814,8 @@
                 "attackrange": 125,
                 "hpregen": 8.5,
                 "hpregenperlevel": 0.55,
-                "mpregen": 7.15,
-                "mpregenperlevel": 0.45,
+                "mpregen": 6,
+                "mpregenperlevel": 0.35,
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 63,
@@ -5677,7 +5825,7 @@
             }
         },
         "Shen": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Shen",
             "key": "98",
             "name": "Shen",
@@ -5693,7 +5841,7 @@
                 "full": "Shen.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 192,
+                "x": 336,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -5719,14 +5867,14 @@
                 "mpregenperlevel": 0,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 60,
+                "attackdamage": 64,
                 "attackdamageperlevel": 3,
                 "attackspeedperlevel": 3,
                 "attackspeed": 0.751
             }
         },
         "Shyvana": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Shyvana",
             "key": "102",
             "name": "Shyvana",
@@ -5742,7 +5890,7 @@
                 "full": "Shyvana.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 240,
+                "x": 384,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -5754,7 +5902,7 @@
             "partype": "Fury",
             "stats": {
                 "hp": 665,
-                "hpperlevel": 109,
+                "hpperlevel": 104,
                 "mp": 100,
                 "mpperlevel": 0,
                 "movespeed": 350,
@@ -5770,13 +5918,13 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 66,
-                "attackdamageperlevel": 3.4,
+                "attackdamageperlevel": 3,
                 "attackspeedperlevel": 2.5,
                 "attackspeed": 0.658
             }
         },
         "Singed": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Singed",
             "key": "27",
             "name": "Singed",
@@ -5792,7 +5940,7 @@
                 "full": "Singed.png",
                 "sprite": "champion3.png",
                 "group": "champion",
-                "x": 288,
+                "x": 432,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -5822,11 +5970,11 @@
                 "attackdamage": 63,
                 "attackdamageperlevel": 3.4,
                 "attackspeedperlevel": 1.9,
-                "attackspeed": 0.613
+                "attackspeed": 0.625
             }
         },
         "Sion": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Sion",
             "key": "14",
             "name": "Sion",
@@ -5840,10 +5988,10 @@
             },
             "image": {
                 "full": "Sion.png",
-                "sprite": "champion3.png",
+                "sprite": "champion4.png",
                 "group": "champion",
-                "x": 336,
-                "y": 96,
+                "x": 0,
+                "y": 0,
                 "w": 48,
                 "h": 48
             },
@@ -5876,7 +6024,7 @@
             }
         },
         "Sivir": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Sivir",
             "key": "15",
             "name": "Sivir",
@@ -5890,10 +6038,10 @@
             },
             "image": {
                 "full": "Sivir.png",
-                "sprite": "champion3.png",
+                "sprite": "champion4.png",
                 "group": "champion",
-                "x": 384,
-                "y": 96,
+                "x": 48,
+                "y": 0,
                 "w": 48,
                 "h": 48
             },
@@ -5907,7 +6055,7 @@
                 "mp": 340,
                 "mpperlevel": 45,
                 "movespeed": 335,
-                "armor": 26,
+                "armor": 30,
                 "armorperlevel": 4.45,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
@@ -5919,30 +6067,30 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 58,
-                "attackdamageperlevel": 2.8,
+                "attackdamageperlevel": 2.5,
                 "attackspeedperlevel": 2,
                 "attackspeed": 0.625
             }
         },
         "Skarner": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Skarner",
             "key": "72",
             "name": "Skarner",
-            "title": "the Crystal Vanguard",
-            "blurb": "Skarner is an immense crystalline scorpion from a hidden valley in Shurima. Part of the ancient Brackern race, Skarner and his kin are known for their great wisdom and deep connection to the land, as their souls are fused with powerful life crystals...",
+            "title": "the Primordial Sovereign",
+            "blurb": "The ancient, colossal brackern Skarner is revered in Ixtal as one of the founding members of its ruling caste, the Yun Tal. Devoted to keeping his nation safe from the rest of the world, Skarner dwells in a chamber beneath Ixaocan where he can hear the...",
             "info": {
                 "attack": 7,
-                "defense": 6,
+                "defense": 8,
                 "magic": 5,
                 "difficulty": 5
             },
             "image": {
                 "full": "Skarner.png",
-                "sprite": "champion3.png",
+                "sprite": "champion4.png",
                 "group": "champion",
-                "x": 432,
-                "y": 96,
+                "x": 96,
+                "y": 0,
                 "w": 48,
                 "h": 48
             },
@@ -5953,29 +6101,78 @@
             "partype": "Mana",
             "stats": {
                 "hp": 650,
-                "hpperlevel": 99,
+                "hpperlevel": 102,
                 "mp": 320,
                 "mpperlevel": 60,
                 "movespeed": 335,
-                "armor": 38,
-                "armorperlevel": 5,
+                "armor": 33,
+                "armorperlevel": 4.8,
                 "spellblock": 32,
                 "spellblockperlevel": 2.05,
-                "attackrange": 125,
-                "hpregen": 9,
-                "hpregenperlevel": 0.85,
+                "attackrange": 150,
+                "hpregen": 7.5,
+                "hpregenperlevel": 0.75,
                 "mpregen": 7.2,
                 "mpregenperlevel": 0.45,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 65,
-                "attackdamageperlevel": 4.5,
-                "attackspeedperlevel": 2.1,
+                "attackdamage": 60,
+                "attackdamageperlevel": 3,
+                "attackspeedperlevel": 2,
                 "attackspeed": 0.625
             }
         },
+        "Smolder": {
+            "version": "14.7.1",
+            "id": "Smolder",
+            "key": "901",
+            "name": "Smolder",
+            "title": "the Fiery Fledgling",
+            "blurb": "Hidden amongst the craggy cliffs of the Noxian frontier, under the watchful eyes of his mother, a young dragon is learning what it means to be heir to the Camavoran imperial dragon lineage. Playful and eager to grow up, Smolder looks for any excuse to...",
+            "info": {
+                "attack": 8,
+                "defense": 2,
+                "magic": 5,
+                "difficulty": 6
+            },
+            "image": {
+                "full": "Smolder.png",
+                "sprite": "champion4.png",
+                "group": "champion",
+                "x": 144,
+                "y": 0,
+                "w": 48,
+                "h": 48
+            },
+            "tags": [
+                "Marksman"
+            ],
+            "partype": "Mana",
+            "stats": {
+                "hp": 575,
+                "hpperlevel": 100,
+                "mp": 300,
+                "mpperlevel": 40,
+                "movespeed": 330,
+                "armor": 26,
+                "armorperlevel": 4.7,
+                "spellblock": 30,
+                "spellblockperlevel": 1.3,
+                "attackrange": 550,
+                "hpregen": 3,
+                "hpregenperlevel": 0.6,
+                "mpregen": 8.5,
+                "mpregenperlevel": 0.7,
+                "crit": 0,
+                "critperlevel": 0,
+                "attackdamage": 55,
+                "attackdamageperlevel": 2.3,
+                "attackspeedperlevel": 4,
+                "attackspeed": 0.638
+            }
+        },
         "Sona": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Sona",
             "key": "37",
             "name": "Sona",
@@ -5991,7 +6188,7 @@
                 "full": "Sona.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 0,
+                "x": 192,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -6025,7 +6222,7 @@
             }
         },
         "Soraka": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Soraka",
             "key": "16",
             "name": "Soraka",
@@ -6041,7 +6238,7 @@
                 "full": "Soraka.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 48,
+                "x": 240,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -6075,7 +6272,7 @@
             }
         },
         "Swain": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Swain",
             "key": "50",
             "name": "Swain",
@@ -6091,7 +6288,7 @@
                 "full": "Swain.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 96,
+                "x": 288,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -6125,7 +6322,7 @@
             }
         },
         "Sylas": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Sylas",
             "key": "517",
             "name": "Sylas",
@@ -6141,7 +6338,7 @@
                 "full": "Sylas.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 144,
+                "x": 336,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -6154,7 +6351,7 @@
             "stats": {
                 "hp": 575,
                 "hpperlevel": 129,
-                "mp": 310,
+                "mp": 400,
                 "mpperlevel": 70,
                 "movespeed": 340,
                 "armor": 27,
@@ -6175,7 +6372,7 @@
             }
         },
         "Syndra": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Syndra",
             "key": "134",
             "name": "Syndra",
@@ -6191,7 +6388,7 @@
                 "full": "Syndra.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 192,
+                "x": 384,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -6220,11 +6417,11 @@
                 "attackdamage": 54,
                 "attackdamageperlevel": 2.9,
                 "attackspeedperlevel": 2,
-                "attackspeed": 0.625
+                "attackspeed": 0.658
             }
         },
         "TahmKench": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "TahmKench",
             "key": "223",
             "name": "Tahm Kench",
@@ -6240,7 +6437,7 @@
                 "full": "TahmKench.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 240,
+                "x": 432,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -6274,7 +6471,7 @@
             }
         },
         "Taliyah": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Taliyah",
             "key": "163",
             "name": "Taliyah",
@@ -6290,8 +6487,8 @@
                 "full": "Taliyah.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 288,
-                "y": 0,
+                "x": 0,
+                "y": 48,
                 "w": 48,
                 "h": 48
             },
@@ -6320,11 +6517,11 @@
                 "attackdamage": 58,
                 "attackdamageperlevel": 3.3,
                 "attackspeedperlevel": 1.36,
-                "attackspeed": 0.625
+                "attackspeed": 0.658
             }
         },
         "Talon": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Talon",
             "key": "91",
             "name": "Talon",
@@ -6340,8 +6537,8 @@
                 "full": "Talon.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 336,
-                "y": 0,
+                "x": 48,
+                "y": 48,
                 "w": 48,
                 "h": 48
             },
@@ -6373,7 +6570,7 @@
             }
         },
         "Taric": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Taric",
             "key": "44",
             "name": "Taric",
@@ -6389,8 +6586,8 @@
                 "full": "Taric.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 384,
-                "y": 0,
+                "x": 96,
+                "y": 48,
                 "w": 48,
                 "h": 48
             },
@@ -6406,7 +6603,7 @@
                 "mpperlevel": 60,
                 "movespeed": 340,
                 "armor": 40,
-                "armorperlevel": 4.6,
+                "armorperlevel": 4.3,
                 "spellblock": 28,
                 "spellblockperlevel": 2.05,
                 "attackrange": 150,
@@ -6423,7 +6620,7 @@
             }
         },
         "Teemo": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Teemo",
             "key": "17",
             "name": "Teemo",
@@ -6439,8 +6636,8 @@
                 "full": "Teemo.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 432,
-                "y": 0,
+                "x": 144,
+                "y": 48,
                 "w": 48,
                 "h": 48
             },
@@ -6473,7 +6670,7 @@
             }
         },
         "Thresh": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Thresh",
             "key": "412",
             "name": "Thresh",
@@ -6489,7 +6686,7 @@
                 "full": "Thresh.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 0,
+                "x": 192,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -6505,7 +6702,7 @@
                 "mp": 274,
                 "mpperlevel": 44,
                 "movespeed": 330,
-                "armor": 28,
+                "armor": 31,
                 "armorperlevel": 0,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
@@ -6523,7 +6720,7 @@
             }
         },
         "Tristana": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Tristana",
             "key": "18",
             "name": "Tristana",
@@ -6539,7 +6736,7 @@
                 "full": "Tristana.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 48,
+                "x": 240,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -6550,14 +6747,14 @@
             ],
             "partype": "Mana",
             "stats": {
-                "hp": 670,
+                "hp": 640,
                 "hpperlevel": 102,
                 "mp": 250,
                 "mpperlevel": 32,
                 "movespeed": 325,
-                "armor": 26,
-                "armorperlevel": 4.2,
-                "spellblock": 30,
+                "armor": 30,
+                "armorperlevel": 4.5,
+                "spellblock": 28,
                 "spellblockperlevel": 1.3,
                 "attackrange": 525,
                 "hpregen": 4,
@@ -6573,7 +6770,7 @@
             }
         },
         "Trundle": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Trundle",
             "key": "48",
             "name": "Trundle",
@@ -6589,7 +6786,7 @@
                 "full": "Trundle.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 96,
+                "x": 288,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -6600,9 +6797,9 @@
             ],
             "partype": "Mana",
             "stats": {
-                "hp": 686,
+                "hp": 650,
                 "hpperlevel": 110,
-                "mp": 281,
+                "mp": 340,
                 "mpperlevel": 45,
                 "movespeed": 350,
                 "armor": 37,
@@ -6617,13 +6814,13 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 68,
-                "attackdamageperlevel": 3,
+                "attackdamageperlevel": 4,
                 "attackspeedperlevel": 2.9,
-                "attackspeed": 0.6
+                "attackspeed": 0.67
             }
         },
         "Tryndamere": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Tryndamere",
             "key": "23",
             "name": "Tryndamere",
@@ -6639,7 +6836,7 @@
                 "full": "Tryndamere.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 144,
+                "x": 336,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -6651,7 +6848,7 @@
             "partype": "Fury",
             "stats": {
                 "hp": 696,
-                "hpperlevel": 115,
+                "hpperlevel": 108,
                 "mp": 100,
                 "mpperlevel": 0,
                 "movespeed": 345,
@@ -6659,21 +6856,21 @@
                 "armorperlevel": 4.3,
                 "spellblock": 32,
                 "spellblockperlevel": 2.05,
-                "attackrange": 125,
+                "attackrange": 175,
                 "hpregen": 8.5,
                 "hpregenperlevel": 0.9,
                 "mpregen": 0,
                 "mpregenperlevel": 0,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 72,
+                "attackdamage": 66,
                 "attackdamageperlevel": 4,
-                "attackspeedperlevel": 2.9,
+                "attackspeedperlevel": 3.4,
                 "attackspeed": 0.67
             }
         },
         "TwistedFate": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "TwistedFate",
             "key": "4",
             "name": "Twisted Fate",
@@ -6689,7 +6886,7 @@
                 "full": "TwistedFate.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 192,
+                "x": 384,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -6717,12 +6914,12 @@
                 "critperlevel": 0,
                 "attackdamage": 52,
                 "attackdamageperlevel": 3.3,
-                "attackspeedperlevel": 3.22,
-                "attackspeed": 0.651
+                "attackspeedperlevel": 2.5,
+                "attackspeed": 0.625
             }
         },
         "Twitch": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Twitch",
             "key": "29",
             "name": "Twitch",
@@ -6738,7 +6935,7 @@
                 "full": "Twitch.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 240,
+                "x": 432,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -6772,7 +6969,7 @@
             }
         },
         "Udyr": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Udyr",
             "key": "77",
             "name": "Udyr",
@@ -6788,8 +6985,8 @@
                 "full": "Udyr.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 288,
-                "y": 48,
+                "x": 0,
+                "y": 96,
                 "w": 48,
                 "h": 48
             },
@@ -6822,7 +7019,7 @@
             }
         },
         "Urgot": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Urgot",
             "key": "6",
             "name": "Urgot",
@@ -6838,8 +7035,8 @@
                 "full": "Urgot.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 336,
-                "y": 48,
+                "x": 48,
+                "y": 96,
                 "w": 48,
                 "h": 48
             },
@@ -6872,7 +7069,7 @@
             }
         },
         "Varus": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Varus",
             "key": "110",
             "name": "Varus",
@@ -6888,8 +7085,8 @@
                 "full": "Varus.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 384,
-                "y": 48,
+                "x": 96,
+                "y": 96,
                 "w": 48,
                 "h": 48
             },
@@ -6915,14 +7112,14 @@
                 "mpregenperlevel": 0.8,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 62,
+                "attackdamage": 60,
                 "attackdamageperlevel": 3.4,
                 "attackspeedperlevel": 4,
                 "attackspeed": 0.658
             }
         },
         "Vayne": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Vayne",
             "key": "67",
             "name": "Vayne",
@@ -6938,8 +7135,8 @@
                 "full": "Vayne.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 432,
-                "y": 48,
+                "x": 144,
+                "y": 96,
                 "w": 48,
                 "h": 48
             },
@@ -6972,7 +7169,7 @@
             }
         },
         "Veigar": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Veigar",
             "key": "45",
             "name": "Veigar",
@@ -6988,7 +7185,7 @@
                 "full": "Veigar.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 0,
+                "x": 192,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -6998,7 +7195,7 @@
             ],
             "partype": "Mana",
             "stats": {
-                "hp": 550,
+                "hp": 580,
                 "hpperlevel": 108,
                 "mp": 490,
                 "mpperlevel": 26,
@@ -7021,7 +7218,7 @@
             }
         },
         "Velkoz": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Velkoz",
             "key": "161",
             "name": "Vel'Koz",
@@ -7037,7 +7234,7 @@
                 "full": "Velkoz.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 48,
+                "x": 240,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -7065,12 +7262,12 @@
                 "critperlevel": 0,
                 "attackdamage": 55,
                 "attackdamageperlevel": 3.1416,
-                "attackspeedperlevel": 1.36,
-                "attackspeed": 0.625
+                "attackspeedperlevel": 1.59,
+                "attackspeed": 0.643
             }
         },
         "Vex": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Vex",
             "key": "711",
             "name": "Vex",
@@ -7086,7 +7283,7 @@
                 "full": "Vex.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 96,
+                "x": 288,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -7119,7 +7316,7 @@
             }
         },
         "Vi": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Vi",
             "key": "254",
             "name": "Vi",
@@ -7135,7 +7332,7 @@
                 "full": "Vi.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 144,
+                "x": 336,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -7169,7 +7366,7 @@
             }
         },
         "Viego": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Viego",
             "key": "234",
             "name": "Viego",
@@ -7185,7 +7382,7 @@
                 "full": "Viego.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 192,
+                "x": 384,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -7219,7 +7416,7 @@
             }
         },
         "Viktor": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Viktor",
             "key": "112",
             "name": "Viktor",
@@ -7235,7 +7432,7 @@
                 "full": "Viktor.png",
                 "sprite": "champion4.png",
                 "group": "champion",
-                "x": 240,
+                "x": 432,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -7268,7 +7465,7 @@
             }
         },
         "Vladimir": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Vladimir",
             "key": "8",
             "name": "Vladimir",
@@ -7282,10 +7479,10 @@
             },
             "image": {
                 "full": "Vladimir.png",
-                "sprite": "champion4.png",
+                "sprite": "champion5.png",
                 "group": "champion",
-                "x": 288,
-                "y": 96,
+                "x": 0,
+                "y": 0,
                 "w": 48,
                 "h": 48
             },
@@ -7317,7 +7514,7 @@
             }
         },
         "Volibear": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Volibear",
             "key": "106",
             "name": "Volibear",
@@ -7331,10 +7528,10 @@
             },
             "image": {
                 "full": "Volibear.png",
-                "sprite": "champion4.png",
+                "sprite": "champion5.png",
                 "group": "champion",
-                "x": 336,
-                "y": 96,
+                "x": 48,
+                "y": 0,
                 "w": 48,
                 "h": 48
             },
@@ -7367,7 +7564,7 @@
             }
         },
         "Warwick": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Warwick",
             "key": "19",
             "name": "Warwick",
@@ -7381,10 +7578,10 @@
             },
             "image": {
                 "full": "Warwick.png",
-                "sprite": "champion4.png",
+                "sprite": "champion5.png",
                 "group": "champion",
-                "x": 384,
-                "y": 96,
+                "x": 96,
+                "y": 0,
                 "w": 48,
                 "h": 48
             },
@@ -7417,7 +7614,7 @@
             }
         },
         "Xayah": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Xayah",
             "key": "498",
             "name": "Xayah",
@@ -7431,10 +7628,10 @@
             },
             "image": {
                 "full": "Xayah.png",
-                "sprite": "champion4.png",
+                "sprite": "champion5.png",
                 "group": "champion",
-                "x": 432,
-                "y": 96,
+                "x": 144,
+                "y": 0,
                 "w": 48,
                 "h": 48
             },
@@ -7443,8 +7640,8 @@
             ],
             "partype": "Mana",
             "stats": {
-                "hp": 660,
-                "hpperlevel": 102,
+                "hp": 630,
+                "hpperlevel": 107,
                 "mp": 340,
                 "mpperlevel": 40,
                 "movespeed": 330,
@@ -7466,7 +7663,7 @@
             }
         },
         "Xerath": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Xerath",
             "key": "101",
             "name": "Xerath",
@@ -7482,7 +7679,7 @@
                 "full": "Xerath.png",
                 "sprite": "champion5.png",
                 "group": "champion",
-                "x": 0,
+                "x": 192,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -7494,7 +7691,7 @@
             "stats": {
                 "hp": 596,
                 "hpperlevel": 106,
-                "mp": 459,
+                "mp": 400,
                 "mpperlevel": 22,
                 "movespeed": 340,
                 "armor": 22,
@@ -7504,18 +7701,18 @@
                 "attackrange": 525,
                 "hpregen": 5.5,
                 "hpregenperlevel": 0.55,
-                "mpregen": 8,
+                "mpregen": 6.85,
                 "mpregenperlevel": 0.8,
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 55,
                 "attackdamageperlevel": 3,
                 "attackspeedperlevel": 1.36,
-                "attackspeed": 0.625
+                "attackspeed": 0.658
             }
         },
         "XinZhao": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "XinZhao",
             "key": "5",
             "name": "Xin Zhao",
@@ -7531,7 +7728,7 @@
                 "full": "XinZhao.png",
                 "sprite": "champion5.png",
                 "group": "champion",
-                "x": 48,
+                "x": 240,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -7565,7 +7762,7 @@
             }
         },
         "Yasuo": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Yasuo",
             "key": "157",
             "name": "Yasuo",
@@ -7581,7 +7778,7 @@
                 "full": "Yasuo.png",
                 "sprite": "champion5.png",
                 "group": "champion",
-                "x": 96,
+                "x": 288,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -7593,7 +7790,7 @@
             "partype": "Flow",
             "stats": {
                 "hp": 590,
-                "hpperlevel": 101,
+                "hpperlevel": 110,
                 "mp": 100,
                 "mpperlevel": 0,
                 "movespeed": 345,
@@ -7615,7 +7812,7 @@
             }
         },
         "Yone": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Yone",
             "key": "777",
             "name": "Yone",
@@ -7631,7 +7828,7 @@
                 "full": "Yone.png",
                 "sprite": "champion5.png",
                 "group": "champion",
-                "x": 144,
+                "x": 336,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -7643,11 +7840,11 @@
             "partype": "Flow",
             "stats": {
                 "hp": 620,
-                "hpperlevel": 99,
+                "hpperlevel": 105,
                 "mp": 500,
                 "mpperlevel": 0,
                 "movespeed": 345,
-                "armor": 28,
+                "armor": 30,
                 "armorperlevel": 4.6,
                 "spellblock": 32,
                 "spellblockperlevel": 2.05,
@@ -7665,7 +7862,7 @@
             }
         },
         "Yorick": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Yorick",
             "key": "83",
             "name": "Yorick",
@@ -7681,7 +7878,7 @@
                 "full": "Yorick.png",
                 "sprite": "champion5.png",
                 "group": "champion",
-                "x": 192,
+                "x": 384,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -7715,7 +7912,7 @@
             }
         },
         "Yuumi": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Yuumi",
             "key": "350",
             "name": "Yuumi",
@@ -7731,7 +7928,7 @@
                 "full": "Yuumi.png",
                 "sprite": "champion5.png",
                 "group": "champion",
-                "x": 240,
+                "x": 432,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -7765,7 +7962,7 @@
             }
         },
         "Zac": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Zac",
             "key": "154",
             "name": "Zac",
@@ -7781,8 +7978,8 @@
                 "full": "Zac.png",
                 "sprite": "champion5.png",
                 "group": "champion",
-                "x": 288,
-                "y": 0,
+                "x": 0,
+                "y": 48,
                 "w": 48,
                 "h": 48
             },
@@ -7815,7 +8012,7 @@
             }
         },
         "Zed": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Zed",
             "key": "238",
             "name": "Zed",
@@ -7831,8 +8028,8 @@
                 "full": "Zed.png",
                 "sprite": "champion5.png",
                 "group": "champion",
-                "x": 336,
-                "y": 0,
+                "x": 48,
+                "y": 48,
                 "w": 48,
                 "h": 48
             },
@@ -7864,7 +8061,7 @@
             }
         },
         "Zeri": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Zeri",
             "key": "221",
             "name": "Zeri",
@@ -7880,8 +8077,8 @@
                 "full": "Zeri.png",
                 "sprite": "champion5.png",
                 "group": "champion",
-                "x": 384,
-                "y": 0,
+                "x": 96,
+                "y": 48,
                 "w": 48,
                 "h": 48
             },
@@ -7906,14 +8103,14 @@
                 "mpregenperlevel": 0.8,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 53,
-                "attackdamageperlevel": 1.3,
+                "attackdamage": 56,
+                "attackdamageperlevel": 2,
                 "attackspeedperlevel": 2,
                 "attackspeed": 0.658
             }
         },
         "Ziggs": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Ziggs",
             "key": "115",
             "name": "Ziggs",
@@ -7929,8 +8126,8 @@
                 "full": "Ziggs.png",
                 "sprite": "champion5.png",
                 "group": "champion",
-                "x": 432,
-                "y": 0,
+                "x": 144,
+                "y": 48,
                 "w": 48,
                 "h": 48
             },
@@ -7944,8 +8141,8 @@
                 "mp": 480,
                 "mpperlevel": 23.5,
                 "movespeed": 325,
-                "armor": 22,
-                "armorperlevel": 4.5,
+                "armor": 21,
+                "armorperlevel": 4.7,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
                 "attackrange": 550,
@@ -7955,14 +8152,14 @@
                 "mpregenperlevel": 0.8,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 54,
+                "attackdamage": 55,
                 "attackdamageperlevel": 3.1,
                 "attackspeedperlevel": 2,
                 "attackspeed": 0.656
             }
         },
         "Zilean": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Zilean",
             "key": "26",
             "name": "Zilean",
@@ -7978,7 +8175,7 @@
                 "full": "Zilean.png",
                 "sprite": "champion5.png",
                 "group": "champion",
-                "x": 0,
+                "x": 192,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -8008,11 +8205,11 @@
                 "attackdamage": 52,
                 "attackdamageperlevel": 3,
                 "attackspeedperlevel": 2.13,
-                "attackspeed": 0.625
+                "attackspeed": 0.658
             }
         },
         "Zoe": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Zoe",
             "key": "142",
             "name": "Zoe",
@@ -8028,7 +8225,7 @@
                 "full": "Zoe.png",
                 "sprite": "champion5.png",
                 "group": "champion",
-                "x": 48,
+                "x": 240,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -8049,7 +8246,7 @@
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
                 "attackrange": 550,
-                "hpregen": 6.5,
+                "hpregen": 7.5,
                 "hpregenperlevel": 0.6,
                 "mpregen": 8,
                 "mpregenperlevel": 0.65,
@@ -8058,11 +8255,11 @@
                 "attackdamage": 58,
                 "attackdamageperlevel": 3.3,
                 "attackspeedperlevel": 2.5,
-                "attackspeed": 0.625
+                "attackspeed": 0.658
             }
         },
         "Zyra": {
-            "version": "13.7.1",
+            "version": "14.7.1",
             "id": "Zyra",
             "key": "143",
             "name": "Zyra",
@@ -8078,7 +8275,7 @@
                 "full": "Zyra.png",
                 "sprite": "champion5.png",
                 "group": "champion",
-                "x": 96,
+                "x": 288,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -8101,14 +8298,14 @@
                 "attackrange": 575,
                 "hpregen": 5.5,
                 "hpregenperlevel": 0.5,
-                "mpregen": 13,
-                "mpregenperlevel": 0.4,
+                "mpregen": 7,
+                "mpregenperlevel": 0.8,
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 53,
                 "attackdamageperlevel": 3.2,
                 "attackspeedperlevel": 2.11,
-                "attackspeed": 0.625
+                "attackspeed": 0.681
             }
         }
     }
