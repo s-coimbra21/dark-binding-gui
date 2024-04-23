@@ -10,13 +10,12 @@ interface ChampionCircleProps extends Champion {
 export const ChampionCircle: FC<ChampionCircleProps> = ({
   className,
   id,
-  squarePortraitPath,
 }) => (
   <div className={cx(styles.frame, className)}>
     <div
       className={styles.portrait}
       style={{
-        backgroundImage: `url(lcu://${squarePortraitPath})`,
+        backgroundImage: `url(lcu:///lol-game-data/assets/v1/champion-icons/${id}.png)`,
       }}
     />
   </div>
